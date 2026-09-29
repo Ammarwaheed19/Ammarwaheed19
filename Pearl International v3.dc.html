@@ -31,6 +31,53 @@ img{display:block;max-width:100%}
 @keyframes glowFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.03)}}
 @keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(8px);opacity:1}}
 @keyframes orb{0%,100%{translate:0 0;scale:1}50%{translate:5% -6%;scale:1.14}}
+@keyframes ppFade{from{opacity:0}to{opacity:1}}
+@keyframes ppRise{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
+.pp-chips::-webkit-scrollbar,.pp-shelf::-webkit-scrollbar{display:none}
+.pp-link,.pp-name{padding:0}
+.pp-link .pp-chev{display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.pp-link:hover{text-decoration:underline;text-underline-offset:3px}
+.pp-link:hover .pp-chev{transform:translateX(3px)}
+.pp-tile:hover{background:rgba(0,0,0,.035)}
+.pp-name:hover{color:var(--blue)}
+.pp-name{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pp-media:focus-visible,.pp-tile:focus-visible,.pp-chips button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.pp-terms>div:nth-child(4n){border-right:0}
+.pp-terms>div:nth-last-child(-n+4){border-bottom:0}
+@media (max-width:1040px){
+ .pp-why{grid-template-columns:repeat(2,1fr)!important}
+ .pp-terms{grid-template-columns:repeat(2,1fr)!important}
+ .pp-terms>div{border-right:1px solid #EDEDF0!important;border-bottom:1px solid #EDEDF0!important}
+ .pp-terms>div:nth-child(2n){border-right:0!important}
+ .pp-terms>div:nth-last-child(-n+2){border-bottom:0!important}
+ .pp-bar{top:80px!important}
+}
+@media (max-width:860px){
+ .pp-spot,.pp-oem,.pp-qv{grid-template-columns:1fr!important}
+ .pp-spot-vis{min-height:320px;order:-1}
+ .pp-spot-copy{padding:36px 28px 40px!important}
+ .pp-oem{padding:44px 28px!important}
+ .pp-qv-vis{min-height:280px!important}
+ .pp-qv>div:last-child{padding:30px 24px 28px!important}
+}
+@media (max-width:760px){
+ .pp-hero{padding:128px 16px 26px!important}
+ .pp-sec{padding-left:16px!important;padding-right:16px!important}
+ .pp-shelf{justify-content:flex-start!important;overflow-x:auto;margin-left:-16px!important;margin-right:-16px!important;padding:0 12px;scroll-snap-type:x mandatory}
+ .pp-tile{width:124px!important;scroll-snap-align:start}
+ .pp-tile>span:first-child{width:88px!important;height:88px!important}
+ .pp-bar{padding:8px 10px 0!important}
+ .pp-bar-cta{display:none}
+ .pp-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .pp-card .pp-media{margin:6px 6px 0!important;border-radius:14px!important}
+ .pp-card>div{padding:12px 12px 14px!important}
+ .pp-card>div>div:last-child{flex-direction:column;align-items:stretch!important}
+ .pp-card .pp-name{font-size:.88rem!important}
+ .pp-why{grid-template-columns:1fr!important}
+ .pp-terms{grid-template-columns:1fr!important}
+ .pp-terms>div{border-right:0!important;border-bottom:1px solid #EDEDF0!important}
+ .pp-terms>div:last-child{border-bottom:0!important}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </helmet>
@@ -409,83 +456,204 @@ img{display:block;max-width:100%}
 
 </div>
 
-<div data-view="products" data-screen-label="Products catalogue" data-ppage="1" style="display:none;padding-top:110px">
-  <section style="padding:34px 26px 40px;background:radial-gradient(96% 130% at 14% 0%,#1A4593 0%,#0C1F42 58%,#0A1B38 100%)">
-    <div style="max-width:1320px;margin:0 auto">
-      <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#ffffff;margin-bottom:16px">PRODUCT CATALOGUE</div>
-      <h1 style="font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:900;letter-spacing:-.045em;line-height:.96;text-transform:uppercase">Our <span style="color:#ffffff">products</span></h1>
-      <p style="margin-top:16px;max-width:560px;font-size:1rem;line-height:1.7;color:var(--dim)">Leather safety gloves and protective workwear for industrial applications worldwide. Every item is available for bulk order and private labelling.</p>
+<div data-view="products" data-screen-label="Products catalogue" data-ppage="1" style="display:none;background:#F5F5F7;color:#1D1D1F">
+
+  <section class="pp-hero" style="position:relative;overflow:hidden;padding:168px 26px 34px;text-align:center;background:radial-gradient(70% 60% at 50% 0%,#FFFFFF 0%,#F5F5F7 70%)">
+    <div data-reveal="up" style="font-size:1.05rem;font-weight:700;letter-spacing:-.01em;color:var(--blue)">Products</div>
+    <h1 data-reveal="word" class="pp-h1" style="margin:14px auto 0;max-width:15ch;font-size:clamp(2.7rem,7vw,5.4rem);font-weight:800;letter-spacing:-.045em;line-height:.98;color:#1D1D1F">Protection, crafted since 1992.</h1>
+    <p data-reveal="up" style="margin:24px auto 0;max-width:620px;font-size:clamp(1.02rem,1.5vw,1.24rem);line-height:1.55;color:#6E6E73">Leather safety gloves, aprons, sleeves and workwear, made in our own Karachi factory. Every article is available in bulk and under your private label.</p>
+    <div data-reveal="up" style="margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 30px">
+      <button onClick="{{ goSamples }}" class="pp-link" style="font-size:1.05rem;font-weight:600;color:var(--blue)">Request samples <span class="pp-chev">›</span></button>
+      <button onClick="{{ goContact }}" class="pp-link" style="font-size:1.05rem;font-weight:600;color:var(--blue)">Talk to us about OEM <span class="pp-chev">›</span></button>
+    </div>
+
+    <div data-reveal="up" class="pp-shelf" style="margin:64px auto 0;max-width:980px;display:flex;justify-content:center;gap:10px">
+      <sc-for list="{{ shelf }}" as="g" hint-placeholder-count="4">
+        <button onClick="{{ g.onClick }}" aria-pressed="{{ g.pressed }}" class="pp-tile" style="flex:0 0 auto;width:180px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 8px 14px;border-radius:24px;transition:background .35s">
+          <span style="position:relative;width:112px;height:112px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:box-shadow .45s cubic-bezier(.16,1,.3,1),transform .45s cubic-bezier(.16,1,.3,1);box-shadow:{{ g.ring }};transform:{{ g.lift }}">
+            <img src="{{ g.img }}" alt="{{ g.name }}" style="max-width:74%;max-height:78%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13)"/>
+          </span>
+          <span style="font-size:.94rem;font-weight:{{ g.weight }};letter-spacing:-.01em;color:{{ g.color }};transition:color .3s">{{ g.name }}</span>
+          <span style="margin-top:-8px;font-size:.76rem;color:#86868B">{{ g.count }}</span>
+        </button>
+      </sc-for>
     </div>
   </section>
 
-  <section style="padding:30px 26px 110px;background:var(--tint);color:var(--ink)">
-    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+  <div class="pp-bar" style="position:sticky;top:84px;z-index:120;padding:10px 18px 0;display:flex;justify-content:center;pointer-events:none">
+    <div style="pointer-events:auto;max-width:100%;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(255,255,255,.74);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 34px rgba(15,27,46,.10)">
+      <div class="pp-chips" style="display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.onClick }}" aria-pressed="{{ c.pressed }}" style="flex:0 0 auto;white-space:nowrap;padding:10px 16px;border-radius:999px;font-size:.85rem;letter-spacing:-.005em;transition:background .35s cubic-bezier(.16,1,.3,1),color .3s;background:{{ c.bg }};color:{{ c.fg }};font-weight:{{ c.weight }}" style-hover="color:#1D1D1F">{{ c.label }}<span style="margin-left:6px;font-size:.72rem;opacity:.6">{{ c.n }}</span></button>
+        </sc-for>
+      </div>
+      <button onClick="{{ goSamples }}" class="pp-bar-cta" style="flex:0 0 auto;white-space:nowrap;background:var(--blue);color:#fff;font-size:.8rem;font-weight:700;padding:10px 18px;border-radius:999px;transition:background .3s" style-hover="background:var(--blue-dk)">Request samples</button>
+    </div>
+  </div>
 
-      <aside data-side="1" style="flex:0 1 268px;position:sticky;top:104px;min-width:0">
-        <div style="border:1px solid var(--hair);border-radius:14px;padding:20px 16px;background:#ffffff">
-          <div style="font-size:.62rem;font-weight:800;letter-spacing:.22em;color:#8B95A6;padding:0 8px 14px;border-bottom:1px solid var(--hair)">CATEGORIES</div>
-          <div style="display:flex;flex-direction:column;gap:3px;margin-top:12px">
-            <sc-for list="{{ tree }}" as="t" hint-placeholder-count="9">
-              <button onClick="{{ t.onClick }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border-radius:11px;transition:background .3s,color .3s;padding:{{ t.pad }};background:{{ t.bg }};color:{{ t.fg }};font-size:{{ t.size }};font-weight:{{ t.weight }};letter-spacing:{{ t.ls }}">
-                <span>{{ t.label }}</span>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="flex:0 0 auto;opacity:{{ t.chev }};transform:rotate({{ t.rot }})"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </button>
-            </sc-for>
-          </div>
+  <section class="pp-sec" style="padding:40px 26px 0">
+    <div data-spot="1" class="pp-spot" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;min-height:460px;border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04)">
+      <div class="pp-spot-copy" style="padding:60px 56px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:.9rem;font-weight:700;color:var(--blue)">{{ spot.group }} · {{ spot.label }}</div>
+        <h2 style="margin-top:12px;font-size:clamp(2rem,4vw,3.3rem);font-weight:800;letter-spacing:-.04em;line-height:1.02;color:#1D1D1F">{{ spot.head }}</h2>
+        <p style="margin-top:18px;max-width:460px;font-size:1.06rem;line-height:1.6;color:#6E6E73">{{ spot.desc }}</p>
+        <div style="margin-top:34px;display:flex;flex-wrap:wrap;gap:30px 40px">
+          <sc-for list="{{ spot.specs }}" as="s" hint-placeholder-count="3">
+            <div>
+              <div style="font-family:'League Spartan',Archivo,sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#1D1D1F">{{ s.v }}</div>
+              <div style="margin-top:6px;font-size:.8rem;color:#86868B">{{ s.k }}</div>
+            </div>
+          </sc-for>
         </div>
-        <div data-promo="1" style="margin-top:16px;border:1px solid var(--hair);border-radius:14px;padding:22px;background:var(--tint)">
-          <div style="font-size:.98rem;font-weight:800;letter-spacing:-.015em">Need a custom spec?</div>
-          <p style="margin-top:8px;font-size:.85rem;line-height:1.65;color:var(--body)">Private label and OEM production available across every category.</p>
-          <button onClick="{{ goSamples }}" style="margin-top:14px;font-size:.78rem;font-weight:800;letter-spacing:.1em;color:var(--blue)">TALK TO US →</button>
+        <div style="margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px">
+          <button data-mag="1" onClick="{{ spot.onReq }}" style="background:var(--blue);color:#fff;font-size:.92rem;font-weight:700;padding:14px 26px;border-radius:999px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--blue-dk);box-shadow:0 14px 34px rgba(18,62,171,.32)">Request a sample</button>
+          <button onClick="{{ jumpGrid }}" class="pp-link" style="font-size:.95rem;font-weight:600;color:var(--blue)">See all {{ spot.n }} <span class="pp-chev">›</span></button>
         </div>
-      </aside>
-
-      <div data-main="1" style="flex:1 1 620px;min-width:0">
-        <div data-chead="1" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1px solid var(--hair);margin-bottom:26px">
-          <div>
-            <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;letter-spacing:-.03em;color:var(--blue)">{{ curTitle }}</h2>
-            <div style="margin-top:7px;font-size:.85rem;color:var(--body)">{{ curCount }} · bulk order and private label available</div>
-          </div>
-          <button data-mag="1" onClick="{{ goSamples }}" style="background:var(--blue);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.12em;padding:13px 24px;border-radius:999px;white-space:nowrap;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 12px 34px rgba(0,49,143,.5)">REQUEST SAMPLES →</button>
-        </div>
-
-        <sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
-          <div data-pgrid="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px">
-            <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
-              <div data-card="1" style="position:relative;border:1px solid var(--hair);border-radius:14px;overflow:hidden;background:#ffffff;box-shadow:0 1px 2px rgba(15,27,46,.04);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .45s,border-color .45s" style-hover="transform:translateY(-5px);box-shadow:0 16px 36px rgba(15,27,46,.1);border-color:#cfd8e6">
-                <div style="position:relative;height:200px;display:flex;align-items:center;justify-content:center;background:var(--tint);border-bottom:1px solid var(--hair);overflow:hidden">
-                  <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}">
-                    <div style="text-align:center;color:#5f6b7e">
-                      <div style="font-family:'League Spartan',Archivo,sans-serif;font-size:3.4rem;font-weight:900;letter-spacing:-.04em;line-height:.9;color:#0d2b6b">{{ p.imgno }}</div>
-                      <div style="margin-top:8px;font-size:.58rem;font-weight:800;letter-spacing:.16em">IMAGE FILE</div>
-                    </div>
-                  </sc-if>
-                  <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}">
-                    <div style="text-align:center;color:#7d8798">
-                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9.5" r="1.5"></circle><polyline points="21 15 16 10 5 20"></polyline></svg>
-                      <div style="margin-top:9px;font-size:.58rem;font-weight:800;letter-spacing:.14em">NO IMAGE YET</div>
-                    </div>
-                  </sc-if>
-                  <div style="position:absolute;right:12px;top:12px;background:var(--blue);color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.1em;padding:5px 10px;border-radius:6px">{{ p.code }}</div>
-                </div>
-                <div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:13px">
-                  <h3 style="font-size:.92rem;font-weight:800;letter-spacing:-.012em;line-height:1.38;color:var(--blue)">{{ p.name }}</h3>
-                  <button onClick="{{ p.onReq }}" style="align-self:flex-start;font-size:.68rem;font-weight:800;letter-spacing:.12em;color:var(--ink);transition:color .3s" style-hover="color:var(--blue)">REQUEST SAMPLE →</button>
-                </div>
-              </div>
-            </sc-for>
+      </div>
+      <div class="pp-spot-vis" style="position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(80% 70% at 50% 45%,#FFFFFF 0%,#EEF1F6 100%);overflow:hidden">
+        <sc-if value="{{ spot.hasImg }}" hint-placeholder-val="{{ true }}">
+          <img data-parallax=".05" src="{{ spot.img }}" alt="{{ spot.label }}" style="max-height:400px;max-width:78%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13) saturate(1.05)"/>
+        </sc-if>
+        <sc-if value="{{ spot.noImg }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center">
+            <div style="color:rgba(18,62,171,.08);display:flex;justify-content:center">{{ spot.icon }}</div>
+            <div style="margin-top:-54px;font-family:'League Spartan',Archivo,sans-serif;font-size:clamp(6rem,13vw,10rem);font-weight:900;letter-spacing:-.06em;line-height:.9;background:linear-gradient(180deg,#1D1D1F 0%,#123EAB 110%);-webkit-background-clip:text;background-clip:text;color:transparent">{{ spot.n }}</div>
+            <div style="margin-top:8px;font-size:.95rem;font-weight:600;color:#6E6E73">{{ spot.nWord }} in production</div>
           </div>
         </sc-if>
-        <sc-if value="{{ noItems }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed var(--hair);border-radius:14px;padding:56px 30px;text-align:center">
-            <h3 style="font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Catalogue coming online</h3>
-            <p style="margin:10px auto 0;max-width:34rem;font-size:.9rem;line-height:1.7;color:var(--body)">We manufacture this range to order. Send us your specification and we'll come back with options, pricing and lead times.</p>
-            <button data-mag="1" onClick="{{ goSamples }}" style="margin-top:22px;background:var(--blue);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.12em;padding:14px 28px;border-radius:999px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 12px 34px rgba(0,49,143,.5)">ENQUIRE ABOUT THIS RANGE</button>
-          </div>
-        </sc-if>
+        <div style="position:absolute;left:22px;bottom:20px;font-size:.72rem;font-weight:600;color:#86868B">{{ spot.caption }}</div>
       </div>
     </div>
   </section>
+
+  <section data-anchor="pgrid" class="pp-sec" style="padding:80px 26px 40px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:28px">
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;color:#1D1D1F">All {{ curTitleLc }}. <span style="color:#86868B">{{ curCount }}, ready to quote.</span></h2>
+      </div>
+
+      <sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
+        <div data-pgrid="1" class="pp-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:20px">
+          <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
+            <article data-card="1" class="pp-card" style="display:flex;flex-direction:column;border-radius:24px;background:#fff;overflow:hidden;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .5s" style-hover="transform:translateY(-6px);box-shadow:0 24px 50px rgba(15,27,46,.12)">
+              <button onClick="{{ p.onOpen }}" aria-label="Quick look: {{ p.name }}" class="pp-media" style="position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;margin:10px 10px 0;border-radius:18px;background:#F5F5F7;overflow:hidden">
+                <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ false }}">
+                  <img data-img="1" src="{{ p.img }}" alt="{{ p.name }}" style="max-width:72%;max-height:80%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+                </sc-if>
+                <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}">
+                  <div data-img="1" style="display:flex;flex-direction:column;align-items:center;gap:12px;color:#C3C8D2;transition:transform .8s cubic-bezier(.16,1,.3,1)">
+                    {{ p.icon }}
+                    <span style="font-size:.7rem;font-weight:600;color:#A1A6B0">{{ p.ph }}</span>
+                  </div>
+                </sc-if>
+                <span style="position:absolute;left:12px;top:12px;background:rgba(255,255,255,.9);color:#6E6E73;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:999px">{{ p.code }}</span>
+                <span data-arrow="1" style="position:absolute;right:12px;bottom:12px;width:34px;height:34px;border-radius:50%;background:#1D1D1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;line-height:1;opacity:0;transform:scale(.55);transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .3s">+</span>
+              </button>
+              <div style="flex:1;display:flex;flex-direction:column;padding:18px 20px 20px">
+                <div style="font-size:.76rem;font-weight:700;color:var(--blue)">{{ p.subLabel }}</div>
+                <button onClick="{{ p.onOpen }}" class="pp-name" style="margin-top:6px;text-align:left;font-size:1.02rem;font-weight:700;letter-spacing:-.015em;line-height:1.35;color:#1D1D1F">{{ p.name }}</button>
+                <div style="margin-top:auto;padding-top:18px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+                  <button onClick="{{ p.onReq }}" style="background:#1D1D1F;color:#fff;font-size:.78rem;font-weight:700;padding:9px 16px;border-radius:999px;white-space:nowrap;transition:background .3s" style-hover="background:var(--blue)">Request sample</button>
+                  <button onClick="{{ p.onOpen }}" class="pp-link" style="font-size:.84rem;font-weight:600;color:var(--blue);white-space:nowrap">Quick look</button>
+                </div>
+              </div>
+            </article>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ noItems }}" hint-placeholder-val="{{ false }}">
+        <div style="border-radius:24px;background:#fff;padding:64px 30px;text-align:center">
+          <h3 style="font-size:1.4rem;font-weight:800;letter-spacing:-.025em">Made to order.</h3>
+          <p style="margin:10px auto 0;max-width:34rem;font-size:1rem;line-height:1.6;color:#6E6E73">Send us your specification and we'll come back with options, pricing and lead times.</p>
+          <button onClick="{{ goSamples }}" style="margin-top:22px;background:var(--blue);color:#fff;font-size:.9rem;font-weight:700;padding:13px 26px;border-radius:999px">Enquire about this range</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section class="pp-sec" style="padding:60px 26px 40px">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 data-reveal="up" style="font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;color:#1D1D1F">Why buy from the factory. <span style="color:#86868B">No agents in between.</span></h2>
+      <div class="pp-why" style="margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+        <sc-for list="{{ ppWhy }}" as="w" hint-placeholder-count="4">
+          <div data-reveal="up" style="border-radius:24px;background:#fff;padding:30px 26px 32px">
+            <span style="width:48px;height:48px;border-radius:14px;background:#EEF2FB;color:var(--blue);display:flex;align-items:center;justify-content:center">{{ w.icon }}</span>
+            <h3 style="margin-top:22px;font-size:1.18rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;color:#1D1D1F">{{ w.t }}</h3>
+            <p style="margin-top:10px;font-size:.93rem;line-height:1.6;color:#6E6E73">{{ w.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="pp-sec" style="padding:60px 26px 40px">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 data-reveal="up" style="font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;color:#1D1D1F">Order terms. <span style="color:#86868B">Clear from the first quote.</span></h2>
+      <div data-reveal="up" class="pp-terms" style="margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);border-radius:24px;background:#fff;overflow:hidden">
+        <sc-for list="{{ ppTerms }}" as="tm" hint-placeholder-count="8">
+          <div style="padding:28px 26px;border-right:1px solid #EDEDF0;border-bottom:1px solid #EDEDF0">
+            <div style="font-size:.78rem;font-weight:600;color:#86868B">{{ tm.k }}</div>
+            <div style="margin-top:8px;font-size:1rem;font-weight:600;line-height:1.45;color:#1D1D1F">{{ tm.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="pp-sec" style="padding:60px 26px 110px">
+    <div data-reveal="scale" class="pp-oem" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:30px;border-radius:32px;overflow:hidden;background:radial-gradient(90% 120% at 10% 0%,#1A4593 0%,#0D2650 55%,#081A38 100%);color:#fff;padding:64px 60px">
+      <div>
+        <div style="font-size:.9rem;font-weight:700;color:#8FB0FF">OEM &amp; private label</div>
+        <h2 style="margin-top:12px;font-size:clamp(2.1rem,4.4vw,3.6rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff">Your brand,<br/>our factory floor.</h2>
+        <p style="margin-top:18px;max-width:460px;font-size:1.06rem;line-height:1.6;color:rgba(255,255,255,.74)">Custom specifications, private labelling and bespoke packaging, built to your drawings. Handle a sample before you commit to bulk.</p>
+        <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px">
+          <button data-mag="1" onClick="{{ goSamples }}" style="background:#fff;color:var(--blue);font-size:.92rem;font-weight:700;padding:14px 26px;border-radius:999px;transition:box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="box-shadow:0 14px 36px rgba(0,0,0,.35)">Start a custom order</button>
+          <a href="https://wa.me/923232400137" target="_blank" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:.92rem;font-weight:700;padding:14px 26px;border-radius:999px;transition:background .3s" style-hover="background:rgba(255,255,255,.12);color:#fff">WhatsApp us</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div style="width:min(340px,70vw);aspect-ratio:1/1;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px rgba(0,0,0,.35)">
+          <img src="img/u1-010.jpg" alt="Industrial coverall" style="max-height:78%;max-width:70%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13)"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ qvOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-qv="1" role="dialog" aria-modal="true" aria-label="{{ qv.name }}" style="position:fixed;inset:0;z-index:400;display:flex;align-items:center;justify-content:center;padding:18px">
+      <div onClick="{{ closeQv }}" style="position:absolute;inset:0;background:rgba(10,16,28,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);animation:ppFade .35s ease both"></div>
+      <div class="pp-qv" style="position:relative;width:min(960px,100%);max-height:calc(100vh - 36px);overflow:auto;display:grid;grid-template-columns:1fr 1fr;border-radius:30px;background:#fff;color:#1D1D1F;box-shadow:0 40px 120px rgba(0,0,0,.35);animation:ppRise .55s cubic-bezier(.16,1,.3,1) both">
+        <button onClick="{{ closeQv }}" aria-label="Close" style="position:absolute;right:16px;top:16px;z-index:2;width:36px;height:36px;border-radius:50%;background:#EDEDF0;color:#1D1D1F;display:flex;align-items:center;justify-content:center;transition:background .3s" style-hover="background:#DCDCE0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+        </button>
+        <div class="pp-qv-vis" style="min-height:420px;display:flex;align-items:center;justify-content:center;background:#F5F5F7">
+          <sc-if value="{{ qv.hasImg }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ qv.img }}" alt="{{ qv.name }}" style="max-width:76%;max-height:380px;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13)"/>
+          </sc-if>
+          <sc-if value="{{ qv.noImg }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;color:#C3C8D2">{{ qv.icon }}<span style="font-size:.78rem;font-weight:600;color:#A1A6B0">{{ qv.ph }}</span></div>
+          </sc-if>
+        </div>
+        <div style="padding:46px 40px 40px;display:flex;flex-direction:column">
+          <div style="font-size:.82rem;font-weight:700;color:var(--blue)">{{ qv.group }} · {{ qv.subLabel }}</div>
+          <h3 style="margin-top:10px;font-size:1.7rem;font-weight:800;letter-spacing:-.03em;line-height:1.15">{{ qv.name }}</h3>
+          <div style="margin-top:10px;font-size:.85rem;color:#86868B">Article {{ qv.code }}</div>
+          <div style="margin-top:26px;border-top:1px solid #EDEDF0">
+            <sc-for list="{{ qvSpecs }}" as="q" hint-placeholder-count="5">
+              <div style="display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid #EDEDF0;font-size:.88rem">
+                <span style="color:#86868B;white-space:nowrap">{{ q.k }}</span>
+                <span style="font-weight:600;text-align:right">{{ q.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px">
+            <button onClick="{{ qv.onReq }}" style="flex:1 1 180px;background:var(--blue);color:#fff;font-size:.92rem;font-weight:700;padding:14px 22px;border-radius:999px;transition:background .3s" style-hover="background:var(--blue-dk)">Request this sample</button>
+            <a href="{{ qv.wa }}" target="_blank" style="flex:1 1 150px;display:inline-flex;align-items:center;justify-content:center;background:#F5F5F7;color:#1D1D1F;font-size:.92rem;font-weight:700;padding:14px 22px;border-radius:999px;transition:background .3s" style-hover="background:#EDEDF0;color:#1D1D1F">Ask on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
 </div>
 
 <div data-view="industries" data-screen-label="Industries page" style="display:none">
@@ -702,7 +870,7 @@ const CATALOG = {
         {code:'P1-010', name:"Cow grain driver gloves with cow split backing", imgno:'3', sel:'Driver Gloves'},
         {code:'P1-011', name:"Goat skin driver gloves with red border piping and open cuff", imgno:'9', sel:'Driver Gloves'},
         {code:'P1-012', name:"Goat skin driver gloves with split leather backing", imgno:'10', sel:'Driver Gloves'},
-        {code:'P1-015', name:"Cow grain driver gloves with a Velcro band cuff", imgno:'2', sel:'Driver Gloves'},
+        {code:'P1-015', img:'img/p2-015.jpg', name:"Cow grain driver gloves with a Velcro band cuff", imgno:'2', sel:'Driver Gloves'},
         {code:'P1-016', name:"Sheep skin driver gloves with a cow split back", imgno:'8', sel:'Driver Gloves'},
         {code:'P1-017', name:"Sheep skin driver gloves with a Velcro band cuff", imgno:'5', sel:'Driver Gloves'},
         {code:'P1-018', name:"Sheep skin driver gloves with blue border piping and open cuff", imgno:'1', sel:'Driver Gloves'},
@@ -711,12 +879,12 @@ const CATALOG = {
         {code:'P1-021', name:"Goat skin driver gloves with split leather backing", imgno:'6', sel:'Driver Gloves'}
       ]},
       {id:'mechanic', label:'Mechanic Gloves', items:[
-        {code:'P1-022', name:"Mechanic gloves made of goat skin leather with a red fabric back", imgno:'14', sel:'Mechanic / Anti-Vibration Gloves'},
+        {code:'P1-022', img:'img/p1-026.jpg', name:"Mechanic gloves made of goat skin leather with a red fabric back", imgno:'14', sel:'Mechanic / Anti-Vibration Gloves'},
         {code:'P1-023', name:"Mechanic gloves made of cow grain yellow leather with a black fabric back", imgno:'15', sel:'Mechanic / Anti-Vibration Gloves'},
         {code:'P1-024', name:"Goat skin gloves with a black waterproof cloth back", imgno:'16', sel:'Mechanic / Anti-Vibration Gloves'}
       ]},
       {id:'welding', label:'Welding Gloves', items:[
-        {code:'P1-025', name:"Cow split blue welding gloves with piping and fleece lining inside", imgno:'23', sel:'Welding Gloves (Cow Split Blue)'},
+        {code:'P1-025', img:'img/p1-025.jpg', name:"Cow split blue welding gloves with piping and fleece lining inside", imgno:'23', sel:'Welding Gloves (Cow Split Blue)'},
         {code:'P1-026', name:"Cow split red welding gloves with piping and fleece lining inside", imgno:'24', sel:'Welding Gloves (Cow Split Red)'},
         {code:'P1-027', name:"Cow split black welding gloves with piping and fleece lining inside", imgno:'17', sel:'Chrome Leather Welding Gloves'},
         {code:'P1-028', name:"White leather welding gloves with red cuff and soft inner lining", imgno:'18', sel:'Chrome Leather Welding Gloves'},
@@ -741,7 +909,7 @@ const CATALOG = {
     label:'INDUSTRIAL APRONS',
     subs: [
       {id:'leather-aprons', label:'Leather Aprons', items:[
-        {code:'P1-101', name:"Grey leather heavy-duty industrial apron", imgno:'39', sel:'Leather Aprons'}
+        {code:'P1-101', img:'img/a1-050.jpg', name:"Grey leather heavy-duty industrial apron", imgno:'39', sel:'Leather Aprons'}
       ]},
       {id:'cotton-aprons', label:'Cotton Aprons', items:[
         {code:'P1-102', name:"White cotton industrial apron with front pocket", imgno:'38', sel:'Leather Aprons'}
@@ -752,7 +920,7 @@ const CATALOG = {
     label:'PROTECTIVE SLEEVES',
     subs: [
       {id:'arm-sleeves', label:'Arm Sleeves', items:[
-        {code:'P1-103', name:"Leather sleeves", imgno:'40', sel:'Protective Arm Sleeves'}
+        {code:'P1-103', img:'img/s1-080.jpg', name:"Leather sleeves", imgno:'40', sel:'Protective Arm Sleeves'}
       ]}
     ]
   },
@@ -760,19 +928,38 @@ const CATALOG = {
     label:'INDUSTRIAL UNIFORM',
     subs: [
       {id:'coveralls', label:'Coveralls', items:[
-        {code:'P1-104', name:"Worker coverall", imgno:'', sel:'Industrial Coveralls / Uniforms'},
+        {code:'P1-104', img:'img/u1-010.jpg', name:"Worker coverall", imgno:'', sel:'Industrial Coveralls / Uniforms'},
         {code:'P1-105', name:"Worker jacket (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'},
         {code:'P1-106', name:"Worker trouser (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'}
       ]}
     ]
   }
 };
+const PI = (d, s) => React.createElement('svg', {width:s, height:s, viewBox:'0 0 24 24', fill:'none', stroke:'currentColor', strokeWidth:1.3, strokeLinecap:'round', strokeLinejoin:'round'}, d.split('|').map((p, i) => React.createElement('path', {key:i, d:p})));
+const GROUP_META = {
+  gloves:{name:'Safety Gloves', img:'img/p1-025.jpg', icon:'M7.5 21v-5.2L4.6 12a1.5 1.5 0 012.3-1.9L8.5 12V5a1.3 1.3 0 012.6 0v6|M11.1 10.5V3.8a1.3 1.3 0 012.6 0v6.7|M13.7 10.5V4.8a1.3 1.3 0 012.6 0v6|M16.3 11V7.2a1.3 1.3 0 012.6 0V15a6 6 0 01-6 6H7.5'},
+  aprons:{name:'Industrial Aprons', img:'img/a1-050.jpg', icon:'M9 3c0 2 1.3 3.2 3 3.2S15 5 15 3|M8.5 6.5h7L17 9v11.2a.8.8 0 01-.8.8H7.8a.8.8 0 01-.8-.8V9z|M4 11h3|M17 11h3|M9.5 14h5'},
+  sleeves:{name:'Protective Sleeves', img:'img/s1-080.jpg', icon:'M6.5 3h6.5l4.5 18h-6.8z|M6.5 3L5 7.5|M9.4 15.5h5.3|M8.7 12.5h4.8'},
+  uniform:{name:'Industrial Uniform', img:'img/u1-010.jpg', icon:'M8.5 3L4.5 6l1.8 3.6 1.9-1V21h3.3v-7h1v7h3.3V8.6l1.9 1L19.5 6l-4-3|M8.5 3c.6 1.4 1.9 2.2 3.5 2.2S14.9 4.4 15.5 3|M8.2 17h2.8|M13 17h2.8'}
+};
+const SUB_COPY = {
+  'rigger':{head:'Grip that goes the distance.', desc:'Cow split palms, cloth backs and rubberized safety cuffs. The workhorse glove for rigging, construction and general handling.', specs:[{v:'Cow split', k:'Palm leather'},{v:'Rubberized', k:'Safety cuff'}]},
+  'driver':{head:'Soft hands. Serious protection.', desc:'Supple sheep, goat and cow grain leathers for dexterity-first work: driving, assembly, warehousing and fine handling.', specs:[{v:'Sheep, goat, cow', k:'Grain leathers'},{v:'Velcro, knit, open', k:'Cuff options'}]},
+  'mechanic':{head:'Built for the torque.', desc:'Leather palms with fabric backs for mechanics and maintenance crews who need grip, flex and abrasion resistance in one glove.', specs:[{v:'Goat & cow grain', k:'Palm leather'},{v:'Fabric back', k:'For flex'}]},
+  'welding':{head:'Made for the heat.', desc:'Fleece-lined cow split gauntlets and precision TIG gloves, stitched to stand up to spatter and radiant heat.', specs:[{v:'Fleece', k:'Inner lining'},{v:'Gauntlet & TIG', k:'Styles'}]},
+  'knit':{head:'Light. Coated. Ready.', desc:'Knit shells with nitrile, polyurethane and crinkle coatings for assembly, packing and light handling.', specs:[{v:'Nitrile & PU', k:'Coatings'},{v:'Knit shell', k:'Breathable'}]},
+  'dotted':{head:'Grip, dot by dot.', desc:'Canvas and knit gloves with PVC dotted and fully coated palms, for sure handling of smooth and oily loads.', specs:[{v:'PVC dots', k:'Palm grip'},{v:'Canvas & knit', k:'Shells'}]},
+  'leather-aprons':{head:'Heavy duty, chest to knee.', desc:'Split leather aprons for welding, fabrication and foundry work, where sparks and heat come with the job.', specs:[{v:'Split leather', k:'Material'},{v:'Adjustable', k:'Straps'}]},
+  'cotton-aprons':{head:'Clean-line cotton.', desc:'Durable white cotton aprons with a front pocket, suited to food processing and light industry.', specs:[{v:'Cotton', k:'Material'},{v:'Front pocket', k:'Detail'}]},
+  'arm-sleeves':{head:'Cover every inch.', desc:'Full-length leather arm sleeves for heat, spark and abrasion protection during welding work.', specs:[{v:'Leather', k:'Material'},{v:'Full length', k:'Coverage'}]},
+  'coveralls':{head:'Workwear that works.', desc:'Coveralls, jackets and trousers with reflective strips, made in your colours and carrying your logo.', specs:[{v:'Reflective', k:'Hi-vis strips'},{v:'Your logo', k:'Private label'}]}
+};
 const GROUP_KEYS = ['gloves','aprons','sleeves','uniform'];
 const ic = (d, s) => React.createElement('svg', {width:s||13, height:s||13, viewBox:'0 0 24 24', fill:'none', stroke:'currentColor', strokeWidth:1.8, strokeLinecap:'round', strokeLinejoin:'round'}, React.createElement('path', {d}));
 
 class Component extends DCLogic {
   root = React.createRef();
-  state = {sent:false, sentName:'', sentProduct:'', view:'home', openGroup:'gloves', sub:'rigger'};
+  state = {sent:false, sentName:'', sentProduct:'', view:'home', openGroup:'gloves', sub:'rigger', qv:''};
   menuOpen = false;
 
   findSub(id) {
@@ -783,34 +970,60 @@ class Component extends DCLogic {
     return {group:'gloves', sub:CATALOG.gloves.subs[0]};
   }
 
-  buildTree() {
-    const rows = [];
-    GROUP_KEYS.forEach(k => {
-      const g = CATALOG[k];
-      const open = this.state.openGroup === k;
-      rows.push({
-        label:g.label, pad:'13px 14px', bg:open ? 'var(--blue)' : 'var(--tint)',
-        fg:open ? '#fff' : 'var(--ink)', size:'.74rem', weight:'800', ls:'.1em', chev:'.75', rot:open ? '0deg' : '-90deg',
-        onClick: () => this.setState(s => ({openGroup: s.openGroup === k ? '' : k}))
-      });
-      if (!open) return;
-      g.subs.forEach(sb => {
-        const active = this.state.sub === sb.id;
-        rows.push({
-          label:sb.label, pad:'11px 14px 11px 22px',
-          bg:active ? 'rgba(18,62,171,.08)' : 'transparent',
-          fg:active ? 'var(--blue)' : 'var(--body)',
-          size:'.83rem', weight:active ? '700' : '500', ls:'0', chev:'0', rot:'0deg',
-          onClick: () => this.setState({sub: sb.id})
-        });
-      });
+  pickSub(id) {
+    if (id === this.state.sub) return;
+    this.setState({sub:id, openGroup:this.findSub(id).group});
+  }
+
+  buildShelf() {
+    return GROUP_KEYS.map(k => {
+      const m = GROUP_META[k], on = this.state.openGroup === k;
+      const n = CATALOG[k].subs.reduce((t, sb) => t + sb.items.length, 0);
+      return {
+        name:m.name, img:m.img, count:n === 1 ? '1 product' : n + ' products', pressed:on ? 'true' : 'false',
+        ring:on ? '0 0 0 2px var(--blue),0 14px 34px rgba(18,62,171,.18)' : '0 1px 2px rgba(0,0,0,.05)',
+        lift:on ? 'translateY(-3px)' : 'none',
+        weight:on ? '700' : '500', color:on ? 'var(--blue)' : '#1D1D1F',
+        onClick: () => this.pickSub(CATALOG[k].subs[0].id)
+      };
     });
-    return rows;
+  }
+
+  buildChips() {
+    const g = CATALOG[this.state.openGroup] || CATALOG.gloves;
+    return g.subs.map(sb => {
+      const on = this.state.sub === sb.id;
+      return {
+        label:sb.label, n:sb.items.length, pressed:on ? 'true' : 'false',
+        bg:on ? '#1D1D1F' : 'transparent', fg:on ? '#fff' : '#424245', weight:on ? '700' : '500',
+        onClick: () => this.pickSub(sb.id)
+      };
+    });
+  }
+
+  findItem(code) {
+    for (const k of GROUP_KEYS) for (const sb of CATALOG[k].subs) {
+      const p = sb.items.find(x => x.code === code);
+      if (p) return {p, sb, k};
+    }
+    return null;
+  }
+
+  decorate(p, sb, k) {
+    return Object.assign({}, p, {
+      hasImg:!!p.img, noImg:!p.img, subLabel:sb.label, group:GROUP_META[k].name,
+      icon:PI(GROUP_META[k].icon, 64),
+      ph:p.imgno ? 'Photo ref. ' + p.imgno : 'Photo coming soon',
+      onOpen:() => this.setState({qv:p.code}),
+      onReq:() => { if (this.state.qv) this.setState({qv:''}); this.requestProduct(p); },
+      wa:'https://wa.me/923232400137?text=' + encodeURIComponent('Hello Pearl International, I would like a quote and a sample for article ' + p.code + ': ' + p.name + '.')
+    });
   }
 
   renderVals() {
     const cur = this.findSub(this.state.sub);
     const items = cur.sub.items || [];
+    const qvHit = this.state.qv ? this.findItem(this.state.qv) : null;
     return {
       root: this.root,
       year: new Date().getFullYear(),
@@ -828,15 +1041,39 @@ class Component extends DCLogic {
         {t:'100,000+ PAIRS MONTHLY', d:'Real capacity, with flexible MOQs per article.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 17)},
         {t:'SAMPLES FIRST', d:'Free sample on bulk order, before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 17)}
       ],
-      tree: this.buildTree(),
+      shelf: this.buildShelf(),
+      chips: this.buildChips(),
+      spot: (() => {
+        const c = SUB_COPY[cur.sub.id] || {head:cur.sub.label, desc:'', specs:[]};
+        const hero = items.find(p => p.img);
+        const n = items.length;
+        return {
+          group:GROUP_META[cur.group].name, label:cur.sub.label, head:c.head, desc:c.desc,
+          specs:c.specs.concat([{v:n + (n === 1 ? ' style' : ' styles'), k:'In this range'}]),
+          n, nWord:n === 1 ? 'style' : 'styles',
+          hasImg:!!hero, noImg:!hero, img:hero ? hero.img : '', icon:PI(GROUP_META[cur.group].icon, 220),
+          caption:hero ? 'Shown: ' + hero.code : 'Bulk & private label',
+          onReq:() => this.requestProduct(items[0] || {sel:''})
+        };
+      })(),
+      jumpGrid: () => this.jump('pgrid'),
       curTitle: cur.sub.label,
-      curCount: items.length === 1 ? '1 product' : items.length + ' products',
+      curTitleLc: cur.sub.label.toLowerCase(),
+      curCount: items.length === 1 ? '1 style' : items.length + ' styles',
       hasItems: items.length > 0,
       noItems: items.length === 0,
-      items: items.map(p => Object.assign({}, p, {
-        hasImg: !!p.imgno, noImg: !p.imgno,
-        onReq: () => this.requestProduct(p)
-      })),
+      items: items.map(p => this.decorate(p, cur.sub, cur.group)),
+      qvOpen: !!qvHit,
+      qv: qvHit ? this.decorate(qvHit.p, qvHit.sb, qvHit.k) : {},
+      qvSpecs: TERMS.filter(t => ['MOQ','LEAD TIME','SHIPMENT','SAMPLES','SIZES'].includes(t.k)).map(t => ({k:t.k === 'MOQ' ? 'MOQ' : t.k.charAt(0) + t.k.slice(1).toLowerCase(), v:t.v})),
+      ppTerms: TERMS.map(t => ({k:t.k === 'MOQ' ? 'MOQ' : t.k.charAt(0) + t.k.slice(1).toLowerCase(), v:t.v})),
+      closeQv: () => this.setState({qv:''}),
+      ppWhy: [
+        {t:'Samples first', d:'Free sample on bulk order. Check materials, stitching and finish before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 22)},
+        {t:'Inspected in-house', d:'A 12-point inspection on every article, carried out by our own QC team on the floor.', icon:ic('M12 3l7 3v5c0 4.4-2.9 8.3-7 9.5C7.9 19.3 5 15.4 5 11V6l7-3zM9 12l2 2 4-4', 22)},
+        {t:'Your label, your spec', d:'Complete private labelling and custom packaging, made to your drawings and tolerances.', icon:ic('M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V3h10l7.6 7.6a2 2 0 010 2.8zM7.5 7.5h.01', 22)},
+        {t:'Real capacity', d:'100,000+ pairs monthly with flexible MOQs, from trial orders to full container loads.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 22)}
+      ],
       industries: INDUSTRIES,
       nav: NAV.map(n => ({
         t:n.t, go:() => this.goView(n.v),
@@ -882,7 +1119,7 @@ class Component extends DCLogic {
   goView(view, anchor) {
     if (this.menuOpen) this.toggleMenu();
     if (this.state.view !== view) {
-      this.setState({view});
+      this.setState({view, qv:''});
       window.scrollTo(0, 0);
       if (anchor && anchor !== 'top') setTimeout(() => this.jump(anchor), 90);
       return;
@@ -1078,33 +1315,6 @@ class Component extends DCLogic {
       if (links) links.style.display = narrow ? 'none' : 'flex';
       if (burger) burger.style.display = narrow ? 'flex' : 'none';
       if (!narrow && menu) { menu.style.display = 'none'; this.menuOpen = false; }
-
-      const mob = window.innerWidth < 760;
-      const side = r.querySelector('[data-side]');
-      const promo = r.querySelector('[data-promo]');
-      const main = r.querySelector('[data-main]');
-      const chead = r.querySelector('[data-chead]');
-      const ppage = r.querySelector('[data-ppage]');
-      const grid = r.querySelector('[data-pgrid]');
-      const wrapEl = side ? side.parentElement : null;
-      const wrapped = !wrapEl || wrapEl.clientWidth < 268 + 36 + 620;
-      if (side) {
-        side.style.position = wrapped ? 'static' : 'sticky';
-        side.style.flex = wrapped ? '1 1 100%' : '0 1 268px';
-        side.style.width = wrapped ? '100%' : '';
-      }
-      if (promo) promo.style.display = mob ? 'none' : 'block';
-      if (main) main.style.flex = mob ? '1 1 100%' : '1 1 620px';
-      if (chead) {
-        chead.style.alignItems = mob ? 'flex-start' : 'flex-end';
-        chead.style.flexDirection = mob ? 'column' : 'row';
-      }
-      if (ppage) ppage.style.paddingTop = mob ? '92px' : '110px';
-      if (grid) grid.style.gridTemplateColumns = mob ? '1fr' : 'repeat(auto-fit,minmax(min(100%,230px),1fr))';
-      r.querySelectorAll('[data-ppage] section').forEach(s => {
-        s.style.paddingLeft = mob ? '16px' : '26px';
-        s.style.paddingRight = mob ? '16px' : '26px';
-      });
     };
     apply();
     this._onResize = apply;
@@ -1123,6 +1333,8 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    this._onKey = e => { if (e.key === 'Escape' && this.state.qv) this.setState({qv:''}); };
+    window.addEventListener('keydown', this._onKey);
     this.applyProps();
     this.syncView();
     this.wireResponsive();
@@ -1133,11 +1345,24 @@ class Component extends DCLogic {
     this.wireCounters();
   }
 
-  componentDidUpdate() { this.applyProps(); this.syncView(); this.wireReveals(); this.wireCards(); this.wireMagnets(); }
+  componentDidUpdate(pp, ps) {
+    const r = this.root.current;
+    document.documentElement.style.overflow = this.state.qv ? 'hidden' : '';
+    if (r && ps && ps.sub !== this.state.sub && this.state.view === 'products') {
+      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ease = 'cubic-bezier(.16,1,.3,1)';
+      if (!still) {
+        const spot = r.querySelector('[data-spot]');
+        if (spot) spot.animate([{opacity:0, transform:'translateY(18px) scale(.985)'}, {opacity:1, transform:'none'}], {duration:650, easing:ease});
+        r.querySelectorAll('[data-pgrid] > *').forEach((el, i) => el.animate([{opacity:0, transform:'translateY(22px)'}, {opacity:1, transform:'none'}], {duration:600, delay:Math.min(i, 8) * 45, easing:ease, fill:'backwards'}));
+      }
+    }
+    this.applyProps(); this.syncView(); this.wireReveals(); this.wireCards(); this.wireMagnets(); }
 
   componentWillUnmount() {
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
     if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._onKey) window.removeEventListener('keydown', this._onKey);
     if (this.obs) this.obs.disconnect();
     if (this.cObs) this.cObs.disconnect();
     if (this.sweep) clearInterval(this.sweep);

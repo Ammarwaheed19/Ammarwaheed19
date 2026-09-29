@@ -37,6 +37,8 @@ img{display:block;max-width:100%}
 @keyframes ppRise{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
 .pi-faq summary::-webkit-details-marker{display:none}
 .pi-faq[open] .pi-faq-ic{transform:rotate(45deg)}
+@media (max-width:860px){.tw-grid{grid-template-columns:1fr!important}.tw-tile{min-height:0!important}}
+@media (max-width:560px){.tw-copy{padding:34px 24px 0!important}.tw-facts>div{padding:16px 14px 18px!important}.tw-facts>div>div:first-child{font-size:.98rem!important}}
 .pp-chips::-webkit-scrollbar,.pp-shelf::-webkit-scrollbar{display:none}
 .pp-link,.pp-name{padding:0}
 .pp-link .pp-chev{display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1)}
@@ -188,51 +190,57 @@ img{display:block;max-width:100%}
   </div>
 </div>
 
-<section data-screen-label="Sample & OEM" style="padding:clamp(84px,9vw,124px) 26px;background:#ffffff;color:var(--ink)">
+<section data-screen-label="Sample & OEM" class="tw-sec" style="padding:clamp(84px,9vw,124px) 26px;background:#ffffff;color:var(--ink)">
   <div style="max-width:1320px;margin:0 auto">
-    <div data-reveal="up" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:40px">
-      <h2 style="font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-.035em;line-height:1.02;color:var(--ink)">Two ways to start<br/><span style="color:var(--blue)">working with us.</span></h2>
-      <p style="max-width:400px;font-size:.98rem;line-height:1.7;color:var(--body)">Evaluate our standard range, or bring us your own specification and we will build to it.</p>
+    <div data-reveal="up" style="text-align:center;max-width:760px;margin:0 auto 48px">
+      <h2 style="font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;letter-spacing:-.045em;line-height:1;color:var(--ink)">Two ways to start.</h2>
+      <p style="margin-top:14px;font-size:clamp(1.05rem,1.8vw,1.4rem);font-weight:600;letter-spacing:-.015em;line-height:1.4;color:#86868B">Test our standard range, or have us build to your specification.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:22px">
-      <div data-card="1" onClick="{{ goSamples }}" style="position:relative;display:flex;flex-direction:column;cursor:pointer;border-radius:14px;overflow:hidden;background:#ffffff;border:1px solid var(--hair);box-shadow:0 1px 2px rgba(15,27,46,.04);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s" style-hover="transform:translateY(-5px);box-shadow:0 18px 44px rgba(15,27,46,.1);border-color:#cfd8e6">
-        <div style="height:238px;display:flex;align-items:center;justify-content:center;background:var(--tint);overflow:hidden">
-          <img data-img="1" src="img/p1-026.jpg" alt="Welding gloves" style="max-height:80%;max-width:78%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.06) saturate(1.04);transition:transform .95s cubic-bezier(.16,1,.3,1)"/>
-        </div>
-        <div style="display:flex;flex-direction:column;flex:1;padding:34px 34px 32px">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-            <span style="width:22px;height:1.5px;background:#ffffff;flex:0 0 auto"></span>
-            <span style="font-size:.64rem;font-weight:800;letter-spacing:.2em;color:var(--blue)">SAMPLE PROGRAMME</span>
-          </div>
-          <h3 style="font-size:clamp(1.6rem,2.7vw,2.15rem);font-weight:900;letter-spacing:-.03em;line-height:1.04;margin-bottom:14px">See the quality<br/>before you buy.</h3>
-          <p style="font-size:.95rem;line-height:1.68;color:var(--body);margin-bottom:24px">Verify materials, stitching and finish first. A free sample is provided on bulk order.</p>
-          <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;border-top:1px solid var(--hair)">
-            <span style="display:inline-flex;align-items:center;gap:9px;font-size:.74rem;font-weight:800;letter-spacing:.14em;color:var(--ink);white-space:nowrap">REQUEST SAMPLES
-              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .45s cubic-bezier(.16,1,.3,1)"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
-            </span>
-            <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;color:#7C8698;white-space:nowrap">FREE ON BULK ORDER</span>
+
+    <div class="tw-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+
+      <div data-card="1" data-reveal="up" class="tw-tile" style="position:relative;display:flex;flex-direction:column;min-height:640px;border-radius:30px;overflow:hidden;background:#F5F5F7;color:#1D1D1F;transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s" style-hover="transform:translateY(-6px);box-shadow:0 30px 60px rgba(15,27,46,.12)">
+        <div class="tw-copy" style="position:relative;z-index:2;padding:48px 48px 0">
+          <div style="font-size:.95rem;font-weight:700;color:var(--blue)">Sample programme</div>
+          <h3 style="margin-top:10px;font-size:clamp(2rem,3.4vw,2.9rem);font-weight:900;letter-spacing:-.04em;line-height:1.02">See the quality<br/>before you buy.</h3>
+          <p style="margin-top:14px;max-width:400px;font-size:1.02rem;line-height:1.6;color:#6E6E73">Check materials, stitching and finish on any article in the range before you place a bulk order.</p>
+          <div style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px">
+            <button data-mag="1" onClick="{{ goSamples }}" style="background:var(--blue);color:#fff;font-size:.92rem;font-weight:700;padding:13px 24px;border-radius:999px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--blue-dk);box-shadow:0 14px 34px rgba(18,62,171,.3)">Request samples</button>
+            <button onClick="{{ goProducts }}" class="pp-link" style="font-size:.95rem;font-weight:600;color:var(--blue)">Browse the range <span class="pp-chev">›</span></button>
           </div>
         </div>
-      </div>
-      <div data-card="1" onClick="{{ goOem }}" style="position:relative;display:flex;flex-direction:column;cursor:pointer;border-radius:14px;overflow:hidden;background:#ffffff;border:1px solid var(--hair);box-shadow:0 1px 2px rgba(15,27,46,.04);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s" style-hover="transform:translateY(-5px);box-shadow:0 18px 44px rgba(15,27,46,.1);border-color:#cfd8e6">
-        <div style="height:238px;display:flex;align-items:center;justify-content:center;background:var(--tint);overflow:hidden">
-          <img data-img="1" src="img/u1-010.jpg" alt="Industrial coverall" style="max-height:80%;max-width:62%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.06) saturate(1.04);transition:transform .95s cubic-bezier(.16,1,.3,1)"/>
+        <div style="flex:1;position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:250px">
+          <img data-img="1" src="img/p1-026.jpg" alt="Mechanic gloves, red and white" style="position:absolute;right:4%;bottom:-8%;height:430px;max-height:130%;max-width:70%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13) saturate(1.05);transition:transform .9s cubic-bezier(.16,1,.3,1)"/>
         </div>
-        <div style="display:flex;flex-direction:column;flex:1;padding:34px 34px 32px">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-            <span style="width:22px;height:1.5px;background:#ffffff;flex:0 0 auto"></span>
-            <span style="font-size:.64rem;font-weight:800;letter-spacing:.2em;color:var(--blue)">OEM &amp; PRIVATE LABEL</span>
-          </div>
-          <h3 style="font-size:clamp(1.6rem,2.7vw,2.15rem);font-weight:900;letter-spacing:-.03em;line-height:1.04;margin-bottom:14px">Your brand,<br/>our factory floor.</h3>
-          <p style="font-size:.95rem;line-height:1.68;color:var(--body);margin-bottom:24px">Custom specifications, private labelling and bespoke packaging, built to your drawings and tolerances.</p>
-          <div style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;border-top:1px solid var(--hair)">
-            <span style="display:inline-flex;align-items:center;gap:9px;font-size:.74rem;font-weight:800;letter-spacing:.14em;color:var(--ink);white-space:nowrap">SEE CAPABILITIES
-              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .45s cubic-bezier(.16,1,.3,1)"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
-            </span>
-            <span style="font-size:.68rem;font-weight:700;letter-spacing:.1em;color:#7C8698;white-space:nowrap">8 WEEK LEAD TIME</span>
-          </div>
+        <div class="tw-facts" style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(0,0,0,.08);background:rgba(245,245,247,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">
+          <div style="padding:20px 24px 22px"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">2 days</div><div style="margin-top:4px;font-size:.78rem;color:#86868B">To review and pack</div></div>
+          <div style="padding:20px 24px 22px;border-left:1px solid rgba(0,0,0,.08)"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">DHL · FedEx</div><div style="margin-top:4px;font-size:.78rem;color:#86868B">Tracked courier</div></div>
+          <div style="padding:20px 24px 22px;border-left:1px solid rgba(0,0,0,.08)"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">Any article</div><div style="margin-top:4px;font-size:.78rem;color:#86868B">Across the catalogue</div></div>
         </div>
       </div>
+
+      <div data-card="1" data-reveal="up" class="tw-tile" style="position:relative;display:flex;flex-direction:column;min-height:640px;border-radius:30px;overflow:hidden;background:radial-gradient(90% 80% at 80% 100%,#1D4FB8 0%,#0D2650 55%,#081A38 100%);color:#fff;transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s" style-hover="transform:translateY(-6px);box-shadow:0 30px 60px rgba(8,26,56,.35)">
+        <div class="tw-copy" style="position:relative;z-index:2;padding:48px 48px 0">
+          <div style="font-size:.95rem;font-weight:700;color:#8FB0FF">OEM &amp; private label</div>
+          <h3 style="margin-top:10px;font-size:clamp(2rem,3.4vw,2.9rem);font-weight:900;letter-spacing:-.04em;line-height:1.02">Your brand,<br/>our factory floor.</h3>
+          <p style="margin-top:14px;max-width:400px;font-size:1.02rem;line-height:1.6;color:rgba(255,255,255,.72)">Custom specifications, private labelling and bespoke packaging, built to your drawings and tolerances.</p>
+          <div style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px">
+            <button data-mag="1" onClick="{{ goContact }}" style="background:#fff;color:var(--blue);font-size:.92rem;font-weight:700;padding:13px 24px;border-radius:999px;transition:box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="box-shadow:0 14px 34px rgba(0,0,0,.35)">Discuss your spec</button>
+            <a href="https://wa.me/923232400137" target="_blank" class="pp-link" style="font-size:.95rem;font-weight:600;color:#fff">WhatsApp us <span class="pp-chev">›</span></a>
+          </div>
+        </div>
+        <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:250px">
+          <div style="position:absolute;right:8%;bottom:10%;width:min(250px,48%);aspect-ratio:1/1;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 30px 70px rgba(0,0,0,.4)">
+            <img data-img="1" src="img/u1-010.jpg" alt="Navy reflective coverall" style="max-height:80%;max-width:70%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.13);transition:transform .9s cubic-bezier(.16,1,.3,1)"/>
+          </div>
+        </div>
+        <div class="tw-facts" style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14);background:rgba(8,26,56,.4);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">
+          <div style="padding:20px 24px 22px"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">Your logo</div><div style="margin-top:4px;font-size:.78rem;color:rgba(255,255,255,.6)">Labels &amp; hang tags</div></div>
+          <div style="padding:20px 24px 22px;border-left:1px solid rgba(255,255,255,.14)"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">Custom</div><div style="margin-top:4px;font-size:.78rem;color:rgba(255,255,255,.6)">Packaging</div></div>
+          <div style="padding:20px 24px 22px;border-left:1px solid rgba(255,255,255,.14)"><div style="font-size:1.15rem;font-weight:800;letter-spacing:-.02em">8 weeks</div><div style="margin-top:4px;font-size:.78rem;color:rgba(255,255,255,.6)">From confirmation</div></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -355,7 +363,7 @@ img{display:block;max-width:100%}
   <div style="max-width:1320px;margin:0 auto">
     <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#ffffff;margin-bottom:18px">SAMPLES &amp; TRADE TERMS</div>
     <h1 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:1;color:#fff">Handle the goods<br/>before you order.</h1>
-    <p style="margin-top:22px;max-width:640px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">A free sample is provided on bulk order. Terms below are the ones every serious buyer asks for, answered up front.</p>
+    <p style="margin-top:22px;max-width:640px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">Order a sample of any article before you commit to bulk. Terms below are the ones every serious buyer asks for, answered up front.</p>
   </div>
 </section>
 <section data-anchor="terms" data-screen-label="Trade terms" style="padding:clamp(80px,9vw,112px) 26px;background:#ffffff;color:var(--ink)">
@@ -885,7 +893,7 @@ const WHYS = [
   {n:'03', t:'Real, scalable capacity', d:'100,000+ pairs monthly with flexible MOQs, from trial orders to full container loads.'},
   {n:'04', t:'Direct from the people who make it', d:'You deal with the factory, not an agent, which is why our pricing holds up against any quote you are comparing.'},
   {n:'05', t:'Custom OEM & private label', d:'Your brand, your specifications, with complete private labelling and custom packaging.'},
-  {n:'06', t:'Samples before any order', d:'A free sample on bulk order. Handle the goods before you commit a rupee.'}
+  {n:'06', t:'Samples before any order', d:'Order a sample of any article and handle the goods before you commit to a bulk order.'}
 ];
 const MARKETS = [
   {code:'UK', name:'United Kingdom'},{code:'AU', name:'Australia'},{code:'DE', name:'Germany'},{code:'FR', name:'France'},
@@ -897,7 +905,7 @@ const TERMS = [
   {k:'PAYMENT', v:'25% advance, balance at sight of B/L, or L/C at sight'},
   {k:'SHIPMENT', v:'FOB Karachi'},
   {k:'MOQ', v:'Set per article. Tell us your range and we confirm'},
-  {k:'SAMPLES', v:'Free sample on bulk order'},
+  {k:'SAMPLES', v:'Available on every article before bulk order'},
   {k:'LEATHERS', v:'Goatskin, cow split and pigskin'},
   {k:'SIZES', v:'Full size range available on every article'},
   {k:'CARTONS', v:'Dimensions and CBM quoted with every offer'}
@@ -923,7 +931,7 @@ const FAQS = [
   {q:'Do you make custom branded gloves and workwear?', a:'Yes. We offer complete OEM and private label manufacturing: your logo, custom packaging, hang tags and labels, built to your specification.'},
   {q:'Which countries do you export to?', a:'15+ countries, including the United Kingdom, Australia, Germany, France, UAE, Saudi Arabia, the United States, Canada, the Netherlands and Belgium. We handle export documentation including commercial invoice, packing list, certificate of origin and EUR1 form.'},
   {q:'How long does bulk production take?', a:'Lead time is 8 weeks from order confirmation. Shipment is FOB Karachi, and carton dimensions and CBM are quoted with every offer.'},
-  {q:'Can I get samples before placing a bulk order?', a:'Yes. Samples ship worldwide by DHL or FedEx with tracking, and a free sample is provided on bulk order. Use the sample request form to send your shipping details and product requirements.'},
+  {q:'Can I get samples before placing a bulk order?', a:'Yes. Samples ship worldwide by DHL or FedEx with tracking. Use the sample request form to send your shipping details and product requirements.'},
   {q:'What payment terms do you offer?', a:'25% advance with the balance at sight of B/L, or L/C at sight.'}
 ];
 const EXPORT = [
@@ -1135,7 +1143,7 @@ class Component extends DCLogic {
         {t:'RIGOROUS QUALITY', d:'A 12-point inspection on every article, by our own QC team.', icon:ic('M12 3l7 3v5c0 4.4-2.9 8.3-7 9.5C7.9 19.3 5 15.4 5 11V6l7-3z', 17)},
         {t:'15+ EXPORT MARKETS', d:'UK, Australia, Germany, Canada, Thailand & more.', icon:ic('M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.4 2.5 15.6 0 18M12 3c-2.5 2.4-2.5 15.6 0 18', 17)},
         {t:'100,000+ PAIRS MONTHLY', d:'Real capacity, with flexible MOQs per article.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 17)},
-        {t:'SAMPLES FIRST', d:'Free sample on bulk order, before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 17)}
+        {t:'SAMPLES FIRST', d:'Sample any article before you commit to bulk.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 17)}
       ],
       shelf: this.buildShelf(),
       chips: this.buildChips(),
@@ -1165,7 +1173,7 @@ class Component extends DCLogic {
       ppTerms: TERMS.map(t => ({k:t.k === 'MOQ' ? 'MOQ' : t.k.charAt(0) + t.k.slice(1).toLowerCase(), v:t.v})),
       closeQv: () => this.setState({qv:''}),
       ppWhy: [
-        {t:'Samples first', d:'Free sample on bulk order. Check materials, stitching and finish before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 22)},
+        {t:'Samples first', d:'Sample any article first. Check materials, stitching and finish before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 22)},
         {t:'Inspected in-house', d:'A 12-point inspection on every article, carried out by our own QC team on the floor.', icon:ic('M12 3l7 3v5c0 4.4-2.9 8.3-7 9.5C7.9 19.3 5 15.4 5 11V6l7-3zM9 12l2 2 4-4', 22)},
         {t:'Your label, your spec', d:'Complete private labelling and custom packaging, made to your drawings and tolerances.', icon:ic('M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V3h10l7.6 7.6a2 2 0 010 2.8zM7.5 7.5h.01', 22)},
         {t:'Real capacity', d:'100,000+ pairs monthly with flexible MOQs, from trial orders to full container loads.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 22)}

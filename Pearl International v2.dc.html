@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pearl International — Industrial PPE, factory-direct since 1992</title>
+<style>
+:root{--accent:#00318f;--accent2:#2a6dd9;--deep:#001233;--light:#f5f5f7;--text:#1d1d1f;--text-soft:#6e6e73}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-x:hidden}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent2)}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit}
+img{display:block;max-width:100%}
+@keyframes lineSlideIn{from{opacity:0;transform:translateY(40px) scaleX(.85)}to{opacity:1;transform:translateY(0) scaleX(1)}}
+@keyframes wordFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes shimmer{from{background-position:-1000px 0}to{background-position:1000px 0}}
+@keyframes slideUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInScale{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+@keyframes drift{0%,100%{transform:translate(0,0)}33%{transform:translate(12px,-8px)}66%{transform:translate(-10px,6px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</helmet>
+
+<div ref="{{ root }}" style="position:relative;overflow:hidden">
+
+<nav style="position:sticky;top:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06);padding:16px 24px;transition:padding .3s,box-shadow .3s" data-nav="1">
+  <div style="max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:30px">
+    <button onClick="{{ logo }}" style="display:flex;align-items:baseline;gap:6px;padding:0">
+      <span style="font-size:1.1rem;font-weight:700;letter-spacing:-.015em">Pearl</span>
+      <span style="font-size:.55rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">International</span>
+    </button>
+    <div style="display:flex;gap:32px;flex:1">
+      <button onClick="{{ goHome }}" style="font-size:.9rem;font-weight:500;color:var(--text);opacity:.7;transition:opacity .3s,color .3s" style-hover="opacity:1;color:var(--accent)">Home</button>
+      <button onClick="{{ goAbout }}" style="font-size:.9rem;font-weight:500;color:var(--text);opacity:.7;transition:opacity .3s,color .3s" style-hover="opacity:1;color:var(--accent)">About</button>
+      <button onClick="{{ goProducts }}" style="font-size:.9rem;font-weight:500;color:var(--text);opacity:.7;transition:opacity .3s,color .3s" style-hover="opacity:1;color:var(--accent)">Products</button>
+      <button onClick="{{ goContact }}" style="font-size:.9rem;font-weight:500;color:var(--text);opacity:.7;transition:opacity .3s,color .3s" style-hover="opacity:1;color:var(--accent)">Contact</button>
+    </div>
+    <button onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.85rem;font-weight:600;padding:11px 22px;border-radius:8px;transition:background .3s,box-shadow .3s" style-hover="background:var(--accent2);box-shadow:0 8px 24px rgba(0,49,143,.25)">Samples</button>
+  </div>
+</nav>
+
+<section data-page="home" style="position:relative;overflow:hidden;background:#fff;padding:120px 24px 80px">
+  <div style="position:absolute;top:-30%;left:-10%;width:900px;height:900px;background:radial-gradient(circle,rgba(0,49,143,.08),rgba(0,49,143,0) 70%);border-radius:50%;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-20%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(42,109,217,.06),rgba(42,109,217,0) 70%);border-radius:50%;pointer-events:none;animation:drift 18s ease-in-out infinite"></div>
+  
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:52px">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px">
+        <span style="width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px rgba(0,49,143,.12);animation:pulse 2s ease-in-out infinite"></span>
+        <span style="font-size:.8rem;font-weight:600;letter-spacing:.05em;color:var(--accent)">Since 1992</span>
+      </div>
+      <h1 style="font-size:clamp(3rem,8vw,5.5rem);font-weight:700;letter-spacing:-.035em;line-height:1.05;margin:0;display:grid;gap:8px;color:var(--text)">
+        <span style="animation:lineSlideIn .8s cubic-bezier(.16,1,.3,1) both;animation-delay:0ms">Your Reliable</span>
+        <span style="animation:lineSlideIn .8s cubic-bezier(.16,1,.3,1) both;animation-delay:120ms;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent">Source for Industrial</span>
+        <span style="animation:lineSlideIn .8s cubic-bezier(.16,1,.3,1) both;animation-delay:240ms">PPE & Workwear</span>
+      </h1>
+    </div>
+    
+    <p style="font-size:clamp(1.1rem,2.2vw,1.35rem);line-height:1.5;color:var(--text-soft);max-width:700px;margin:0 0 40px;animation:slideUp .9s cubic-bezier(.16,1,.3,1) both;animation-delay:360ms">Factory-direct leather safety gloves and protective apparel. Supplying distributors across 15+ global markets with consistent quality and competitive pricing.</p>
+    
+    <div style="display:flex;flex-wrap:wrap;gap:14px;animation:slideUp .9s cubic-bezier(.16,1,.3,1) both;animation-delay:480ms">
+      <button onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.95rem;font-weight:600;padding:15px 32px;border-radius:8px;transition:all .35s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,49,143,.28)">Request Samples</button>
+      <button onClick="{{ goProducts }}" style="border:1.5px solid rgba(0,49,143,.2);color:var(--accent);font-size:.95rem;font-weight:600;padding:15px 32px;border-radius:8px;transition:all .35s" style-hover="background:rgba(0,49,143,.04);border-color:var(--accent)">View Products</button>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;padding:100px 24px;background:linear-gradient(180deg,#fff 0%,var(--light) 100%)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px">
+      <div style="animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 20%">
+        <div style="display:flex;align-items:baseline;font-size:3.2rem;font-weight:700;letter-spacing:-.03em;color:var(--accent);margin-bottom:8px"><span data-count="30">0</span><span style="font-size:1.5rem;opacity:.6">+</span></div>
+        <div style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px">Years of Manufacturing</div>
+        <div style="font-size:.85rem;color:var(--text-soft)">Est. 1992, Karachi</div>
+      </div>
+      <div style="animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="display:flex;align-items:baseline;font-size:3.2rem;font-weight:700;letter-spacing:-.03em;color:var(--accent);margin-bottom:8px"><span data-count="15">0</span><span style="font-size:1.5rem;opacity:.6">+</span></div>
+        <div style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px">Export Markets</div>
+        <div style="font-size:.85rem;color:var(--text-soft)">UK, EU, UAE, AUS</div>
+      </div>
+      <div style="animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 28%">
+        <div style="display:flex;align-items:baseline;font-size:3.2rem;font-weight:700;letter-spacing:-.03em;color:var(--accent);margin-bottom:8px"><span data-count="500">0</span><span style="font-size:1.5rem;opacity:.6">K+</span></div>
+        <div style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px">Monthly Output</div>
+        <div style="font-size:.85rem;color:var(--text-soft)">Pairs produced</div>
+      </div>
+      <div style="animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%">
+        <div style="display:flex;align-items:baseline;font-size:3.2rem;font-weight:700;letter-spacing:-.03em;color:var(--accent);margin-bottom:8px"><span data-count="100">0</span><span style="font-size:1.5rem;opacity:.6">%</span></div>
+        <div style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:2px">Quality Inspected</div>
+        <div style="font-size:.85rem;color:var(--text-soft)">Every single unit</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:120px 24px;background:#fff">
+  <div style="max-width:1400px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:70px">
+      <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">
+        <span style="width:6px;height:6px;background:var(--accent);border-radius:50%"></span>
+        The Range
+      </div>
+      <h2 style="font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:0">Product Categories</h2>
+      <p style="margin-top:14px;font-size:1.05rem;color:var(--text-soft);max-width:600px;margin-left:auto;margin-right:auto">Manufactured to international standards for the world's most demanding industrial environments.</p>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px">
+      <div onClick="{{ cat1 }}" style="background:var(--light);border-radius:14px;padding:32px;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.04);animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 20%" style-hover="transform:translateY(-8px);background:#fff;box-shadow:0 20px 50px rgba(0,20,60,.1);border-color:rgba(0,49,143,.15)">
+        <div style="position:absolute;top:-60%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:0;transition:opacity .6s" style-hover="opacity:.04"></div>
+        <div style="position:relative;z-index:2">
+          <div style="width:48px;height:48px;background:rgba(0,49,143,.1);border-radius:10px;margin-bottom:18px;color:var(--accent);display:flex;align-items:center;justify-content:center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 13c0-1.105.895-2 2-2h2c1.105 0 2 .895 2 2v6c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2v-6z"></path><path d="M13 13c0-1.105.895-2 2-2h2c1.105 0 2 .895 2 2v6c0 1.105-.895 2-2 2h-2c-1.105 0-2-.895-2-2v-6z"></path><path d="M8 8c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v1H8V8z"></path><path d="M18 8c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v1h-3V8z"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:var(--text);margin-bottom:10px">Safety Gloves</h3>
+          <p style="font-size:.95rem;line-height:1.55;color:var(--text-soft);margin-bottom:16px">Welding, driver, rigger and mechanic gloves for all industrial applications worldwide.</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.9rem;font-weight:600">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 5 16 12 9 19"></polyline></svg></div>
+        </div>
+      </div>
+      
+      <div onClick="{{ cat2 }}" style="background:var(--light);border-radius:14px;padding:32px;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.04);animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%" style-hover="transform:translateY(-8px);background:#fff;box-shadow:0 20px 50px rgba(0,20,60,.1);border-color:rgba(0,49,143,.15)">
+        <div style="position:absolute;top:-60%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:0;transition:opacity .6s" style-hover="opacity:.04"></div>
+        <div style="position:relative;z-index:2">
+          <div style="width:48px;height:48px;background:rgba(0,49,143,.1);border-radius:10px;margin-bottom:18px;color:var(--accent);display:flex;align-items:center;justify-content:center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 7v10c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V7M9 9c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-2c-1.1 0-2-.9-2-2V9z"></path><path d="M17 9c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-2c-1.1 0-2-.9-2-2V9z"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:var(--text);margin-bottom:10px">Industrial Aprons</h3>
+          <p style="font-size:.95rem;line-height:1.55;color:var(--text-soft);margin-bottom:16px">Heavy-duty leather aprons for welding, fabrication and chemical handling.</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.9rem;font-weight:600">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 5 16 12 9 19"></polyline></svg></div>
+        </div>
+      </div>
+      
+      <div onClick="{{ cat3 }}" style="background:var(--light);border-radius:14px;padding:32px;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.04);animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 28%" style-hover="transform:translateY(-8px);background:#fff;box-shadow:0 20px 50px rgba(0,20,60,.1);border-color:rgba(0,49,143,.15)">
+        <div style="position:absolute;top:-60%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:0;transition:opacity .6s" style-hover="opacity:.04"></div>
+        <div style="position:relative;z-index:2">
+          <div style="width:48px;height:48px;background:rgba(0,49,143,.1);border-radius:10px;margin-bottom:18px;color:var(--accent);display:flex;align-items:center;justify-content:center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 11l1 8c.1.6.6 1 1.2 1h13.6c.6 0 1.1-.4 1.2-1l1-8H3z"></path><path d="M10 5v4M14 5v4M8 9l.5-3c.1-.5.5-1 1-1h5c.5 0 .9.5 1 1L16 9"></path></svg>
+          </div>
+          <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:var(--text);margin-bottom:10px">Protective Sleeves</h3>
+          <p style="font-size:.95rem;line-height:1.55;color:var(--text-soft);margin-bottom:16px">Full-length leather arm sleeves for heat and abrasion protection.</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.9rem;font-weight:600">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 5 16 12 9 19"></polyline></svg></div>
+        </div>
+      </div>
+      
+      <div onClick="{{ cat4 }}" style="background:var(--light);border-radius:14px;padding:32px;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;border:1px solid rgba(0,0,0,.04);animation:fadeInScale .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%" style-hover="transform:translateY(-8px);background:#fff;box-shadow:0 20px 50px rgba(0,20,60,.1);border-color:rgba(0,49,143,.15)">
+        <div style="position:absolute;top:-60%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:0;transition:opacity .6s" style-hover="opacity:.04"></div>
+        <div style="position:relative;z-index:2">
+          <div style="width:48px;height:48px;background:rgba(0,49,143,.1);border-radius:10px;margin-bottom:18px;color:var(--accent);display:flex;align-items:center;justify-content:center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 4h12v2H6zM6 8h12v8c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8zM8 14h8"></path><rect x="10" y="18" width="4" height="2" fill="currentColor"></rect></svg>
+          </div>
+          <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:var(--text);margin-bottom:10px">Industrial Uniforms</h3>
+          <p style="font-size:.95rem;line-height:1.55;color:var(--text-soft);margin-bottom:16px">Durable coveralls with reflective strips for high-visibility compliance.</p>
+          <div style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.9rem;font-weight:600">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 5 16 12 9 19"></polyline></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;padding:120px 24px;background:linear-gradient(135deg,var(--deep),var(--accent) 55%,var(--accent2));color:#fff;overflow:hidden">
+  <div style="position:absolute;top:-20%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.1),rgba(255,255,255,0) 70%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:-15%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.08),rgba(255,255,255,0) 70%);pointer-events:none;animation:drift 20s ease-in-out infinite"></div>
+  
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
+    <h2 style="font-size:clamp(2rem,4.5vw,3.4rem);font-weight:700;letter-spacing:-.03em;line-height:1.08;max-width:700px;margin:0 0 20px">Why Partner With Pearl International</h2>
+    <p style="font-size:1.1rem;line-height:1.55;max-width:650px;color:rgba(255,255,255,.8);margin-bottom:50px">Three decades of manufacturing expertise, global supply capability, and uncompromising quality — built for serious B2B buyers.</p>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">01</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Factory-Direct Pricing</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">No middlemen. Manufacturer rates with volume discounts.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">02</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Consistent Quality</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">12-point inspection on every batch, zero-defect commitment.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px;border-bottom:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">03</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Scalable Production</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">500K+ monthly output with flexible MOQs.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px;border-right:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">04</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Global Experience</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">Serving 15+ markets with full export support.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px;border-right:1px solid rgba(255,255,255,.08)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">05</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Custom OEM</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">Your brand, your specs, complete private labelling.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.02));padding:32px">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">06</div>
+        <h4 style="font-size:1.2rem;font-weight:600;margin:0 0 8px">Sample Program</h4>
+        <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.75)">Evaluate before you commit. Ships in 3–5 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:120px 24px;background:#fff">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">
+          <span style="width:4px;height:4px;background:var(--accent);border-radius:50%"></span>
+          Ready to Start
+        </div>
+        <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:0 0 16px;color:var(--text)">Get Product Samples Today</h2>
+        <p style="font-size:1.05rem;line-height:1.6;color:var(--text-soft);margin-bottom:28px">Serious buyers verify quality, feel the material, and test durability before placing large orders. Our sample program gets you started in 3–5 days.</p>
+        <button onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.95rem;font-weight:600;padding:15px 32px;border-radius:8px;transition:all .35s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,49,143,.28)">Request Samples</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="background:var(--light);border-radius:12px;padding:24px;text-align:center"><div style="font-size:2.2rem;font-weight:700;color:var(--accent)">1</div><div style="font-size:.9rem;font-weight:600;margin-top:6px">Submit Request</div></div>
+        <div style="background:var(--light);border-radius:12px;padding:24px;text-align:center"><div style="font-size:2.2rem;font-weight:700;color:var(--accent)">2</div><div style="font-size:.9rem;font-weight:600;margin-top:6px">We Confirm</div></div>
+        <div style="background:var(--light);border-radius:12px;padding:24px;text-align:center"><div style="font-size:2.2rem;font-weight:700;color:var(--accent)">3</div><div style="font-size:.9rem;font-weight:600;margin-top:6px">Shipped Out</div></div>
+        <div style="background:var(--light);border-radius:12px;padding:24px;text-align:center"><div style="font-size:2.2rem;font-weight:700;color:var(--accent)">4</div><div style="font-size:.9rem;font-weight:600;margin-top:6px">Order Bulk</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--text);color:#fff;padding:60px 24px 30px">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px">
+    <div>
+      <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:14px">
+        <span style="font-size:1rem;font-weight:700;letter-spacing:-.015em">Pearl</span>
+        <span style="font-size:.5rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">International</span>
+      </div>
+      <p style="font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)">Pioneering leather safety products since 1992. Serving global B2B clients with quality, reliability and competitive pricing.</p>
+    </div>
+    <div>
+      <h4 style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px">Quick Links</h4>
+      <ul style="display:flex;flex-direction:column;gap:9px">
+        <li><button onClick="{{ goHome }}" style="color:rgba(255,255,255,.75);font-size:.85rem;transition:color .3s" style-hover="color:#fff">Home</button></li>
+        <li><button onClick="{{ goAbout }}" style="color:rgba(255,255,255,.75);font-size:.85rem;transition:color .3s" style-hover="color:#fff">About</button></li>
+        <li><button onClick="{{ goProducts }}" style="color:rgba(255,255,255,.75);font-size:.85rem;transition:color .3s" style-hover="color:#fff">Products</button></li>
+        <li><button onClick="{{ goContact }}" style="color:rgba(255,255,255,.75);font-size:.85rem;transition:color .3s" style-hover="color:#fff">Contact</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px">Contact</h4>
+      <ul style="display:flex;flex-direction:column;gap:9px;font-size:.85rem">
+        <li><a href="mailto:sales@pearlinternational.org" style="color:rgba(255,255,255,.75);transition:color .3s" style-hover="color:#fff">sales@pearlinternational.org</a></li>
+        <li style="color:rgba(255,255,255,.75)">+92 21 32370620</li>
+        <li style="color:rgba(255,255,255,.75)">+92 323 2400137</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 14px">Address</h4>
+      <p style="font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)">126/2 Mumtaz Manzil<br/>Bihar Colony, Karachi<br/>Pakistan</p>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.8rem;color:rgba(255,255,255,.5)">
+    <span>© {{ year }} Pearl International. All rights reserved.</span>
+    <span>Karachi, Pakistan</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#00318f&quot;,&quot;options&quot;:[&quot;#00318f&quot;,&quot;#0b2d6b&quot;,&quot;#123b8f&quot;,&quot;#1d1d1f&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home' };
+
+  renderVals() {
+    return {
+      root: React.createRef(),
+      year: new Date().getFullYear(),
+      logo: () => this.go('home'),
+      goHome: () => this.go('home'),
+      goAbout: () => this.go('about'),
+      goProducts: () => this.go('products'),
+      goContact: () => this.go('contact'),
+      goSamples: () => this.go('samples'),
+      cat1: () => this.go('products'),
+      cat2: () => this.go('products'),
+      cat3: () => this.go('products'),
+      cat4: () => this.go('products')
+    };
+  }
+
+  go(page) {
+    this.setState({ page });
+    window.scrollTo(0, 0);
+    this.wireCounters();
+  }
+
+  wireCounters() {
+    const els = document.querySelectorAll('[data-count]');
+    els.forEach(el => {
+      const target = parseFloat(el.textContent) || 0;
+      if (target > 0) return;
+      const num = parseInt(el.getAttribute('data-count'));
+      const dur = parseFloat(el.getAttribute('data-dur')) || 1500;
+      const t0 = performance.now();
+      const tick = t => {
+        const k = Math.min(1, (t - t0) / dur);
+        el.textContent = Math.round(num * k);
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  componentDidMount() {
+    this.wireCounters();
+  }
+}
+</script>
+</body>
+</html>

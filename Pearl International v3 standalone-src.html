@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="img/p1-025.jpg" data-resource-id="catGloves" />
+<meta name="ext-resource-dependency" content="img/a1-050.jpg" data-resource-id="catAprons" />
+<meta name="ext-resource-dependency" content="img/s1-080.jpg" data-resource-id="catSleeves" />
+<meta name="ext-resource-dependency" content="img/u1-010.jpg" data-resource-id="catUniforms" />
+<template id="__bundler_thumbnail" data-bg-color="#00318f">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#00318f"/>
+    <text x="600" y="400" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="200" font-weight="bold" fill="#ffffff" letter-spacing="-8">PEARL</text>
+    <text x="600" y="480" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="52" font-weight="bold" fill="#8ba6dd" letter-spacing="26">INTERNATIONAL</text>
+    <rect x="470" y="540" width="260" height="8" fill="#3d7ff0"/>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pearl International — Industrial PPE &amp; Workwear Manufacturer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=League+Spartan:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{--blue:#00318f;--blue-lt:#3d7ff0;--ink:#04287a;--card:#063189;--line:rgba(255,255,255,.17);--dim:rgba(255,255,255,.74)}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:#04287a;color:#fff;font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;overflow-x:hidden}
+h1,h2,h3,h4,p,ul,figure{margin:0}
+h1,h2,h3{font-family:"League Spartan",Archivo,sans-serif}
+ul{padding:0;list-style:none}
+a{color:var(--blue-lt);text-decoration:none}
+a:hover{color:#6f9ff5}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit}
+img{display:block;max-width:100%}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
+@keyframes glowFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.03)}}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(8px);opacity:1}}
+@keyframes orb{0%,100%{translate:0 0;scale:1}50%{translate:5% -6%;scale:1.14}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div ref="{{ root }}" style="position:relative;background:#04287a">
+
+<div data-nav="1" style="position:fixed;top:18px;left:0;right:0;z-index:300;display:flex;justify-content:center;padding:0 18px;transition:top .45s cubic-bezier(.16,1,.3,1)">
+  <div style="position:relative;display:flex;align-items:center">
+    <button data-tab="1" onClick="{{ goSamples }}" style="position:absolute;left:0;top:50%;transform:translate(0,-50%);z-index:0;background:var(--blue);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.14em;padding:12px 30px 12px 20px;border-radius:999px 0 0 999px;white-space:nowrap;opacity:0;pointer-events:none;transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .45s">SAMPLES</button>
+    <div data-pill="1" style="position:relative;z-index:1;display:flex;align-items:center;gap:22px;background:#fff;border-radius:22px;padding:8px 10px 8px 18px;box-shadow:0 18px 50px rgba(0,0,0,.4);transition:padding .45s cubic-bezier(.16,1,.3,1),box-shadow .45s">
+      <button onClick="{{ goTop }}" style="display:flex;align-items:center;gap:12px;padding:0">
+        <img src="img/logo-color.png" alt="Pearl International" style="height:38px;width:auto;mix-blend-mode:multiply"/>
+        <span style="display:flex;flex-direction:column;align-items:flex-start;gap:3px">
+          <span style="font-family:'League Spartan',Archivo,sans-serif;font-size:1.3rem;font-weight:900;letter-spacing:-.02em;line-height:.86;color:#0d2b6b">PEARL</span>
+          <span style="font-size:.46rem;font-weight:700;letter-spacing:.3em;color:#0d2b6b">INTERNATIONAL</span>
+        </span>
+      </button>
+      <span style="width:1px;height:30px;background:rgba(13,43,107,.16);flex:0 0 auto"></span>
+      <div data-links="1" style="display:flex;align-items:center;gap:20px">
+        <sc-for list="{{ nav }}" as="nv" hint-placeholder-count="6">
+          <button onClick="{{ nv.go }}" style="font-size:.79rem;transition:color .3s;font-weight:{{ nv.weight }};color:{{ nv.color }}" style-hover="color:var(--blue)">{{ nv.t }}</button>
+        </sc-for>
+      </div>
+      <a href="https://wa.me/923232400137" target="_blank" style="display:flex;align-items:center;gap:9px;background:#0d2b6b;color:#fff;font-size:.79rem;font-weight:700;padding:11px 20px;border-radius:999px;white-space:nowrap;transition:background .3s,box-shadow .35s" style-hover="background:var(--blue);color:#fff;box-shadow:0 8px 26px rgba(13,43,107,.5)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        +92 323 2400137
+      </a>
+      <button data-burger="1" onClick="{{ toggleMenu }}" aria-label="Menu" style="display:none;width:38px;height:38px;align-items:center;justify-content:center;border-radius:999px;color:#04287a">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="8" x2="21" y2="8"></line><line x1="3" y1="16" x2="21" y2="16"></line></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div data-menu="1" style="display:none;position:fixed;top:82px;left:18px;right:18px;z-index:290;background:rgba(244,246,250,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:22px;padding:12px;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.5)">
+  <sc-for list="{{ nav }}" as="nv" hint-placeholder-count="6">
+    <button onClick="{{ nv.go }}" style="text-align:left;padding:14px 16px;font-size:1rem;font-weight:700;border-bottom:1px solid rgba(0,0,0,.07);color:{{ nv.mcolor }}">{{ nv.t }}</button>
+  </sc-for>
+</div>
+
+<div data-view="home">
+<section data-screen-label="Hero" style="position:relative;min-height:auto;display:flex;align-items:center;overflow:hidden;background:radial-gradient(125% 105% at 18% 6%,#0b3ea6 0%,#052f8c 46%,#00246e 100%);padding:132px 26px 74px">
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 1px,transparent 1px 82px);pointer-events:none"></div>
+  <div style="position:absolute;top:-16%;right:-8%;width:min(820px,88vw);height:min(820px,88vw);background:radial-gradient(circle,rgba(120,170,255,.2) 0%,rgba(120,170,255,0) 62%);animation:orb 24s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-26%;left:-14%;width:min(700px,78vw);height:min(700px,78vw);background:radial-gradient(circle,rgba(0,20,70,.5),rgba(0,20,70,0) 66%);animation:orb 30s ease-in-out 4s infinite reverse;pointer-events:none"></div>
+
+  <div style="position:relative;z-index:2;width:100%;max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:44px">
+    <div style="flex:1 1 500px;min-width:0">
+      <div data-reveal="up" style="display:inline-flex;align-items:center;gap:10px;max-width:100%;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.07);border-radius:999px;padding:8px 15px;margin-bottom:24px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#fff;animation:pulseDot 2.2s ease-in-out infinite"></span>
+        <span style="font-size:.62rem;font-weight:800;letter-spacing:.17em;color:#fff;white-space:nowrap">TRUSTED B2B MANUFACTURER SINCE 1992</span>
+      </div>
+      <h1 data-reveal="up" style="font-family:'League Spartan',Archivo,sans-serif;font-size:clamp(2.2rem,4.6vw,3.9rem);font-weight:900;letter-spacing:-.028em;line-height:1.03;margin:0 0 22px;color:#fff">Your Reliable Source<br/>for <span style="color:#8ba6dd">Industrial PPE.</span></h1>
+      <p data-reveal="up" style="max-width:560px;font-size:clamp(.94rem,1.1vw,1.02rem);line-height:1.7;color:rgba(255,255,255,.78);margin-bottom:26px">Factory-direct leather safety gloves and protective workwear. Supplying distributors, importers and industrial buyers across 15+ global markets — with consistent quality and competitive pricing.</p>
+      <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px">
+        <sc-for list="{{ pills }}" as="pl" hint-placeholder-count="4">
+          <span style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.06);border-radius:999px;padding:8px 14px;font-size:.62rem;font-weight:800;letter-spacing:.11em;color:#fff;white-space:nowrap">
+            <span style="opacity:.85;display:flex">{{ pl.icon }}</span>{{ pl.t }}
+          </span>
+        </sc-for>
+      </div>
+      <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:13px">
+        <button data-mag="1" onClick="{{ goSamples }}" style="display:inline-flex;align-items:center;gap:11px;background:#fff;color:#00318f;font-size:.74rem;font-weight:900;letter-spacing:.09em;padding:15px 26px;border-radius:11px;white-space:nowrap;transition:box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="box-shadow:0 18px 46px rgba(0,10,40,.45)">REQUEST SAMPLES
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+        </button>
+        <button onClick="{{ goOem }}" style="border:1.5px solid rgba(255,255,255,.4);color:#fff;font-size:.74rem;font-weight:900;letter-spacing:.09em;padding:15px 24px;border-radius:11px;white-space:nowrap;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.1);border-color:#fff">VIEW PRODUCTS</button>
+        <button onClick="{{ goProducts }}" style="display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,.4);color:#fff;font-size:.74rem;font-weight:900;letter-spacing:.09em;padding:15px 24px;border-radius:11px;white-space:nowrap;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.1);border-color:#fff">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><polyline points="14 3 14 8 19 8"></polyline></svg>CATALOGUE
+        </button>
+      </div>
+    </div>
+
+    <div data-reveal="scale" style="flex:0 1 340px;min-width:0">
+      <div style="border:1px solid rgba(255,255,255,.22);background:linear-gradient(170deg,rgba(255,255,255,.11),rgba(255,255,255,.03));border-radius:22px;padding:26px 24px 24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">
+        <div style="text-align:center;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.18)">
+          <div style="font-family:'League Spartan',Archivo,sans-serif;display:flex;align-items:flex-start;justify-content:center;font-size:3.4rem;font-weight:900;letter-spacing:-.05em;line-height:1;color:#fff"><span data-count="30">0</span><span style="font-size:1.5rem;margin-top:.35em;color:#8ba6dd">+</span></div>
+          <div style="margin-top:10px;font-size:.66rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.72)">YEARS OF MANUFACTURING</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:17px;margin-top:20px">
+          <sc-for list="{{ heroFacts }}" as="f" hint-placeholder-count="4">
+            <div style="display:flex;align-items:flex-start;gap:14px">
+              <span style="flex:0 0 30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);border-radius:9px;color:#bcd0f2">{{ f.icon }}</span>
+              <div style="min-width:0">
+                <div style="font-size:.68rem;font-weight:900;letter-spacing:.1em;color:#fff">{{ f.t }}</div>
+                <div style="margin-top:4px;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.7)">{{ f.d }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="position:relative;z-index:6;margin:-30px 0 0;overflow:hidden;pointer-events:none">
+  <div style="transform:rotate(-1.6deg);width:112%;margin-left:-6%;background:var(--blue);padding:17px 0;box-shadow:0 22px 60px rgba(0,49,143,.4);overflow:hidden">
+    <div data-mq="1" style="display:flex;width:max-content;animation:mq 34s linear infinite;will-change:transform">
+      <div style="display:flex;align-items:center;gap:30px;padding-right:30px;font-size:clamp(1rem,2.1vw,1.6rem);font-weight:900;letter-spacing:.02em;color:#fff;white-space:nowrap">
+        <span>WELDING GLOVES</span><span style="opacity:.55">•</span><span>DRIVER GLOVES</span><span style="opacity:.55">•</span><span>RIGGER GLOVES</span><span style="opacity:.55">•</span><span>LEATHER APRONS</span><span style="opacity:.55">•</span><span>ARM SLEEVES</span><span style="opacity:.55">•</span><span>COVERALLS</span><span style="opacity:.55">•</span><span>OEM PRIVATE LABEL</span><span style="opacity:.55">•</span><span>KARACHI · PAKISTAN</span><span style="opacity:.55">•</span><span>SINCE 1992</span><span style="opacity:.55">•</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:30px;padding-right:30px;font-size:clamp(1rem,2.1vw,1.6rem);font-weight:900;letter-spacing:.02em;color:#fff;white-space:nowrap" aria-hidden="true">
+        <span>WELDING GLOVES</span><span style="opacity:.55">•</span><span>DRIVER GLOVES</span><span style="opacity:.55">•</span><span>RIGGER GLOVES</span><span style="opacity:.55">•</span><span>LEATHER APRONS</span><span style="opacity:.55">•</span><span>ARM SLEEVES</span><span style="opacity:.55">•</span><span>COVERALLS</span><span style="opacity:.55">•</span><span>OEM PRIVATE LABEL</span><span style="opacity:.55">•</span><span>KARACHI · PAKISTAN</span><span style="opacity:.55">•</span><span>SINCE 1992</span><span style="opacity:.55">•</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:2px;background:var(--line);margin-top:44px">
+  <div data-card="1" onClick="{{ goSamples }}" style="position:relative;min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;padding:44px;background:#053080;cursor:pointer;overflow:hidden">
+    <div style="position:absolute;right:-7%;top:50%;transform:translateY(-50%);width:min(310px,44%);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 44% 38%,#f1f5fa 0%,#dae2ef 56%,#bcc9dd 100%);box-shadow:0 44px 100px rgba(0,20,60,.6);pointer-events:none">
+      <img data-img="1" src="img/p1-026.jpg" alt="Welding gloves" style="width:76%;mix-blend-mode:multiply;filter:brightness(1.07) saturate(1.04);transition:transform .95s cubic-bezier(.16,1,.3,1)"/>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,#053080 36%,rgba(14,19,28,.5) 52%,rgba(14,19,28,0) 62%);pointer-events:none"></div>
+    <div data-reveal="up" style="position:relative">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:14px">SAMPLE PROGRAMME</div>
+      <h3 style="font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.06;margin-bottom:14px">See the quality<br/>before you buy.</h3>
+      <p style="max-width:400px;font-size:.95rem;line-height:1.65;color:var(--dim);margin-bottom:22px">Verify materials, stitching and finish first. Samples dispatch worldwide within 3–5 business days.</p>
+      <span style="display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:800;letter-spacing:.14em;color:#fff;white-space:nowrap">REQUEST SAMPLES
+        <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue-lt)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .45s cubic-bezier(.16,1,.3,1)"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+      </span>
+    </div>
+  </div>
+  <div data-card="1" onClick="{{ goOem }}" style="position:relative;min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;padding:44px;background:#042a76;cursor:pointer;overflow:hidden">
+    <div style="position:absolute;right:-7%;top:50%;transform:translateY(-50%);width:min(310px,44%);aspect-ratio:1;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 44% 38%,#f1f5fa 0%,#dae2ef 56%,#bcc9dd 100%);box-shadow:0 44px 100px rgba(0,20,60,.6);pointer-events:none">
+      <img data-img="1" src="img/u1-010.jpg" alt="Industrial coverall" style="width:66%;mix-blend-mode:multiply;filter:brightness(1.07) saturate(1.04);transition:transform .95s cubic-bezier(.16,1,.3,1)"/>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,#042a76 36%,rgba(12,16,23,.5) 52%,rgba(12,16,23,0) 62%);pointer-events:none"></div>
+    <div data-reveal="up" style="position:relative">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:14px">OEM &amp; PRIVATE LABEL</div>
+      <h3 style="font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.06;margin-bottom:14px">Your brand,<br/>our factory floor.</h3>
+      <p style="max-width:400px;font-size:.95rem;line-height:1.65;color:var(--dim);margin-bottom:22px">Custom specifications, private labelling and bespoke packaging — built to your drawings and tolerances.</p>
+      <span style="display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:800;letter-spacing:.14em;color:#fff;white-space:nowrap">SEE CAPABILITIES
+        <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue-lt)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .45s cubic-bezier(.16,1,.3,1)"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section data-anchor="products" data-screen-label="Products" style="padding:110px 26px;background:#eef2f8">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:46px">
+      <div data-reveal="up" style="flex:1 1 460px">
+        <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--blue);margin-bottom:18px">THE RANGE</div>
+        <h2 style="font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.035em;line-height:1.02;color:#0d2b6b">Professional <span style="color:var(--blue)">Industrial PPE</span></h2>
+      </div>
+      <p data-reveal="up" style="flex:1 1 320px;max-width:440px;font-size:1rem;line-height:1.7;color:#5b6577">Made by a factory that has done one thing for three decades. From complete crew kit-outs to specialist high-heat protection.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:22px">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+        <div data-card="1" onClick="{{ c.onClick }}" style="position:relative;border-radius:18px;overflow:hidden;background:#fff;cursor:pointer;box-shadow:0 2px 10px rgba(13,43,107,.07);transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .5s" style-hover="transform:translateY(-6px);box-shadow:0 22px 50px rgba(13,43,107,.16)">
+          <div style="position:relative;height:300px;display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden">
+            <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ false }}">
+              <img data-img="1" src="{{ c.img }}" alt="{{ c.name }}" style="max-height:82%;max-width:80%;object-fit:contain;transition:transform .95s cubic-bezier(.16,1,.3,1)"/>
+            </sc-if>
+            <sc-if value="{{ c.top }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;left:0;top:22px;background:var(--blue);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.13em;padding:7px 14px;border-radius:0 6px 6px 0">BESTSELLER</div>
+            </sc-if>
+          </div>
+          <div style="padding:4px 30px 34px">
+            <h3 style="font-size:1.3rem;font-weight:800;letter-spacing:-.02em;color:#0d2b6b;margin-bottom:12px">{{ c.name }}</h3>
+            <p style="font-size:.95rem;line-height:1.62;color:#5b6577;margin-bottom:20px">{{ c.desc }}</p>
+            <span style="display:inline-flex;align-items:center;gap:9px;font-size:.74rem;font-weight:800;letter-spacing:.13em;color:var(--blue)">EXPLORE RANGE
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+            </span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</div>
+
+<div data-view="about" data-screen-label="About page" style="display:none">
+<section style="padding:150px 26px 34px;background:radial-gradient(110% 100% at 20% 0%,#0b3ea6 0%,#052f8c 52%,#00246e 100%)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#8ba6dd;margin-bottom:18px">ABOUT PEARL INTERNATIONAL</div>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:1;color:#fff">A working factory,<br/>not a trading desk.</h1>
+    <p style="margin-top:22px;max-width:660px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">Pearl International has manufactured leather safety gloves and protective workwear in Karachi since 1992. In three decades we have never lost a customer to a quality complaint — and every article we ship is inspected by our own team before it leaves the floor.</p>
+  </div>
+</section>
+<section data-anchor="about" data-screen-label="Why Pearl" style="position:relative;padding:100px 26px 120px;background:radial-gradient(90% 70% at 50% 0%,#0b3ea6 0%,#04287a 62%);overflow:hidden">
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(760px,92vw);height:2px;background:linear-gradient(90deg,transparent,var(--blue-lt),transparent);opacity:.55"></div>
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="up" style="text-align:center;max-width:760px;margin:0 auto 66px">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.28em;color:var(--blue-lt);margin-bottom:20px">VALUES &amp; STANDARDS</div>
+      <h2 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.045em;line-height:.96;text-transform:uppercase">Why <span style="color:var(--blue-lt)">Pearl?</span></h2>
+      <p style="margin-top:20px;font-size:1rem;line-height:1.7;color:var(--dim)">Three decades of manufacturing expertise, global supply capability and uncompromising quality control — built for serious B2B buyers.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden">
+      <sc-for list="{{ whys }}" as="w" hint-placeholder-count="6">
+        <div style="background:#063189;padding:40px 34px 44px;transition:background .5s" style-hover="background:#0a3ea0">
+          <div style="font-size:.72rem;font-weight:900;letter-spacing:.14em;color:var(--blue-lt);margin-bottom:20px">{{ w.n }}</div>
+          <h4 style="font-size:1.16rem;font-weight:800;letter-spacing:-.018em;margin-bottom:11px">{{ w.t }}</h4>
+          <p style="font-size:.9rem;line-height:1.72;color:var(--dim)">{{ w.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 26px 118px;background:#04287a">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:34px">
+    <div data-reveal="up" style="border-left:3px solid var(--blue);padding-left:22px">
+      <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:900;letter-spacing:-.045em;line-height:1"><span data-count="30">0</span><span style="color:var(--blue-lt)">+</span></div>
+      <div style="margin-top:9px;font-size:.66rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.55)">YEARS OF MANUFACTURING</div>
+    </div>
+    <div data-reveal="up" style="border-left:3px solid var(--blue);padding-left:22px">
+      <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:900;letter-spacing:-.045em;line-height:1"><span data-count="15">0</span><span style="color:var(--blue-lt)">+</span></div>
+      <div style="margin-top:9px;font-size:.66rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.55)">EXPORT MARKETS</div>
+    </div>
+    <div data-reveal="up" style="border-left:3px solid var(--blue);padding-left:22px">
+      <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:900;letter-spacing:-.045em;line-height:1"><span data-count="100">0</span><span style="color:var(--blue-lt)">,000+</span></div>
+      <div style="margin-top:9px;font-size:.66rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.55)">PAIRS PER MONTH</div>
+    </div>
+    <div data-reveal="up" style="border-left:3px solid var(--blue);padding-left:22px">
+      <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:900;letter-spacing:-.045em;line-height:1"><span data-count="24">0</span><span style="color:var(--blue-lt)">H</span></div>
+      <div style="margin-top:9px;font-size:.66rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.55)">ENQUIRY RESPONSE</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 26px 120px;background:#04287a">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:40px">
+      <h2 style="font-size:clamp(1.9rem,4vw,3rem);font-weight:900;letter-spacing:-.04em;line-height:1;text-transform:uppercase">Markets we<br/><span style="color:var(--blue-lt)">export to</span></h2>
+      <p style="max-width:420px;font-size:.96rem;line-height:1.7;color:var(--dim)">Established relationships across 15+ countries, with full export documentation, compliance and logistics handled in-house.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,168px),1fr));gap:14px">
+      <sc-for list="{{ markets }}" as="m" hint-placeholder-count="8">
+        <div style="border:1px solid var(--line);border-radius:16px;padding:26px 22px;background:var(--card);transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s,background .4s" style-hover="transform:translateY(-6px);border-color:rgba(61,127,240,.42);background:#0a3ea0">
+          <div style="font-size:1.42rem;font-weight:900;letter-spacing:.02em;color:var(--blue-lt)">{{ m.code }}</div>
+          <div style="margin-top:9px;font-size:.83rem;font-weight:700;color:rgba(255,255,255,.86)">{{ m.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div data-view="samples" data-screen-label="Request samples page" style="display:none">
+<section style="padding:150px 26px 34px;background:radial-gradient(110% 100% at 20% 0%,#0b3ea6 0%,#052f8c 52%,#00246e 100%)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#8ba6dd;margin-bottom:18px">SAMPLES &amp; TRADE TERMS</div>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:1;color:#fff">Handle the goods<br/>before you order.</h1>
+    <p style="margin-top:22px;max-width:640px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">A free sample is provided on bulk order. Terms below are the ones every serious buyer asks for, answered up front.</p>
+  </div>
+</section>
+<section data-anchor="terms" data-screen-label="Trade terms" style="padding:96px 26px 118px;background:#04287a">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:26px;margin-bottom:38px">
+      <div>
+        <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--blue-lt);margin-bottom:18px">TRADE TERMS</div>
+        <h2 style="font-size:clamp(1.9rem,4.2vw,3.1rem);font-weight:900;letter-spacing:-.04em;line-height:1;text-transform:uppercase">What buyers<br/><span style="color:var(--blue-lt)">ask first</span></h2>
+      </div>
+      <p style="max-width:430px;font-size:.96rem;line-height:1.7;color:var(--dim)">Answered up front so you don't have to email for them. Carton dimensions and CBM are supplied with every quotation.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden">
+      <sc-for list="{{ terms }}" as="t" hint-placeholder-count="8">
+        <div style="background:#063189;padding:28px 28px 32px;transition:background .5s" style-hover="background:#0a3ea0">
+          <div style="font-size:.64rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:12px">{{ t.k }}</div>
+          <div style="font-size:1rem;font-weight:700;letter-spacing:-.015em;line-height:1.45">{{ t.v }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p data-reveal="up" style="margin-top:22px;font-size:.84rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:760px">Quality control is carried out in-house by our own team; we do not currently hold CE marking, and any certification a buyer requires is arranged and stated explicitly before an order is confirmed.</p>
+  </div>
+</section>
+
+<section data-anchor="samples" data-screen-label="Request samples" style="position:relative;padding:112px 26px;background:radial-gradient(80% 60% at 22% 12%,#0b3ea6 0%,#04287a 60%);overflow:hidden">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:52px;align-items:flex-start">
+    <div data-reveal="up" style="flex:1 1 380px">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--blue-lt);margin-bottom:20px">SAMPLE PROGRAMME</div>
+      <h2 style="font-size:clamp(2.2rem,5vw,3.7rem);font-weight:900;letter-spacing:-.045em;line-height:.98;text-transform:uppercase;margin-bottom:20px">Try before<br/><span style="color:var(--blue-lt)">you buy.</span></h2>
+      <p style="max-width:440px;font-size:1rem;line-height:1.72;color:var(--dim);margin-bottom:34px">Serious buyers verify quality, feel the material and test durability before committing. Four steps from first enquiry to a bulk order.</p>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;gap:18px;align-items:flex-start;border:1px solid var(--line);border-radius:15px;padding:19px 22px;background:rgba(255,255,255,.022);transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s" style-hover="transform:translateX(7px);border-color:rgba(61,127,240,.4)">
+            <div style="flex:0 0 30px;height:30px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900">{{ s.n }}</div>
+            <div>
+              <div style="font-size:.98rem;font-weight:800;letter-spacing:-.01em">{{ s.t }}</div>
+              <p style="margin-top:5px;font-size:.87rem;line-height:1.62;color:var(--dim)">{{ s.d }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-reveal="up" style="flex:1 1 460px">
+      <div style="border:1px solid var(--line);border-radius:24px;padding:38px;background:#053080">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:44px 8px">
+            <div style="width:64px;height:64px;border-radius:50%;background:rgba(61,127,240,.14);color:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin:0 auto"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <h3 style="margin-top:22px;font-size:1.55rem;font-weight:900;letter-spacing:-.03em">Request submitted</h3>
+            <p style="margin:13px auto 0;max-width:31rem;font-size:.94rem;line-height:1.72;color:var(--dim)">Thank you, {{ sentName }}. We've logged your request for {{ sentProduct }} and will confirm on WhatsApp or email within 24 hours.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <h3 style="font-size:1.3rem;font-weight:900;letter-spacing:-.028em">Sample request form</h3>
+            <p style="margin-top:7px;font-size:.87rem;color:var(--dim)">Fields marked * are required. We reply within 24 hours.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:13px;margin-top:24px">
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">FULL NAME *</span><input data-f="name" type="text" placeholder="John Smith" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"/></label>
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">COMPANY *</span><input data-f="company" type="text" placeholder="Your Company Ltd." style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"/></label>
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">EMAIL *</span><input data-f="email" type="email" placeholder="john@company.com" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"/></label>
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">WHATSAPP *</span><input data-f="whatsapp" type="tel" placeholder="+44 7000 000000" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"/></label>
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">COUNTRY *</span><input data-f="country" type="text" placeholder="United Kingdom" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"/></label>
+              <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">MONTHLY VOLUME</span>
+                <select data-f="qty" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:#063189;color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)">
+                  <option value="">Select volume</option>
+                  <option>Under 500 pairs/month</option>
+                  <option>500 – 2,000 pairs/month</option>
+                  <option>2,000 – 10,000 pairs/month</option>
+                  <option>10,000+ pairs/month</option>
+                  <option>One-time / project order</option>
+                </select>
+              </label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:7px;margin-top:13px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">PRODUCT(S) NEEDED *</span>
+              <select data-f="product" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:#063189;color:#fff;outline:none;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)">
+                <option value="">Select product category</option>
+                <option>Welding Gloves (Cow Split Blue)</option>
+                <option>Welding Gloves (Cow Split Red)</option>
+                <option>Chrome Leather Welding Gloves</option>
+                <option>Aramid Stitched Welding Gloves</option>
+                <option>Driver Gloves</option>
+                <option>Rigger Gloves</option>
+                <option>Mechanic / Anti-Vibration Gloves</option>
+                <option>Leather Aprons</option>
+                <option>Protective Arm Sleeves</option>
+                <option>Industrial Coveralls / Uniforms</option>
+                <option>Multiple products (specify in notes)</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:7px;margin-top:13px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">SHIPPING ADDRESS *</span><textarea data-f="address" rows="3" placeholder="Full address including city, postcode and country" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;resize:vertical;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"></textarea></label>
+            <label style="display:flex;flex-direction:column;gap:7px;margin-top:13px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,.62)">NOTES</span><textarea data-f="notes" rows="2" placeholder="Sizes, colours, certifications…" style="padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-size:.9rem;background:rgba(255,255,255,.04);color:#fff;outline:none;resize:vertical;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--blue-lt);box-shadow:0 0 0 4px rgba(61,127,240,.16)"></textarea></label>
+            <div data-err="1" style="display:none;margin-top:14px;font-size:.84rem;color:#ff7a6b">Please fill in all required fields.</div>
+            <button onClick="{{ submit }}" style="width:100%;margin-top:22px;background:var(--blue);color:#fff;font-size:.86rem;font-weight:800;letter-spacing:.1em;padding:17px;border-radius:999px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 14px 40px rgba(0,49,143,.5);transform:translateY(-2px)">SUBMIT SAMPLE REQUEST</button>
+            <p style="margin-top:13px;font-size:.73rem;line-height:1.6;color:rgba(255,255,255,.42);text-align:center">By submitting you agree to be contacted about your request. We never share your information.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;background:var(--blue);padding:clamp(70px,11vw,130px) 26px;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 1px,transparent 1px 62px);pointer-events:none"></div>
+  <div style="position:relative;max-width:1320px;margin:0 auto;text-align:center">
+    <h2 data-reveal="up" style="font-size:clamp(2.4rem,8vw,6.2rem);font-weight:900;letter-spacing:-.05em;line-height:.92;text-transform:uppercase;color:#04102c">Protect your<br/>workforce.</h2>
+    <p data-reveal="up" style="margin:26px auto 0;max-width:560px;font-size:1.02rem;line-height:1.68;color:rgba(255,255,255,.86)">Request samples or a bulk quotation. We respond to every enquiry within 24 hours.</p>
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin-top:34px">
+      <button data-mag="1" onClick="{{ goSamples }}" style="background:#fff;color:var(--blue);font-size:.86rem;font-weight:800;letter-spacing:.1em;padding:17px 34px;border-radius:999px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s" style-hover="box-shadow:0 16px 44px rgba(0,0,0,.35)">REQUEST SAMPLES</button>
+      <a href="https://wa.me/923232400137" target="_blank" style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.45);color:#fff;font-size:.86rem;font-weight:700;letter-spacing:.08em;padding:17px 30px;border-radius:999px;white-space:nowrap;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.14);border-color:#fff;color:#fff">WHATSAPP US</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div data-view="products" data-screen-label="Products catalogue" data-ppage="1" style="display:none;padding-top:110px">
+  <section style="padding:34px 26px 40px;background:radial-gradient(80% 70% at 24% 0%,#0b3ea6 0%,#04287a 62%)">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--blue-lt);margin-bottom:16px">PRODUCT CATALOGUE</div>
+      <h1 style="font-size:clamp(2.3rem,5.6vw,4.2rem);font-weight:900;letter-spacing:-.045em;line-height:.96;text-transform:uppercase">Our <span style="color:var(--blue-lt)">products</span></h1>
+      <p style="margin-top:16px;max-width:560px;font-size:1rem;line-height:1.7;color:var(--dim)">Leather safety gloves and protective workwear for industrial applications worldwide. Every item is available for bulk order and private labelling.</p>
+    </div>
+  </section>
+
+  <section style="padding:14px 26px 110px;background:#04287a">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+
+      <aside data-side="1" style="flex:0 1 268px;position:sticky;top:104px;min-width:0">
+        <div style="border:1px solid var(--line);border-radius:20px;padding:22px 18px;background:var(--card)">
+          <div style="font-size:.62rem;font-weight:800;letter-spacing:.22em;color:rgba(255,255,255,.42);padding:0 8px 14px;border-bottom:1px solid var(--line)">CATEGORIES</div>
+          <div style="display:flex;flex-direction:column;gap:3px;margin-top:12px">
+            <sc-for list="{{ tree }}" as="t" hint-placeholder-count="9">
+              <button onClick="{{ t.onClick }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;border-radius:11px;transition:background .3s,color .3s;padding:{{ t.pad }};background:{{ t.bg }};color:{{ t.fg }};font-size:{{ t.size }};font-weight:{{ t.weight }};letter-spacing:{{ t.ls }}">
+                <span>{{ t.label }}</span>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="flex:0 0 auto;opacity:{{ t.chev }};transform:rotate({{ t.rot }})"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <div data-promo="1" style="margin-top:16px;border:1px solid var(--line);border-radius:20px;padding:22px;background:linear-gradient(150deg,rgba(0,49,143,.24),rgba(0,49,143,0))">
+          <div style="font-size:.98rem;font-weight:800;letter-spacing:-.015em">Need a custom spec?</div>
+          <p style="margin-top:8px;font-size:.85rem;line-height:1.65;color:var(--dim)">Private label and OEM production available across every category.</p>
+          <button onClick="{{ goSamples }}" style="margin-top:14px;font-size:.78rem;font-weight:800;letter-spacing:.1em;color:var(--blue-lt)">TALK TO US →</button>
+        </div>
+      </aside>
+
+      <div data-main="1" style="flex:1 1 620px;min-width:0">
+        <div data-chead="1" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:26px">
+          <div>
+            <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;letter-spacing:-.03em;color:var(--blue-lt)">{{ curTitle }}</h2>
+            <div style="margin-top:7px;font-size:.85rem;color:var(--dim)">{{ curCount }} · bulk order and private label available</div>
+          </div>
+          <button data-mag="1" onClick="{{ goSamples }}" style="background:var(--blue);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.12em;padding:13px 24px;border-radius:999px;white-space:nowrap;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 12px 34px rgba(0,49,143,.5)">REQUEST SAMPLES →</button>
+        </div>
+
+        <sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}">
+          <div data-pgrid="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px">
+            <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
+              <div data-card="1" style="position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);transition:transform .55s cubic-bezier(.16,1,.3,1),border-color .45s" style-hover="transform:translateY(-6px);border-color:rgba(61,127,240,.45)">
+                <div style="position:relative;height:200px;display:flex;align-items:center;justify-content:center;background:radial-gradient(76% 76% at 50% 42%,#f1f5fa 0%,#dde5f0 58%,#c4cfe0 100%);overflow:hidden">
+                  <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}">
+                    <div style="text-align:center;color:#5f6b7e">
+                      <div style="font-family:'League Spartan',Archivo,sans-serif;font-size:3.4rem;font-weight:900;letter-spacing:-.04em;line-height:.9;color:#0d2b6b">{{ p.imgno }}</div>
+                      <div style="margin-top:8px;font-size:.58rem;font-weight:800;letter-spacing:.16em">IMAGE FILE</div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}">
+                    <div style="text-align:center;color:#7d8798">
+                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9.5" r="1.5"></circle><polyline points="21 15 16 10 5 20"></polyline></svg>
+                      <div style="margin-top:9px;font-size:.58rem;font-weight:800;letter-spacing:.14em">NO IMAGE YET</div>
+                    </div>
+                  </sc-if>
+                  <div style="position:absolute;right:12px;top:12px;background:var(--blue);color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.1em;padding:5px 10px;border-radius:6px">{{ p.code }}</div>
+                </div>
+                <div style="padding:18px 18px 20px;display:flex;flex-direction:column;gap:13px">
+                  <h3 style="font-size:.92rem;font-weight:800;letter-spacing:-.012em;line-height:1.38;color:var(--blue-lt)">{{ p.name }}</h3>
+                  <button onClick="{{ p.onReq }}" style="align-self:flex-start;font-size:.68rem;font-weight:800;letter-spacing:.12em;color:#fff;transition:color .3s" style-hover="color:var(--blue-lt)">REQUEST SAMPLE →</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ noItems }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed var(--line);border-radius:20px;padding:56px 30px;text-align:center">
+            <h3 style="font-size:1.1rem;font-weight:800;letter-spacing:-.02em">Catalogue coming online</h3>
+            <p style="margin:10px auto 0;max-width:34rem;font-size:.9rem;line-height:1.7;color:var(--dim)">We manufacture this range to order. Send us your specification and we'll come back with options, pricing and lead times.</p>
+            <button data-mag="1" onClick="{{ goSamples }}" style="margin-top:22px;background:var(--blue);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.12em;padding:14px 28px;border-radius:999px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 12px 34px rgba(0,49,143,.5)">ENQUIRE ABOUT THIS RANGE</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-view="industries" data-screen-label="Industries page" style="display:none">
+<section style="padding:150px 26px 34px;background:radial-gradient(110% 100% at 20% 0%,#0b3ea6 0%,#052f8c 52%,#00246e 100%)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#8ba6dd;margin-bottom:18px">INDUSTRIES SERVED</div>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:1;color:#fff">Built for the trades<br/>that wear it out.</h1>
+    <p style="margin-top:22px;max-width:640px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">Our distributors supply crews in the sectors below. Tell us the trade and we'll recommend the article and leather that suits the work.</p>
+  </div>
+</section>
+<section style="padding:96px 26px 120px;background:#04287a">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden">
+    <sc-for list="{{ industries }}" as="n" hint-placeholder-count="6">
+      <div style="background:#063189;padding:40px 34px 44px;transition:background .5s" style-hover="background:#0a3ea0">
+        <div style="font-size:.72rem;font-weight:900;letter-spacing:.14em;color:var(--blue-lt);margin-bottom:20px">{{ n.n }}</div>
+        <h3 style="font-size:1.24rem;font-weight:800;letter-spacing:-.02em;margin-bottom:11px">{{ n.t }}</h3>
+        <p style="font-size:.9rem;line-height:1.72;color:var(--dim);margin-bottom:18px">{{ n.d }}</p>
+        <div style="font-size:.68rem;font-weight:800;letter-spacing:.13em;color:rgba(255,255,255,.5)">TYPICAL KIT</div>
+        <div style="margin-top:9px;font-size:.86rem;font-weight:700;color:#fff">{{ n.kit }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="max-width:1320px;margin:34px auto 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:20px;padding:30px 32px;background:linear-gradient(140deg,rgba(0,49,143,.28),rgba(0,49,143,0))">
+    <div>
+      <h3 style="font-size:1.2rem;font-weight:800;letter-spacing:-.02em">Not sure which article fits your crews?</h3>
+      <p style="margin-top:7px;font-size:.92rem;line-height:1.6;color:var(--dim)">Send us the application and we'll send samples of the two closest options.</p>
+    </div>
+    <button data-mag="1" onClick="{{ goSamples }}" style="background:var(--blue);color:#fff;font-size:.78rem;font-weight:900;letter-spacing:.12em;padding:16px 30px;border-radius:12px;white-space:nowrap;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 14px 38px rgba(0,49,143,.5)">REQUEST SAMPLES</button>
+  </div>
+</section>
+</div>
+
+<div data-view="contact" data-screen-label="Contact page" style="display:none">
+<section style="padding:150px 26px 34px;background:radial-gradient(110% 100% at 20% 0%,#0b3ea6 0%,#052f8c 52%,#00246e 100%)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:#8ba6dd;margin-bottom:18px">CONTACT US</div>
+    <h1 style="font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;letter-spacing:-.035em;line-height:1;color:#fff">Talk to the factory<br/>directly.</h1>
+    <p style="margin-top:22px;max-width:620px;font-size:1.02rem;line-height:1.75;color:rgba(255,255,255,.8)">Enquiries are answered within 24 hours on working days. For a quotation, include the article, quantity and destination port.</p>
+  </div>
+</section>
+<section style="padding:96px 26px 120px;background:#04287a">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:36px">
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden">
+      <div style="background:#063189;padding:32px 30px">
+        <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue-lt);margin-bottom:12px">EMAIL</div>
+        <a href="mailto:sales@pearlinternational.org" style="font-size:1.04rem;font-weight:700;color:#fff;transition:color .3s" style-hover="color:var(--blue-lt)">sales@pearlinternational.org</a>
+        <p style="margin-top:9px;font-size:.86rem;line-height:1.6;color:var(--dim)">The single address for samples, quotations and OEM enquiries.</p>
+      </div>
+      <div style="background:#063189;padding:32px 30px">
+        <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue-lt);margin-bottom:12px">PHONE &amp; WHATSAPP</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a href="tel:+922132370620" style="font-size:1rem;font-weight:700;color:#fff;transition:color .3s" style-hover="color:var(--blue-lt)">Landline — +92 21 32370620</a>
+          <a href="tel:+923003931059" style="font-size:1rem;font-weight:700;color:#fff;transition:color .3s" style-hover="color:var(--blue-lt)">Mobile — +92 300 3931059</a>
+          <a href="https://wa.me/923232400137" target="_blank" style="font-size:1rem;font-weight:700;color:#fff;transition:color .3s" style-hover="color:var(--blue-lt)">WhatsApp — +92 323 2400137</a>
+        </div>
+      </div>
+      <div style="background:#063189;padding:32px 30px">
+        <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue-lt);margin-bottom:12px">FACTORY &amp; OFFICE</div>
+        <p style="font-size:.95rem;line-height:1.7;color:#fff">126/2 Mumtaz Manzil, Bihar Colony<br/>Karachi, Pakistan</p>
+        <p style="margin-top:10px;font-size:.86rem;line-height:1.6;color:var(--dim)">Monday to Friday, 9:00am – 6:00pm PKT. All enquiries answered within 24 hours; buyer visits welcome by appointment.</p>
+      </div>
+    </div>
+    <div style="flex:1 1 380px;border:1px solid var(--line);border-radius:22px;padding:34px 32px;background:linear-gradient(160deg,rgba(0,49,143,.24),rgba(0,49,143,0))">
+      <h3 style="font-size:1.4rem;font-weight:900;letter-spacing:-.025em">Send an enquiry</h3>
+      <p style="margin-top:10px;font-size:.92rem;line-height:1.7;color:var(--dim)">Our sample request form captures everything we need to quote — article, quantity, destination and terms.</p>
+      <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px">
+        <button data-mag="1" onClick="{{ goSamples }}" style="background:var(--blue);color:#fff;font-size:.8rem;font-weight:900;letter-spacing:.12em;padding:17px 28px;border-radius:12px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 14px 38px rgba(0,49,143,.5)">GO TO SAMPLE REQUEST</button>
+        <button onClick="{{ goProducts }}" style="border:1.5px solid rgba(255,255,255,.3);color:#fff;font-size:.8rem;font-weight:900;letter-spacing:.12em;padding:17px 28px;border-radius:12px;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.08);border-color:#fff">BROWSE THE CATALOGUE</button>
+      </div>
+      <div style="margin-top:24px;padding-top:22px;border-top:1px solid var(--line)">
+        <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue-lt);margin-bottom:12px">FOLLOW US</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="https://www.linkedin.com/company/pearl-international-manufacturing" target="_blank" style="border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.76rem;font-weight:700;color:#fff;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.09);border-color:#fff;color:#fff">LinkedIn</a>
+          <a href="https://www.instagram.com/official.pearlinternational/" target="_blank" style="border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.76rem;font-weight:700;color:#fff;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.09);border-color:#fff;color:#fff">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61565845242094" target="_blank" style="border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.76rem;font-weight:700;color:#fff;transition:background .3s,border-color .3s" style-hover="background:rgba(255,255,255,.09);border-color:#fff;color:#fff">Facebook</a>
+        </div>
+      </div>
+      <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:.84rem;line-height:1.7;color:var(--dim)">Shipping FOB Karachi. Lead time 8 weeks from order confirmation. Payment 25% advance with the balance at sight of B/L, or L/C at sight.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<a href="https://wa.me/923232400137" target="_blank" aria-label="WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:320;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .4s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.08)">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.5z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg>
+</a>
+
+<footer data-screen-label="Footer" style="background:#021d59;padding:88px 26px 30px">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:48px">
+    <div>
+      <div style="display:flex;align-items:center;gap:13px;margin-bottom:18px">
+        <img src="img/logo-white.png" alt="Pearl International" style="height:52px;width:auto;mix-blend-mode:screen"/>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span style="font-size:1.4rem;font-weight:900;font-style:italic;letter-spacing:-.035em;line-height:1">PEARL</span>
+          <span style="font-size:.55rem;font-weight:800;letter-spacing:.22em;color:var(--blue-lt)">INTERNATIONAL</span>
+        </div>
+      </div>
+      <p style="max-width:300px;font-size:.9rem;line-height:1.75;color:var(--dim)">Manufacturer and bulk supplier of industrial safety products and protective workwear. Karachi, Pakistan — exporting worldwide since 1992.</p>
+      <div style="display:flex;gap:10px;margin-top:22px">
+        <a href="https://www.linkedin.com/company/pearl-international-manufacturing" target="_blank" aria-label="LinkedIn" style="width:38px;height:38px;border-radius:11px;border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1),border-color .3s" style-hover="background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+        <a href="https://www.instagram.com/official.pearlinternational/" target="_blank" aria-label="Instagram" style="width:38px;height:38px;border-radius:11px;border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1),border-color .3s" style-hover="background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61565845242094" target="_blank" aria-label="Facebook" style="width:38px;height:38px;border-radius:11px;border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1),border-color .3s" style-hover="background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:20px">NAVIGATION</h4>
+      <ul style="display:flex;flex-direction:column;gap:12px">
+        <li><button onClick="{{ goProducts }}" style="font-size:.9rem;text-align:left;color:rgba(255,255,255,.78);transition:color .3s" style-hover="color:#fff">Products</button></li>
+        <li><button onClick="{{ goIndustries }}" style="font-size:.9rem;text-align:left;color:rgba(255,255,255,.78);transition:color .3s" style-hover="color:#fff">Industries</button></li>
+        <li><button onClick="{{ goAbout }}" style="font-size:.9rem;text-align:left;color:rgba(255,255,255,.78);transition:color .3s" style-hover="color:#fff">About</button></li>
+        <li><button onClick="{{ goSamples }}" style="font-size:.9rem;text-align:left;color:rgba(255,255,255,.78);transition:color .3s" style-hover="color:#fff">Request Samples</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:20px">PRODUCTS</h4>
+      <ul style="display:flex;flex-direction:column;gap:12px;font-size:.9rem;color:rgba(255,255,255,.78)">
+        <li>Welding gloves</li>
+        <li>Driver &amp; rigger gloves</li>
+        <li>Leather aprons</li>
+        <li>Protective sleeves</li>
+        <li>Industrial uniforms</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:var(--blue-lt);margin-bottom:20px">CONTACT</h4>
+      <ul style="display:flex;flex-direction:column;gap:12px;font-size:.9rem;color:rgba(255,255,255,.78)">
+        <li><a href="mailto:sales@pearlinternational.org">sales@pearlinternational.org</a></li>
+        <li>+92 21 32370620</li>
+        <li>+92 300 3931059</li>
+        <li>126/2 Mumtaz Manzil, Bihar Colony</li>
+        <li>Karachi, Pakistan</li>
+      </ul>
+    </div>
+  </div>
+  <div style="max-width:1320px;margin:56px auto 0;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.42)">
+    <span>© {{ year }} Pearl International. All rights reserved.</span>
+    <span>Karachi, Pakistan</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/923232400137" target="_blank" aria-label="Chat on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:250;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(37,211,102,.42);transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s" style-hover="transform:translateY(-4px) scale(1.07);box-shadow:0 18px 44px rgba(37,211,102,.55);color:#fff">
+  <svg fill="currentColor" viewBox="0 0 24 24" width="26" height="26"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#00318f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#00318f&quot;,&quot;#0b2d6b&quot;,&quot;#1546b8&quot;,&quot;#c8102e&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:34,&quot;min&quot;:12,&quot;max&quot;:60,&quot;step&quot;:2,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Full&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Off&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const R = (typeof window !== 'undefined' && window.__resources) || {};
+const CATS = [
+  {kicker:'GLOVES', top:true, name:'Safety Gloves', code:'P1-025', img:R.catGloves || 'img/p1-025.jpg', desc:'Welding, driver, rigger and mechanic gloves for all industrial applications worldwide.'},
+  {kicker:'APRONS', name:'Industrial Aprons', code:'P1-101', img:R.catAprons || 'img/a1-050.jpg', desc:'Heavy-duty leather aprons for welding, fabrication and chemical handling environments.'},
+  {kicker:'SLEEVES', name:'Protective Sleeves', code:'P1-103', img:R.catSleeves || 'img/s1-080.jpg', desc:'Full-length leather arm sleeves for heat and abrasion protection during welding work.'},
+  {kicker:'UNIFORMS', name:'Industrial Uniforms', code:'P1-104', img:R.catUniforms || 'img/u1-010.jpg', desc:'Durable coveralls and workwear with reflective strips for high-visibility compliance.'}
+];
+const WHYS = [
+  {n:'01', t:'Not a night company', d:'A working factory since 1992 — and in three decades we have never lost a customer to a quality complaint.'},
+  {n:'02', t:'Inspected in-house, every article', d:'A 12-point inspection before packaging, carried out by our own QC team on the floor.'},
+  {n:'03', t:'Real, scalable capacity', d:'100,000+ pairs monthly with flexible MOQs — from trial orders to full container loads.'},
+  {n:'04', t:'Direct from the people who make it', d:'You deal with the factory, not an agent — which is why our pricing holds up against any quote you are comparing.'},
+  {n:'05', t:'Custom OEM & private label', d:'Your brand, your specifications — complete private labelling and custom packaging.'},
+  {n:'06', t:'Samples before any order', d:'A free sample on bulk order — handle the goods before you commit a rupee.'}
+];
+const MARKETS = [
+  {code:'UK', name:'United Kingdom'},{code:'AU', name:'Australia'},{code:'DE', name:'Germany'},{code:'FR', name:'France'},
+  {code:'AE', name:'United Arab Emirates'},{code:'SA', name:'Saudi Arabia'},{code:'US', name:'United States'},{code:'15+', name:'Global markets'}
+];
+const TERMS = [
+  {k:'LEAD TIME', v:'8 weeks from order confirmation'},
+  {k:'PAYMENT', v:'25% advance, balance at sight of B/L — or L/C at sight'},
+  {k:'SHIPMENT', v:'FOB Karachi'},
+  {k:'MOQ', v:'Set per article — tell us your range and we confirm'},
+  {k:'SAMPLES', v:'Free sample on bulk order'},
+  {k:'LEATHERS', v:'Goatskin, cow split and pigskin'},
+  {k:'SIZES', v:'Full size range available on every article'},
+  {k:'CARTONS', v:'Dimensions and CBM quoted with every offer'}
+];
+const NAV = [
+  {t:'Home', v:'home'},
+  {t:'About', v:'about'},
+  {t:'Products', v:'products'},
+  {t:'Industries', v:'industries'},
+  {t:'Request Samples', v:'samples'},
+  {t:'Contact Us', v:'contact'}
+];
+const INDUSTRIES = [
+  {n:'01', t:'Manufacturing', d:'Full protective apparel for production lines, assembly and quality control — designed for extended wear in multi-hazard environments.', kit:'Driver gloves, mechanic gloves, coveralls'},
+  {n:'02', t:'Construction', d:'Site-ready protective gear for builders, contractors and project workers, where heavy-duty durability comes before dexterity.', kit:'Rigger gloves, leather aprons, hi-vis coveralls'},
+  {n:'03', t:'Oil & Gas', d:'The sector demands the highest standards. Chemical and flame-resistant options for upstream, midstream and downstream operations.', kit:'Rigger gloves, FR coveralls, leather aprons'},
+  {n:'04', t:'Industrial Maintenance', d:'Versatile protection for maintenance and repair operations across mixed tasks and changing hazards.', kit:'Mechanic gloves, anti-vibration gloves, sleeves'},
+  {n:'05', t:'Logistics & Warehousing', d:'Durable workwear combining safety, comfort and professional appearance for high-turnover handling.', kit:'Driver gloves, coveralls'},
+  {n:'06', t:'Food Processing', d:'Hygiene-compliant protective apparel meeting strict food safety standards on the line.', kit:'Coveralls, aprons, sleeves'}
+];
+const STEPS = [
+  {n:'1', t:'Submit your request', d:'Products, approximate volume and where to ship.'},
+  {n:'2', t:'We confirm and pack', d:'Reviewed and prepared within two business days.'},
+  {n:'3', t:'Shipped to you', d:'International courier with tracking to your address.'},
+  {n:'4', t:'Evaluate and order bulk', d:'Move straight to a bulk quotation with volume pricing.'}
+];
+
+const CATALOG = {
+  gloves: {
+    label:'SAFETY GLOVES',
+    subs: [
+      {id:'rigger', label:'Rigger Gloves', items:[
+        {code:'P1-001', name:"Cow split standard rigger gloves with a yellow cloth back and a rubberized cuff", imgno:'28', sel:'Rigger Gloves'},
+        {code:'P1-002', name:"Cow split superior rigger gloves with a green cloth back and a rubberized cuff", imgno:'27', sel:'Rigger Gloves'},
+        {code:'P1-003', name:"Cow split superior rigger gloves with a red cloth back and a rubberized cuff", imgno:'29', sel:'Rigger Gloves'},
+        {code:'P1-004', name:"Cow split standard rigger gloves with a stripe cloth back and a rubberized cuff", imgno:'25', sel:'Rigger Gloves'},
+        {code:'P1-005', name:"Cow split double palm rigger gloves with a yellow cloth back and a rubberized cuff", imgno:'26', sel:'Rigger Gloves'},
+        {code:'P1-006', name:"Cow split economy rigger gloves with a candy cloth backing and a rubberized cuff", imgno:'30', sel:'Rigger Gloves'}
+      ]},
+      {id:'driver', label:'Driver Gloves', items:[
+        {code:'P1-007', name:"Sheep/goat skin gloves with a blue interlock back and a Velcro band cuff", imgno:'13', sel:'Driver Gloves'},
+        {code:'P1-008', name:"Sheep/goat skin gloves with a red interlock back and a Velcro band cuff", imgno:'12', sel:'Driver Gloves'},
+        {code:'P1-009', name:"Sheep/goat skin gloves with a red interlock back and a knit wrist cuff", imgno:'11', sel:'Driver Gloves'},
+        {code:'P1-010', name:"Cow grain driver gloves with cow split backing", imgno:'3', sel:'Driver Gloves'},
+        {code:'P1-011', name:"Goat skin driver gloves with red border piping and open cuff", imgno:'9', sel:'Driver Gloves'},
+        {code:'P1-012', name:"Goat skin driver gloves with split leather backing", imgno:'10', sel:'Driver Gloves'},
+        {code:'P1-015', name:"Cow grain driver gloves with a Velcro band cuff", imgno:'2', sel:'Driver Gloves'},
+        {code:'P1-016', name:"Sheep skin driver gloves with a cow split back", imgno:'8', sel:'Driver Gloves'},
+        {code:'P1-017', name:"Sheep skin driver gloves with a Velcro band cuff", imgno:'5', sel:'Driver Gloves'},
+        {code:'P1-018', name:"Sheep skin driver gloves with blue border piping and open cuff", imgno:'1', sel:'Driver Gloves'},
+        {code:'P1-019', name:"Goat skin driver gloves with red border piping and open cuff", imgno:'4', sel:'Driver Gloves'},
+        {code:'P1-020', name:"Goat skin driver gloves with black border piping and open cuff", imgno:'7', sel:'Driver Gloves'},
+        {code:'P1-021', name:"Goat skin driver gloves with split leather backing", imgno:'6', sel:'Driver Gloves'}
+      ]},
+      {id:'mechanic', label:'Mechanic Gloves', items:[
+        {code:'P1-022', name:"Mechanic gloves made of goat skin leather with a red fabric back", imgno:'14', sel:'Mechanic / Anti-Vibration Gloves'},
+        {code:'P1-023', name:"Mechanic gloves made of cow grain yellow leather with a black fabric back", imgno:'15', sel:'Mechanic / Anti-Vibration Gloves'},
+        {code:'P1-024', name:"Goat skin gloves with a black waterproof cloth back", imgno:'16', sel:'Mechanic / Anti-Vibration Gloves'}
+      ]},
+      {id:'welding', label:'Welding Gloves', items:[
+        {code:'P1-025', name:"Cow split blue welding gloves with piping and fleece lining inside", imgno:'23', sel:'Welding Gloves (Cow Split Blue)'},
+        {code:'P1-026', name:"Cow split red welding gloves with piping and fleece lining inside", imgno:'24', sel:'Welding Gloves (Cow Split Red)'},
+        {code:'P1-027', name:"Cow split black welding gloves with piping and fleece lining inside", imgno:'17', sel:'Chrome Leather Welding Gloves'},
+        {code:'P1-028', name:"White leather welding gloves with red cuff and soft inner lining", imgno:'18', sel:'Chrome Leather Welding Gloves'},
+        {code:'P1-029', name:"Cow-grain TIG welder gloves with a cow-split back and a cow-split cuff", imgno:'19', sel:'Aramid Stitched Welding Gloves'},
+        {code:'P1-030', name:"Cow-grain TIG welder gloves with a cow-split cuff", imgno:'22', sel:'Aramid Stitched Welding Gloves'},
+        {code:'P1-031', name:"Goat-skin TIG welder gloves with a cow-split cuff", imgno:'21', sel:'Aramid Stitched Welding Gloves'}
+      ]},
+      {id:'knit', label:'Knit Work Gloves', items:[
+        {code:'P1-032', name:"Gray and black nitrile/polyurethane coated gloves", imgno:'31', sel:'Multiple products (specify in notes)'},
+        {code:'P1-033', name:"Black crinkle-finished coated gloves with orange shell", imgno:'32', sel:'Multiple products (specify in notes)'},
+        {code:'P1-034', name:"White knit cotton/poly string gloves", imgno:'33', sel:'Multiple products (specify in notes)'},
+        {code:'P1-035', name:"Gray dipped/palm coated gloves with extended cuff", imgno:'34', sel:'Multiple products (specify in notes)'}
+      ]},
+      {id:'dotted', label:'Dotted Grip Gloves', items:[
+        {code:'P1-036', name:"Dotted canvas/knit gloves", imgno:'35', sel:'Multiple products (specify in notes)'},
+        {code:'P1-037', name:"Fully coated grip gloves", imgno:'36', sel:'Multiple products (specify in notes)'},
+        {code:'P1-038', name:"PVC dotted hybrid gloves", imgno:'37', sel:'Multiple products (specify in notes)'}
+      ]}
+    ]
+  },
+  aprons: {
+    label:'INDUSTRIAL APRONS',
+    subs: [
+      {id:'leather-aprons', label:'Leather Aprons', items:[
+        {code:'P1-101', name:"Grey leather heavy-duty industrial apron", imgno:'39', sel:'Leather Aprons'}
+      ]},
+      {id:'cotton-aprons', label:'Cotton Aprons', items:[
+        {code:'P1-102', name:"White cotton industrial apron with front pocket", imgno:'38', sel:'Leather Aprons'}
+      ]}
+    ]
+  },
+  sleeves: {
+    label:'PROTECTIVE SLEEVES',
+    subs: [
+      {id:'arm-sleeves', label:'Arm Sleeves', items:[
+        {code:'P1-103', name:"Leather sleeves", imgno:'40', sel:'Protective Arm Sleeves'}
+      ]}
+    ]
+  },
+  uniform: {
+    label:'INDUSTRIAL UNIFORM',
+    subs: [
+      {id:'coveralls', label:'Coveralls', items:[
+        {code:'P1-104', name:"Worker coverall", imgno:'', sel:'Industrial Coveralls / Uniforms'},
+        {code:'P1-105', name:"Worker jacket (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'},
+        {code:'P1-106', name:"Worker trouser (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'}
+      ]}
+    ]
+  }
+};
+const GROUP_KEYS = ['gloves','aprons','sleeves','uniform'];
+const ic = (d, s) => React.createElement('svg', {width:s||13, height:s||13, viewBox:'0 0 24 24', fill:'none', stroke:'currentColor', strokeWidth:1.8, strokeLinecap:'round', strokeLinejoin:'round'}, React.createElement('path', {d}));
+
+class Component extends DCLogic {
+  root = React.createRef();
+  state = {sent:false, sentName:'', sentProduct:'', view:'home', openGroup:'gloves', sub:'rigger'};
+  menuOpen = false;
+
+  findSub(id) {
+    for (const k of GROUP_KEYS) {
+      const s = CATALOG[k].subs.find(x => x.id === id);
+      if (s) return {group:k, sub:s};
+    }
+    return {group:'gloves', sub:CATALOG.gloves.subs[0]};
+  }
+
+  buildTree() {
+    const rows = [];
+    GROUP_KEYS.forEach(k => {
+      const g = CATALOG[k];
+      const open = this.state.openGroup === k;
+      rows.push({
+        label:g.label, pad:'13px 14px', bg:open ? 'var(--blue)' : 'rgba(255,255,255,.03)',
+        fg:'#fff', size:'.74rem', weight:'800', ls:'.1em', chev:'.75', rot:open ? '0deg' : '-90deg',
+        onClick: () => this.setState(s => ({openGroup: s.openGroup === k ? '' : k}))
+      });
+      if (!open) return;
+      g.subs.forEach(sb => {
+        const active = this.state.sub === sb.id;
+        rows.push({
+          label:sb.label, pad:'11px 14px 11px 22px',
+          bg:active ? 'rgba(61,127,240,.16)' : 'transparent',
+          fg:active ? 'var(--blue-lt)' : 'rgba(255,255,255,.68)',
+          size:'.83rem', weight:active ? '700' : '500', ls:'0', chev:'0', rot:'0deg',
+          onClick: () => this.setState({sub: sb.id})
+        });
+      });
+    });
+    return rows;
+  }
+
+  renderVals() {
+    const cur = this.findSub(this.state.sub);
+    const items = cur.sub.items || [];
+    return {
+      root: this.root,
+      year: new Date().getFullYear(),
+      cats: CATS.map(c => Object.assign({}, c, {hasImg: !!c.img, top: !!c.top, onClick: () => this.openCat(c.kicker)})),
+      whys: WHYS, markets: MARKETS, steps: STEPS, terms: TERMS,
+      pills: [
+        {t:'IN-HOUSE INSPECTED', icon:ic('M12 3l7 3v5c0 4.4-2.9 8.3-7 9.5C7.9 19.3 5 15.4 5 11V6l7-3z')},
+        {t:'GLOBAL EXPORT', icon:ic('M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.4 2.5 15.6 0 18M12 3c-2.5 2.4-2.5 15.6 0 18')},
+        {t:'BULK ORDERS', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14')},
+        {t:'CUSTOM OEM', icon:ic('M20.8 5.6a4.6 4.6 0 00-6.5 0L12 7.9l-2.3-2.3a4.6 4.6 0 10-6.5 6.5L12 21l8.8-8.9a4.6 4.6 0 000-6.5z')}
+      ],
+      heroFacts: [
+        {t:'RIGOROUS QUALITY', d:'A 12-point inspection on every article, by our own QC team.', icon:ic('M12 3l7 3v5c0 4.4-2.9 8.3-7 9.5C7.9 19.3 5 15.4 5 11V6l7-3z', 17)},
+        {t:'15+ EXPORT MARKETS', d:'UK, Australia, Germany, UAE, France & more.', icon:ic('M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.4 2.5 15.6 0 18M12 3c-2.5 2.4-2.5 15.6 0 18', 17)},
+        {t:'100,000+ PAIRS MONTHLY', d:'Real capacity, with flexible MOQs per article.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 17)},
+        {t:'SAMPLES FIRST', d:'Free sample on bulk order, before you commit.', icon:ic('M3 9l2-5h14l2 5M3 9h18v10H3zM9 13h6', 17)}
+      ],
+      tree: this.buildTree(),
+      curTitle: cur.sub.label,
+      curCount: items.length === 1 ? '1 product' : items.length + ' products',
+      hasItems: items.length > 0,
+      noItems: items.length === 0,
+      items: items.map(p => Object.assign({}, p, {
+        hasImg: !!p.imgno, noImg: !p.imgno,
+        onReq: () => this.requestProduct(p)
+      })),
+      industries: INDUSTRIES,
+      nav: NAV.map(n => ({
+        t:n.t, go:() => this.goView(n.v),
+        weight:this.state.view === n.v ? '800' : '600',
+        color:this.state.view === n.v ? 'var(--blue)' : '#2b2f38',
+        mcolor:this.state.view === n.v ? 'var(--blue)' : '#04287a'
+      })),
+      goTop: () => this.goView('home'),
+      goAbout: () => this.goView('about'),
+      goProducts: () => this.goView('products'),
+      goIndustries: () => this.goView('industries'),
+      goOem: () => this.goView('home', 'products'),
+      goSamples: () => this.goView('samples'),
+      goContact: () => this.goView('contact'),
+      toggleMenu: () => this.toggleMenu(),
+      submit: () => this.submit(),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      sentName: this.state.sentName,
+      sentProduct: this.state.sentProduct
+    };
+  }
+
+  openCat(kicker) {
+    if (!kicker) { this.goView('products'); return; }
+    const map = {WELDING:'welding', DRIVER:'driver', RIGGER:'rigger', APRONS:'leather-aprons', SLEEVES:'arm-sleeves', UNIFORMS:'coveralls'};
+    const fallback = 'rigger';
+    const id = map[kicker] || fallback;
+    const grp = this.findSub(id).group;
+    this.setState({sub:id, openGroup:grp});
+    this.goView('products');
+  }
+
+  requestProduct(p) {
+    this.goView('samples');
+    setTimeout(() => {
+      const r = this.root.current; if (!r) return;
+      const sel = r.querySelector('[data-f="product"]');
+      if (sel && p.sel) { sel.value = p.sel; sel.style.borderColor = 'var(--blue-lt)'; }
+    }, 420);
+  }
+
+  goView(view, anchor) {
+    if (this.menuOpen) this.toggleMenu();
+    if (this.state.view !== view) {
+      this.setState({view});
+      window.scrollTo(0, 0);
+      if (anchor && anchor !== 'top') setTimeout(() => this.jump(anchor), 90);
+      return;
+    }
+    if (anchor) this.jump(anchor); else window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  syncView() {
+    const r = this.root.current; if (!r) return;
+    r.querySelectorAll('[data-view]').forEach(el => {
+      el.style.display = el.getAttribute('data-view') === this.state.view ? 'block' : 'none';
+    });
+  }
+
+  jump(key) {
+    const r = this.root.current; if (!r) return;
+    if (this.menuOpen) this.toggleMenu();
+    if (key === 'top') { window.scrollTo({top:0, behavior:'smooth'}); return; }
+    const el = r.querySelector('[data-anchor="' + key + '"]');
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+
+  toggleMenu() {
+    const r = this.root.current; if (!r) return;
+    const m = r.querySelector('[data-menu]'); if (!m) return;
+    this.menuOpen = !this.menuOpen;
+    m.style.display = this.menuOpen ? 'flex' : 'none';
+  }
+
+  submit() {
+    const r = this.root.current; if (!r) return;
+    const v = k => { const el = r.querySelector('[data-f="' + k + '"]'); return el ? el.value.trim() : ''; };
+    const req = ['name','company','email','whatsapp','country','address','product'];
+    const missing = req.filter(k => !v(k));
+    const err = r.querySelector('[data-err]');
+    if (missing.length) {
+      if (err) err.style.display = 'block';
+      const first = r.querySelector('[data-f="' + missing[0] + '"]');
+      if (first) { first.style.borderColor = '#ff7a6b'; first.focus({preventScroll:true}); }
+      return;
+    }
+    if (err) err.style.display = 'none';
+    this.setState({sent:true, sentName:v('name'), sentProduct:v('product')});
+  }
+
+  wireReveals() {
+    const r = this.root.current; if (!r) return;
+    const nodes = Array.from(r.querySelectorAll('[data-reveal]')).filter(n => !n.__rv);
+    if (!nodes.length) return;
+    const prep = (el) => {
+      el.__rv = true;
+      const kind = el.getAttribute('data-reveal');
+      el.style.opacity = '0';
+      el.style.willChange = 'opacity, transform, filter';
+      if (kind === 'scale') { el.style.transform = 'scale(.93)'; el.style.filter = 'blur(9px)'; }
+      else if (kind === 'word') { el.style.transform = 'translateY(48px) scale(.97)'; el.style.filter = 'blur(16px)'; }
+      else { el.style.transform = 'translateY(34px)'; el.style.filter = 'blur(6px)'; }
+      const d = kind === 'word' ? '1.15s' : '.95s';
+      el.style.transition = 'opacity ' + d + ' cubic-bezier(.16,1,.3,1),transform ' + d + ' cubic-bezier(.16,1,.3,1),filter ' + d + ' cubic-bezier(.16,1,.3,1)';
+    };
+    const show = (el, delay) => setTimeout(() => {
+      el.style.opacity = '1'; el.style.transform = ''; el.style.filter = '';
+      setTimeout(() => { el.style.willChange = ''; }, 1300);
+    }, delay);
+    nodes.forEach(prep);
+    if (!this.obs) {
+      this.groups = new Map();
+      this.obs = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          const el = en.target; this.obs.unobserve(el);
+          const p = el.parentElement;
+          const n = this.groups.get(p) || 0;
+          this.groups.set(p, n + 1);
+          setTimeout(() => this.groups.set(p, 0), 800);
+          show(el, Math.min(n, 5) * 95);
+        });
+      }, {threshold:0.06, rootMargin:'0px 0px -5% 0px'});
+    }
+    let hero = 0;
+    nodes.forEach(el => {
+      const b = el.getBoundingClientRect();
+      if (b.top < window.innerHeight * 0.95 && b.bottom > 0) show(el, hero++ * 115 + 90);
+      else this.obs.observe(el);
+    });
+    if (this.sweep) clearInterval(this.sweep);
+    this.sweep = setInterval(() => {
+      const all = r.querySelectorAll('[data-reveal]');
+      let hidden = 0;
+      all.forEach(el => {
+        if (el.style.opacity !== '0') return;
+        hidden++;
+        const b = el.getBoundingClientRect();
+        if (b.top < window.innerHeight * 1.05 && b.bottom > -200) { try { this.obs.unobserve(el); } catch (e) {} show(el, 0); }
+      });
+      if (!hidden) { clearInterval(this.sweep); this.sweep = null; }
+    }, 700);
+  }
+
+  wireScroll() {
+    const r = this.root.current; if (!r) return;
+    const pill = r.querySelector('[data-pill]');
+    const tab = r.querySelector('[data-tab]');
+    const wrap = r.querySelector('[data-nav]');
+    const px = Array.from(r.querySelectorAll('[data-parallax]'));
+    let ticking = false;
+    const frame = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const past = y > 90;
+      if (pill) {
+        pill.style.padding = past ? '8px 10px 8px 20px' : '11px 12px 11px 26px';
+        pill.style.boxShadow = past ? '0 22px 60px rgba(0,0,0,.55)' : '0 18px 50px rgba(0,0,0,.42)';
+      }
+      if (wrap) wrap.style.top = past ? '12px' : '18px';
+      if (tab) {
+        tab.style.opacity = past ? '1' : '0';
+        tab.style.pointerEvents = past ? 'auto' : 'none';
+        tab.style.transform = past ? 'translate(-88%,-50%)' : 'translate(0,-50%)';
+      }
+      px.forEach(el => {
+        const f = parseFloat(el.getAttribute('data-parallax')) || 0.06;
+        const b = el.getBoundingClientRect();
+        const mid = b.top + b.height / 2 - window.innerHeight / 2;
+        el.style.translate = '0 ' + Math.round(-mid * f) + 'px';
+      });
+    };
+    this._onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+    window.addEventListener('scroll', this._onScroll, {passive:true});
+    frame();
+  }
+
+  wireCards() {
+    const r = this.root.current; if (!r) return;
+    r.querySelectorAll('[data-card]').forEach(card => {
+      if (card.__cw) return; card.__cw = true;
+      const imgs = card.querySelectorAll('[data-img]');
+      const arrow = card.querySelector('[data-arrow]');
+      card.addEventListener('mouseenter', () => {
+        imgs.forEach(i => { i.style.transform = (i.style.transform || '').includes('translateY(-50%)') ? 'translateY(-50%) scale(1.07)' : 'scale(1.07)'; i.style.opacity = i.style.opacity ? String(Math.min(1, parseFloat(i.style.opacity) + 0.18)) : ''; });
+        if (arrow) { arrow.style.transform = arrow.tagName === 'SPAN' ? 'scale(1)' : 'translateX(6px)'; arrow.style.opacity = '1'; }
+      });
+      card.addEventListener('mouseleave', () => {
+        imgs.forEach(i => { i.style.transform = (i.style.transform || '').includes('translateY(-50%)') ? 'translateY(-50%)' : ''; });
+        if (arrow) { arrow.style.transform = arrow.tagName === 'SPAN' ? 'scale(.55)' : ''; arrow.style.opacity = arrow.tagName === 'SPAN' ? '0' : '1'; }
+      });
+    });
+  }
+
+  wireMagnets() {
+    const r = this.root.current; if (!r) return;
+    r.querySelectorAll('[data-mag]').forEach(b => {
+      if (b.__mw) return; b.__mw = true;
+      b.addEventListener('mousemove', e => {
+        const q = b.getBoundingClientRect();
+        b.style.transform = 'translate(' + ((e.clientX - q.left) / q.width - .5) * 10 + 'px,' + ((e.clientY - q.top) / q.height - .5) * 7 + 'px) scale(1.03)';
+      });
+      b.addEventListener('mouseleave', () => { b.style.transform = ''; });
+    });
+  }
+
+  wireCounters() {
+    const r = this.root.current; if (!r) return;
+    const done = new WeakSet();
+    const run = el => {
+      if (done.has(el)) return; done.add(el);
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const t0 = performance.now();
+      const tick = t => {
+        const k = Math.min(1, (t - t0) / 1500);
+        el.textContent = String(Math.round(target * (1 - Math.pow(1 - k, 3))));
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if (this.cObs) this.cObs.disconnect();
+    this.cObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { run(e.target); this.cObs.unobserve(e.target); } }), {threshold:0.4});
+    r.querySelectorAll('[data-count]').forEach(n => {
+      const b = n.getBoundingClientRect();
+      if (b.top < window.innerHeight && b.bottom > 0) run(n); else this.cObs.observe(n);
+    });
+  }
+
+  wireResponsive() {
+    const r = this.root.current; if (!r) return;
+    const apply = () => {
+      const narrow = window.innerWidth < 1040;
+      const links = r.querySelector('[data-links]');
+      const burger = r.querySelector('[data-burger]');
+      const menu = r.querySelector('[data-menu]');
+      if (links) links.style.display = narrow ? 'none' : 'flex';
+      if (burger) burger.style.display = narrow ? 'flex' : 'none';
+      if (!narrow && menu) { menu.style.display = 'none'; this.menuOpen = false; }
+
+      const mob = window.innerWidth < 760;
+      const side = r.querySelector('[data-side]');
+      const promo = r.querySelector('[data-promo]');
+      const main = r.querySelector('[data-main]');
+      const chead = r.querySelector('[data-chead]');
+      const ppage = r.querySelector('[data-ppage]');
+      const grid = r.querySelector('[data-pgrid]');
+      const wrapEl = side ? side.parentElement : null;
+      const wrapped = !wrapEl || wrapEl.clientWidth < 268 + 36 + 620;
+      if (side) {
+        side.style.position = wrapped ? 'static' : 'sticky';
+        side.style.flex = wrapped ? '1 1 100%' : '0 1 268px';
+        side.style.width = wrapped ? '100%' : '';
+      }
+      if (promo) promo.style.display = mob ? 'none' : 'block';
+      if (main) main.style.flex = mob ? '1 1 100%' : '1 1 620px';
+      if (chead) {
+        chead.style.alignItems = mob ? 'flex-start' : 'flex-end';
+        chead.style.flexDirection = mob ? 'column' : 'row';
+      }
+      if (ppage) ppage.style.paddingTop = mob ? '92px' : '110px';
+      if (grid) grid.style.gridTemplateColumns = mob ? '1fr' : 'repeat(auto-fit,minmax(min(100%,230px),1fr))';
+      r.querySelectorAll('[data-ppage] section').forEach(s => {
+        s.style.paddingLeft = mob ? '16px' : '26px';
+        s.style.paddingRight = mob ? '16px' : '26px';
+      });
+    };
+    apply();
+    this._onResize = apply;
+    window.addEventListener('resize', apply);
+  }
+
+  applyProps() {
+    const r = this.root.current; if (!r) return;
+    const p = this.props || {};
+    const host = r.ownerDocument.documentElement;
+    if (p.accent) host.style.setProperty('--blue', p.accent);
+    const mq = r.querySelector('[data-mq]');
+    if (mq && p.marqueeSpeed) mq.style.animationDuration = p.marqueeSpeed + 's';
+    this.motion = p.motion || 'Full';
+    if (this.motion === 'Off' && mq) mq.style.animation = 'none';
+  }
+
+  componentDidMount() {
+    this.applyProps();
+    this.syncView();
+    this.wireResponsive();
+    this.wireScroll();
+    this.wireCards();
+    this.wireMagnets();
+    this.wireReveals();
+    this.wireCounters();
+  }
+
+  componentDidUpdate() { this.applyProps(); this.syncView(); this.wireReveals(); this.wireCards(); this.wireMagnets(); }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this.obs) this.obs.disconnect();
+    if (this.cObs) this.cObs.disconnect();
+    if (this.sweep) clearInterval(this.sweep);
+  }
+}
+</script>
+</body>
+</html>

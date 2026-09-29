@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pearl International — Industrial PPE, factory-direct since 1992</title>
+<style>
+:root{--accent:#00318f;--accent2:#2a6dd9;--deep:#001233;--rad:24px}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:#fff;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-x:hidden}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent2)}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit}
+img{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(46px);filter:blur(10px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes riseSoft{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes heroIn{from{opacity:0;transform:translateY(34px) scale(.985);filter:blur(12px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes glowPulse{0%,100%{opacity:.5;scale:1}50%{opacity:.85;scale:1.09}}
+@keyframes drift{0%,100%{translate:0 0;scale:1}33%{translate:6% -5%;scale:1.1}66%{translate:-5% 4%;scale:.96}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pageIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes sheen{from{background-position:-140% 0}to{background-position:240% 0}}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(7px);opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;animation-iteration-count:1 !important}}
+</style>
+</helmet>
+<div ref="{{ root }}" style="position:relative">
+
+<div data-navbar="1" style="position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.7);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(0,0,0,.07);transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .4s">
+  <div style="max-width:1200px;margin:0 auto;padding:0 22px;height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <button onClick="{{ goHome }}" style="display:flex;align-items:baseline;gap:8px;padding:0">
+      <span style="font-size:1.05rem;font-weight:700;letter-spacing:-.02em;color:#1d1d1f">Pearl</span>
+      <span style="font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)">International</span>
+    </button>
+    <div data-desknav="1" style="display:flex;align-items:center;gap:30px">
+      <button data-nav="home" onClick="{{ goHome }}" style="font-size:.8rem;font-weight:500;color:#1d1d1f;opacity:.9;transition:opacity .25s,color .25s" style-hover="opacity:1;color:var(--accent)">Home</button>
+      <button data-nav="about" onClick="{{ goAbout }}" style="font-size:.8rem;font-weight:500;color:#1d1d1f;opacity:.65;transition:opacity .25s,color .25s" style-hover="opacity:1;color:var(--accent)">About</button>
+      <button data-nav="products" onClick="{{ goProducts }}" style="font-size:.8rem;font-weight:500;color:#1d1d1f;opacity:.65;transition:opacity .25s,color .25s" style-hover="opacity:1;color:var(--accent)">Products</button>
+      <button data-nav="industries" onClick="{{ goIndustries }}" style="font-size:.8rem;font-weight:500;color:#1d1d1f;opacity:.65;transition:opacity .25s,color .25s" style-hover="opacity:1;color:var(--accent)">Industries</button>
+      <button data-nav="contact" onClick="{{ goContact }}" style="font-size:.8rem;font-weight:500;color:#1d1d1f;opacity:.65;transition:opacity .25s,color .25s" style-hover="opacity:1;color:var(--accent)">Contact</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button data-magnet="1" onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.78rem;font-weight:600;padding:8px 17px;border-radius:980px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,background .3s" style-hover="background:#0040b8;box-shadow:0 8px 26px rgba(0,49,143,.35)">Request samples</button>
+      <button data-burger="1" onClick="{{ toggleMenu }}" aria-label="Menu" style="display:none;width:34px;height:34px;align-items:center;justify-content:center;border-radius:10px;transition:background .25s" style-hover="background:rgba(0,0,0,.05)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div data-progress="1" style="height:2px;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .1s linear"></div>
+</div>
+
+<div data-menu="1" style="display:none;position:fixed;top:58px;left:0;right:0;z-index:190;background:rgba(255,255,255,.94);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(0,0,0,.08);padding:14px 22px 22px;flex-direction:column;gap:2px">
+  <button onClick="{{ goHome }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500;border-bottom:1px solid rgba(0,0,0,.06)">Home</button>
+  <button onClick="{{ goAbout }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500;border-bottom:1px solid rgba(0,0,0,.06)">About</button>
+  <button onClick="{{ goProducts }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500;border-bottom:1px solid rgba(0,0,0,.06)">Products</button>
+  <button onClick="{{ goIndustries }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500;border-bottom:1px solid rgba(0,0,0,.06)">Industries</button>
+  <button onClick="{{ goSamples }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500;border-bottom:1px solid rgba(0,0,0,.06)">Request samples</button>
+  <button onClick="{{ goContact }}" style="text-align:left;padding:13px 4px;font-size:1.05rem;font-weight:500">Contact</button>
+</div>
+
+<div data-page="home" data-screen-label="Home" style="padding-top:58px">
+
+  <section style="position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f5f5f7 62%,#eceef2 100%);padding:88px 22px 0;text-align:center">
+    <div data-orb="1" style="position:absolute;top:-14%;left:50%;width:min(1100px,120vw);height:min(1100px,120vw);transform:translateX(-50%);background:radial-gradient(circle,rgba(0,49,143,.13),rgba(0,49,143,0) 62%);pointer-events:none;animation:drift 22s ease-in-out infinite"></div>
+    <div style="position:relative;max-width:1000px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;padding:6px 15px 6px 11px;border:1px solid rgba(0,49,143,.18);background:rgba(255,255,255,.6);border-radius:980px;font-size:.74rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;color:var(--accent);animation:heroIn .9s cubic-bezier(.16,1,.3,1) both">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.14)"></span>
+        Manufacturing in Karachi since 1992
+      </div>
+      <h1 style="margin:26px 0 0;font-size:clamp(2.8rem,7.4vw,5.4rem);font-weight:700;letter-spacing:-.035em;line-height:1.02;animation:heroIn 1s cubic-bezier(.16,1,.3,1) .08s both">
+        Built to protect.<br/>
+        <span style="background:linear-gradient(100deg,#00318f,#2a6dd9 46%,#00318f);-webkit-background-clip:text;background-clip:text;color:transparent">Made to last.</span>
+      </h1>
+      <p style="max-width:640px;margin:26px auto 0;font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.45;color:#6e6e73;font-weight:400;animation:heroIn 1s cubic-bezier(.16,1,.3,1) .16s both">Factory-direct leather safety gloves and protective workwear, supplied to distributors and importers across 15+ global markets.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px;animation:heroIn 1s cubic-bezier(.16,1,.3,1) .24s both">
+        <button data-magnet="1" onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.95rem;font-weight:600;padding:14px 30px;border-radius:980px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,background .3s" style-hover="background:#0040b8;box-shadow:0 14px 40px rgba(0,49,143,.34)">Request samples</button>
+        <button onClick="{{ goProducts }}" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.95rem;font-weight:500;padding:14px 8px" style-hover="color:var(--accent2)">View the range
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+    <div style="position:relative;max-width:1100px;margin:8px auto 0;padding-bottom:70px">
+      <div style="position:absolute;left:50%;top:46%;width:min(660px,86vw);height:min(660px,86vw);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(42,109,217,.18),rgba(42,109,217,0) 68%);will-change:transform,opacity;animation:glowPulse 7s ease-in-out infinite;pointer-events:none"></div>
+      <img src="img/p1-025.jpg" alt="Cow split leather welding gloves" style="position:relative;width:auto;height:min(520px,58vh);margin:0 auto;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);animation:heroIn 1.3s cubic-bezier(.16,1,.3,1) .3s both"/>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:7px;margin-top:6px;animation:fadeIn 1s 1.2s both">
+        <span style="font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8a8a8f">Scroll</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8a8a8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:bob 2.2s ease-in-out infinite"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--deep);padding:20px 0;overflow:hidden;position:relative">
+    <div style="display:flex;width:max-content;animation:marquee 38s linear infinite;will-change:transform">
+      <div style="display:flex;align-items:center;gap:52px;padding-right:52px;font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap">
+        <span>United Kingdom</span><span>·</span><span>Australia</span><span>·</span><span>Germany</span><span>·</span><span>France</span><span>·</span><span>United Arab Emirates</span><span>·</span><span>Saudi Arabia</span><span>·</span><span>United States</span><span>·</span><span>Netherlands</span><span>·</span><span>Belgium</span><span>·</span><span>Italy</span><span>·</span><span>Spain</span><span>·</span><span>Canada</span><span>·</span><span>New Zealand</span><span>·</span><span>Qatar</span><span>·</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:52px;padding-right:52px;font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap" aria-hidden="true">
+        <span>United Kingdom</span><span>·</span><span>Australia</span><span>·</span><span>Germany</span><span>·</span><span>France</span><span>·</span><span>United Arab Emirates</span><span>·</span><span>Saudi Arabia</span><span>·</span><span>United States</span><span>·</span><span>Netherlands</span><span>·</span><span>Belgium</span><span>·</span><span>Italy</span><span>·</span><span>Spain</span><span>·</span><span>Canada</span><span>·</span><span>New Zealand</span><span>·</span><span>Qatar</span><span>·</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding:96px 22px;background:#fff">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:34px">
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:700;letter-spacing:-.04em;color:#1d1d1f"><span data-count="30" data-dur="1400">0</span><span style="color:var(--accent)">+</span></div>
+        <div style="margin-top:6px;font-size:.95rem;font-weight:600">Years of manufacturing</div>
+        <div style="margin-top:3px;font-size:.85rem;color:#86868b">Established 1992, Karachi</div>
+      </div>
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 28%">
+        <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:700;letter-spacing:-.04em;color:#1d1d1f"><span data-count="15" data-dur="1400">0</span><span style="color:var(--accent)">+</span></div>
+        <div style="margin-top:6px;font-size:.95rem;font-weight:600">Export markets</div>
+        <div style="margin-top:3px;font-size:.85rem;color:#86868b">UK, EU, UAE, Australia</div>
+      </div>
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%">
+        <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:700;letter-spacing:-.04em;color:#1d1d1f"><span data-count="500" data-dur="1700">0</span><span style="color:var(--accent)">K+</span></div>
+        <div style="margin-top:6px;font-size:.95rem;font-weight:600">Monthly output</div>
+        <div style="margin-top:3px;font-size:.85rem;color:#86868b">Pairs produced</div>
+      </div>
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 36%">
+        <div style="display:flex;align-items:baseline;font-size:clamp(2.6rem,5vw,3.9rem);font-weight:700;letter-spacing:-.04em;color:#1d1d1f"><span data-count="100" data-dur="1500">0</span><span style="color:var(--accent)">%</span></div>
+        <div style="margin-top:6px;font-size:.95rem;font-weight:600">Quality inspected</div>
+        <div style="margin-top:3px;font-size:.85rem;color:#86868b">Every single unit</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:20px 22px 110px;background:#f5f5f7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:720px;margin:0 auto 54px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="font-size:.8rem;font-weight:600;letter-spacing:.02em;color:var(--accent);margin-bottom:12px">The range</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">Four categories.<br/>One standard.</h2>
+        <p style="margin-top:16px;font-size:1.05rem;line-height:1.55;color:#6e6e73">Manufactured to international standards for the world's most demanding industrial environments.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:22px">
+        <div data-tilt="1" onClick="{{ goProducts }}" style="position:relative;background:#fff;border-radius:calc(var(--rad) + 4px);overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="box-shadow:0 30px 70px rgba(0,20,60,.16)">
+          <div style="position:relative;height:320px;display:flex;align-items:center;justify-content:center;background:#f6f8fc;overflow:hidden">
+            <div style="position:absolute;top:20px;left:20px;padding:5px 12px;border-radius:980px;background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;z-index:2">Bestseller</div>
+            <img data-zoom="1" src="img/p1-025.jpg" alt="Safety gloves" style="height:300px;width:auto;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+          </div>
+          <div style="padding:28px 30px 32px;border-top:1px solid rgba(0,0,0,.05)">
+            <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.022em">Safety Gloves</h3>
+            <p style="margin-top:9px;font-size:.95rem;line-height:1.55;color:#6e6e73">Welding, driver, rigger and mechanic gloves for every industrial application.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent);font-size:.9rem;font-weight:500;white-space:nowrap">Explore range
+              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .4s cubic-bezier(.16,1,.3,1)"><polyline points="9 5 16 12 9 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+        <div data-tilt="1" onClick="{{ goProducts }}" style="position:relative;background:#fff;border-radius:calc(var(--rad) + 4px);overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%" style-hover="box-shadow:0 30px 70px rgba(0,20,60,.16)">
+          <div style="position:relative;height:320px;display:flex;align-items:center;justify-content:center;background:#f6f8fc;overflow:hidden">
+            <img data-zoom="1" src="img/a1-050.jpg" alt="Industrial aprons" style="height:270px;width:auto;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+          </div>
+          <div style="padding:28px 30px 32px;border-top:1px solid rgba(0,0,0,.05)">
+            <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.022em">Industrial Aprons</h3>
+            <p style="margin-top:9px;font-size:.95rem;line-height:1.55;color:#6e6e73">Heavy-duty leather aprons for welding, fabrication and chemical handling.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent);font-size:.9rem;font-weight:500;white-space:nowrap">Explore range
+              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .4s cubic-bezier(.16,1,.3,1)"><polyline points="9 5 16 12 9 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+        <div data-tilt="1" onClick="{{ goProducts }}" style="position:relative;background:#fff;border-radius:calc(var(--rad) + 4px);overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="box-shadow:0 30px 70px rgba(0,20,60,.16)">
+          <div style="position:relative;height:320px;display:flex;align-items:center;justify-content:center;background:#f6f8fc;overflow:hidden">
+            <img data-zoom="1" src="img/s1-080.jpg" alt="Protective sleeves" style="height:290px;width:auto;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+          </div>
+          <div style="padding:28px 30px 32px;border-top:1px solid rgba(0,0,0,.05)">
+            <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.022em">Protective Sleeves</h3>
+            <p style="margin-top:9px;font-size:.95rem;line-height:1.55;color:#6e6e73">Full-length leather arm sleeves for heat and abrasion protection.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent);font-size:.9rem;font-weight:500;white-space:nowrap">Explore range
+              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .4s cubic-bezier(.16,1,.3,1)"><polyline points="9 5 16 12 9 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+        <div data-tilt="1" onClick="{{ goProducts }}" style="position:relative;background:#fff;border-radius:calc(var(--rad) + 4px);overflow:hidden;cursor:pointer;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%" style-hover="box-shadow:0 30px 70px rgba(0,20,60,.16)">
+          <div style="position:relative;height:320px;display:flex;align-items:center;justify-content:center;background:#f6f8fc;overflow:hidden">
+            <img data-zoom="1" src="img/u1-010.jpg" alt="Industrial uniforms" style="height:300px;width:auto;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+          </div>
+          <div style="padding:28px 30px 32px;border-top:1px solid rgba(0,0,0,.05)">
+            <h3 style="font-size:1.5rem;font-weight:700;letter-spacing:-.022em">Industrial Uniforms</h3>
+            <p style="margin-top:9px;font-size:.95rem;line-height:1.55;color:#6e6e73">Durable coveralls with reflective strips for high-visibility compliance.</p>
+            <div style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent);font-size:.9rem;font-weight:500;white-space:nowrap">Explore range
+              <svg data-arrow="1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .4s cubic-bezier(.16,1,.3,1)"><polyline points="9 5 16 12 9 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;background:var(--deep);color:#fff;padding:120px 22px">
+    <div style="position:absolute;top:-20%;left:-10%;width:60vw;height:60vw;background:radial-gradient(circle,rgba(0,49,143,.65),rgba(0,49,143,0) 66%);animation:drift 26s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:absolute;bottom:-30%;right:-12%;width:55vw;height:55vw;background:radial-gradient(circle,rgba(42,109,217,.4),rgba(42,109,217,0) 66%);animation:drift 32s ease-in-out 3s infinite reverse;pointer-events:none"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto">
+      <div style="max-width:760px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="font-size:.8rem;font-weight:600;color:#7aa5f0;margin-bottom:12px">Why partner with us</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">Three decades of doing<br/>one thing properly.</h2>
+        <p style="margin-top:18px;font-size:1.05rem;line-height:1.55;color:rgba(255,255,255,.62);max-width:600px">Manufacturing expertise, global supply capability and uncompromising quality control — built for serious B2B buyers.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;margin-top:64px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.09);border-radius:calc(var(--rad) - 2px);overflow:hidden">
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">01</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Factory-direct pricing</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">No middlemen. Manufacturer rates with volume discounts for distributors worldwide.</p>
+        </div>
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">02</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Consistent quality control</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">A 12-point inspection before packaging, with a zero-defect commitment on every shipment.</p>
+        </div>
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">03</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Scalable production</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">500,000+ pairs monthly with flexible MOQs — from trial orders to full container loads.</p>
+        </div>
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">04</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Global export experience</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">15+ markets served with full documentation, compliance and logistics coordination.</p>
+        </div>
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">05</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Custom OEM &amp; private label</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">Your brand, your specifications — complete private labelling and custom packaging.</p>
+        </div>
+        <div style="background:var(--deep);padding:38px 32px 42px;transition:background .5s" style-hover="background:#02184a">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#7aa5f0">06</div>
+          <h3 style="margin-top:16px;font-size:1.2rem;font-weight:600;letter-spacing:-.015em">Sample-first programme</h3>
+          <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.55)">Verify our standards before you commit. Samples ship worldwide within 3–5 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:120px 22px;background:#fff">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:60px;align-items:flex-start">
+      <div style="flex:1 1 340px;position:sticky;top:110px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:12px">Sample programme</div>
+        <h2 style="font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">See the quality<br/>before you buy.</h2>
+        <p style="margin-top:18px;font-size:1.05rem;line-height:1.55;color:#6e6e73;max-width:420px">Four steps from first enquiry to a bulk order. Most buyers place theirs within two weeks.</p>
+        <button data-magnet="1" onClick="{{ goSamples }}" style="margin-top:28px;background:var(--accent);color:#fff;font-size:.92rem;font-weight:600;padding:13px 28px;border-radius:980px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,background .3s" style-hover="background:#0040b8;box-shadow:0 14px 40px rgba(0,49,143,.3)">Start a sample request</button>
+      </div>
+      <div style="flex:1 1 440px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:22px;align-items:flex-start;padding:28px 30px;background:#f5f5f7;border-radius:calc(var(--rad) - 4px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="background:#eef2fa;transform:translateX(8px)">
+          <div style="flex:0 0 38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600">1</div>
+          <div><h4 style="font-size:1.08rem;font-weight:600;letter-spacing:-.015em">Submit your request</h4><p style="margin-top:6px;font-size:.93rem;line-height:1.6;color:#6e6e73">Tell us the products, approximate volume and where to ship.</p></div>
+        </div>
+        <div style="display:flex;gap:22px;align-items:flex-start;padding:28px 30px;background:#f5f5f7;border-radius:calc(var(--rad) - 4px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 29%" style-hover="background:#eef2fa;transform:translateX(8px)">
+          <div style="flex:0 0 38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600">2</div>
+          <div><h4 style="font-size:1.08rem;font-weight:600;letter-spacing:-.015em">We confirm and pack</h4><p style="margin-top:6px;font-size:.93rem;line-height:1.6;color:#6e6e73">Your sample pack is reviewed and prepared within two business days.</p></div>
+        </div>
+        <div style="display:flex;gap:22px;align-items:flex-start;padding:28px 30px;background:#f5f5f7;border-radius:calc(var(--rad) - 4px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%" style-hover="background:#eef2fa;transform:translateX(8px)">
+          <div style="flex:0 0 38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600">3</div>
+          <div><h4 style="font-size:1.08rem;font-weight:600;letter-spacing:-.015em">Shipped to you</h4><p style="margin-top:6px;font-size:.93rem;line-height:1.6;color:#6e6e73">Dispatched by international courier with tracking to your address.</p></div>
+        </div>
+        <div style="display:flex;gap:22px;align-items:flex-start;padding:28px 30px;background:#f5f5f7;border-radius:calc(var(--rad) - 4px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 35%" style-hover="background:#eef2fa;transform:translateX(8px)">
+          <div style="flex:0 0 38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:600">4</div>
+          <div><h4 style="font-size:1.08rem;font-weight:600;letter-spacing:-.015em">Evaluate and order bulk</h4><p style="margin-top:6px;font-size:.93rem;line-height:1.6;color:#6e6e73">Once satisfied, move straight to a bulk quotation with volume pricing.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:110px 22px;background:#f5f5f7">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:700px;margin:0 auto 52px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:12px">Industries</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">Where our gear works.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px">
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Manufacturing</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Protective apparel for production lines, assembly and quality control.</p>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 29%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Construction</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Site-ready gear for builders, contractors and project workers.</p>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Oil &amp; Gas</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Chemical and flame-resistant options for upstream and downstream work.</p>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Industrial maintenance</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Versatile protection for maintenance and repair operations.</p>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 29%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Logistics &amp; warehousing</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Durable workwear combining safety, comfort and a professional look.</p>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 4px);padding:32px 30px;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 32%" style-hover="transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,20,60,.1)">
+          <div style="width:42px;height:42px;border-radius:12px;background:rgba(0,49,143,.08);color:var(--accent);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+          <h3 style="margin-top:18px;font-size:1.15rem;font-weight:600;letter-spacing:-.015em">Food processing</h3>
+          <p style="margin-top:8px;font-size:.93rem;line-height:1.6;color:#6e6e73">Hygiene-compliant apparel meeting strict food safety standards.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <button onClick="{{ goIndustries }}" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:.95rem;font-weight:500" style-hover="color:var(--accent2)">All industry solutions
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;padding:120px 22px;background:linear-gradient(135deg,#00194d,#00318f 55%,#0a44b5);color:#fff;text-align:center">
+    <div style="position:absolute;top:-40%;left:50%;width:80vw;height:80vw;transform:translateX(-50%);background:radial-gradient(circle,rgba(122,165,240,.28),rgba(122,165,240,0) 62%);animation:drift 24s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:relative;max-width:720px;margin:0 auto;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%">
+      <h2 style="font-size:clamp(2rem,4.8vw,3.5rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">Start with a sample order.</h2>
+      <p style="margin-top:18px;font-size:1.08rem;line-height:1.55;color:rgba(255,255,255,.72)">Evaluate our quality first. Request samples of any product and have them shipped directly to you.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px">
+        <button data-magnet="1" onClick="{{ goSamples }}" style="background:#fff;color:var(--accent);font-size:.95rem;font-weight:600;padding:14px 30px;border-radius:980px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s" style-hover="box-shadow:0 14px 40px rgba(0,0,0,.28)">Request samples</button>
+        <button onClick="{{ goContact }}" style="border:1px solid rgba(255,255,255,.4);color:#fff;font-size:.95rem;font-weight:500;padding:14px 30px;border-radius:980px;white-space:nowrap;transition:background .35s,border-color .35s" style-hover="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.7)">Get a bulk quote</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-page="about" data-screen-label="About" style="display:none;padding-top:58px">
+  <section style="padding:96px 22px 70px;background:linear-gradient(180deg,#fff,#f5f5f7);text-align:center">
+    <div style="max-width:800px;margin:0 auto">
+      <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:14px">About us</div>
+      <h1 style="font-size:clamp(2.4rem,5.6vw,4rem);font-weight:700;letter-spacing:-.035em;line-height:1.04">Thirty years of<br/>leather, done right.</h1>
+      <p style="margin-top:20px;font-size:1.1rem;line-height:1.55;color:#6e6e73">Manufacturing excellence in industrial safety products, serving distributors and buyers across the globe.</p>
+    </div>
+  </section>
+  <section style="padding:80px 22px 100px;background:#f5f5f7">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:60px;align-items:center">
+      <div style="flex:1 1 380px;display:grid;grid-template-columns:1fr 1fr;gap:14px;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%">
+        <div style="background:#f6f8fc;border-radius:calc(var(--rad) - 4px);padding:18px;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/p1-026.jpg" alt="Welding gloves" style="width:100%;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.06)"/></div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="background:#f6f8fc;border-radius:calc(var(--rad) - 4px);padding:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:1"><img src="img/u1-011.jpg" alt="Coverall" style="width:100%;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04)"/></div>
+          <div style="background:var(--accent);border-radius:calc(var(--rad) - 4px);padding:22px;color:#fff">
+            <div style="font-size:2.1rem;font-weight:700;letter-spacing:-.03em">30<span style="opacity:.6">+</span></div>
+            <div style="font-size:.82rem;color:rgba(255,255,255,.75);margin-top:2px">Years of excellence</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 420px;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%">
+        <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:12px">Our story</div>
+        <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.08">Manufacturing excellence since 1992.</h2>
+        <p style="margin-top:20px;font-size:1rem;line-height:1.7;color:#6e6e73">Pearl International is a leading manufacturer and bulk supplier of industrial safety products and protective workwear. Founded in 1992 in Karachi, Pakistan, we have built a reputation for consistent quality, reliable supply and strong B2B partnerships across the globe.</p>
+        <p style="margin-top:14px;font-size:1rem;line-height:1.7;color:#6e6e73">Our facilities handle large-scale production while maintaining strict quality control. We serve distributors, importers and industrial companies across the UK, Australia, Europe, the UAE and beyond.</p>
+        <p style="margin-top:14px;font-size:1rem;line-height:1.7;color:#6e6e73">From premium leather welding gloves to industrial coveralls, every product reflects our commitment to quality, durability and worker safety.</p>
+        <button data-magnet="1" onClick="{{ goSamples }}" style="margin-top:28px;background:var(--accent);color:#fff;font-size:.92rem;font-weight:600;padding:13px 28px;border-radius:980px;white-space:nowrap;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,background .3s" style-hover="background:#0040b8;box-shadow:0 14px 40px rgba(0,49,143,.3)">Request samples</button>
+      </div>
+    </div>
+  </section>
+  <section style="padding:100px 22px;background:#fff">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:700px;margin:0 auto 50px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%">
+        <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:12px">Global reach</div>
+        <h2 style="font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;letter-spacing:-.032em;line-height:1.05">Markets we export to.</h2>
+        <p style="margin-top:16px;font-size:1.02rem;line-height:1.55;color:#6e6e73">Established relationships across 15+ countries with full documentation, compliance and logistics support.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px">
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">GB</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">United Kingdom</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 27%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">AU</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">Australia</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">DE</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">Germany</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 33%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">FR</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">France</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 24%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">AE</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">UAE</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 27%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">SA</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">Saudi Arabia</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">US</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">United States</div></div>
+        <div style="background:#f5f5f7;border-radius:16px;padding:22px 16px;text-align:center;transition:transform .45s cubic-bezier(.16,1,.3,1),background .4s;animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 33%" style-hover="transform:translateY(-5px);background:#eef2fa"><div style="font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--accent)">15+</div><div style="margin-top:8px;font-size:.85rem;font-weight:600">15+ markets</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-top:16px">
+        <div style="border:1px solid rgba(0,0,0,.08);border-radius:calc(var(--rad) - 4px);padding:28px;transition:border-color .4s,transform .5s cubic-bezier(.16,1,.3,1);animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 28%" style-hover="border-color:rgba(0,49,143,.35);transform:translateY(-4px)">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Pricing</div>
+          <h4 style="margin-top:10px;font-size:1.1rem;font-weight:600;letter-spacing:-.015em">Factory-direct rates</h4>
+          <p style="margin-top:8px;font-size:.92rem;line-height:1.65;color:#6e6e73">Volume discounts and transparent pricing, with no hidden fees for distributor partners.</p>
+        </div>
+        <div style="border:1px solid rgba(0,0,0,.08);border-radius:calc(var(--rad) - 4px);padding:28px;transition:border-color .4s,transform .5s cubic-bezier(.16,1,.3,1);animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 31%" style-hover="border-color:rgba(0,49,143,.35);transform:translateY(-4px)">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Logistics</div>
+          <h4 style="margin-top:10px;font-size:1.1rem;font-weight:600;letter-spacing:-.015em">Reliable freight</h4>
+          <p style="margin-top:8px;font-size:.92rem;line-height:1.65;color:#6e6e73">Coordinated freight so your shipment arrives on time and correctly packaged.</p>
+        </div>
+        <div style="border:1px solid rgba(0,0,0,.08);border-radius:calc(var(--rad) - 4px);padding:28px;transition:border-color .4s,transform .5s cubic-bezier(.16,1,.3,1);animation:riseSoft .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 34%" style-hover="border-color:rgba(0,49,143,.35);transform:translateY(-4px)">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Documentation</div>
+          <h4 style="margin-top:10px;font-size:1.1rem;font-weight:600;letter-spacing:-.015em">Full export support</h4>
+          <p style="margin-top:8px;font-size:.92rem;line-height:1.65;color:#6e6e73">Compliance certificates, customs declarations and country-specific requirements handled.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-page="products" data-screen-label="Products" style="display:none;padding-top:58px">
+  <section style="padding:96px 22px 60px;background:linear-gradient(180deg,#fff,#f5f5f7);text-align:center">
+    <div style="max-width:800px;margin:0 auto">
+      <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:14px">Products</div>
+      <h1 style="font-size:clamp(2.4rem,5.6vw,4rem);font-weight:700;letter-spacing:-.035em;line-height:1.04">The full lineup.</h1>
+      <p style="margin-top:18px;font-size:1.08rem;line-height:1.55;color:#6e6e73">Leather safety gloves and protective workwear for industrial applications worldwide.</p>
+    </div>
+  </section>
+  <section style="padding:50px 22px 100px;background:#f5f5f7">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+      <div style="flex:0 1 230px;position:sticky;top:96px">
+        <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b;margin-bottom:14px">Categories</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+            <button onClick="{{ c.onClick }}" style="display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;padding:11px 14px;border-radius:12px;font-size:.9rem;font-weight:500;transition:background .3s,color .3s;background:{{ c.bg }};color:{{ c.fg }}">
+              <span>{{ c.name }}</span>
+              <span style="font-size:.75rem;opacity:.6">{{ c.count }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <div style="margin-top:26px;padding:20px;background:#fff;border-radius:18px">
+          <div style="font-size:.95rem;font-weight:600;letter-spacing:-.01em">Need a custom spec?</div>
+          <p style="margin-top:7px;font-size:.85rem;line-height:1.6;color:#6e6e73">Private label and OEM production available on all categories.</p>
+          <button onClick="{{ goContact }}" style="margin-top:12px;color:var(--accent);font-size:.85rem;font-weight:600">Talk to us →</button>
+        </div>
+      </div>
+      <div style="flex:1 1 560px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px">
+          <h2 style="font-size:1.7rem;font-weight:700;letter-spacing:-.025em">{{ catTitle }}</h2>
+          <span style="font-size:.85rem;color:#86868b">{{ catCount }} products</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
+          <sc-for list="{{ products }}" as="p" hint-placeholder-count="6">
+            <div style="background:#fff;border-radius:calc(var(--rad) - 2px);overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s" style-hover="transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,20,60,.13)">
+              <div style="height:210px;display:flex;align-items:center;justify-content:center;background:#f6f8fc;overflow:hidden">
+                <img data-zoom="1" src="{{ p.img }}" alt="{{ p.name }}" style="max-height:180px;max-width:80%;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.1) saturate(1.04);transition:transform .8s cubic-bezier(.16,1,.3,1)"/>
+              </div>
+              <div style="padding:20px 22px 24px;border-top:1px solid rgba(0,0,0,.05)">
+                <div style="display:flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)">{{ p.code }}</div>
+                <h3 style="margin-top:8px;font-size:1.02rem;font-weight:600;letter-spacing:-.015em;line-height:1.3">{{ p.name }}</h3>
+                <p style="margin-top:7px;font-size:.86rem;line-height:1.6;color:#6e6e73">{{ p.desc }}</p>
+                <button onClick="{{ p.onReq }}" style="margin-top:14px;font-size:.85rem;font-weight:600;color:var(--accent)" style-hover="color:var(--accent2)">Request sample →</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-page="industries" data-screen-label="Industries" style="display:none;padding-top:58px">
+  <section style="padding:96px 22px 60px;background:linear-gradient(180deg,#fff,#f5f5f7);text-align:center">
+    <div style="max-width:820px;margin:0 auto">
+      <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:14px">Industries</div>
+      <h1 style="font-size:clamp(2.4rem,5.6vw,4rem);font-weight:700;letter-spacing:-.035em;line-height:1.04">Specialised for<br/>demanding sectors.</h1>
+      <p style="margin-top:18px;font-size:1.08rem;line-height:1.55;color:#6e6e73">Pearl International supplies protective apparel to industries with specific safety requirements our products are designed to meet.</p>
+    </div>
+  </section>
+  <section style="padding:60px 22px 110px;background:#f5f5f7">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
+      <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:44px;display:flex;flex-wrap:wrap;gap:36px;transition:box-shadow .5s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 26%" style-hover="box-shadow:0 26px 64px rgba(0,20,60,.11)">
+        <div style="flex:1 1 220px">
+          <div style="width:50px;height:50px;border-radius:14px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+          <h3 style="margin-top:18px;font-size:1.6rem;font-weight:700;letter-spacing:-.025em">Manufacturing</h3>
+        </div>
+        <p style="flex:2 1 320px;font-size:1rem;line-height:1.75;color:#6e6e73">Manufacturing facilities need comprehensive protective apparel across production lines, assembly and quality control. Our products are designed for extended wear in multi-hazard environments.</p>
+        <div style="flex:1 1 200px">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b;margin-bottom:12px">Key requirements</div>
+          <ul style="display:flex;flex-direction:column;gap:9px">
+            <li style="font-size:.9rem;color:#1d1d1f">Machinery protection</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Chemical resistance</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Durability for reuse</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Professional appearance</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:44px;display:flex;flex-wrap:wrap;gap:36px;transition:box-shadow .5s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 28%" style-hover="box-shadow:0 26px 64px rgba(0,20,60,.11)">
+        <div style="flex:1 1 220px">
+          <div style="width:50px;height:50px;border-radius:14px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+          <h3 style="margin-top:18px;font-size:1.6rem;font-weight:700;letter-spacing:-.025em">Construction</h3>
+        </div>
+        <p style="flex:2 1 320px;font-size:1rem;line-height:1.75;color:#6e6e73">Construction sites present multiple hazards at once. Our heavy-duty apparel helps companies maintain safety standards while providing durable comfort for demanding job sites globally.</p>
+        <div style="flex:1 1 200px">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b;margin-bottom:12px">Key requirements</div>
+          <ul style="display:flex;flex-direction:column;gap:9px">
+            <li style="font-size:.9rem;color:#1d1d1f">Heavy-duty durability</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Debris protection</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Weather resistance</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Hi-vis compliance</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:44px;display:flex;flex-wrap:wrap;gap:36px;transition:box-shadow .5s;animation:rise .95s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 30%" style-hover="box-shadow:0 26px 64px rgba(0,20,60,.11)">
+        <div style="flex:1 1 220px">
+          <div style="width:50px;height:50px;border-radius:14px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
+          <h3 style="margin-top:18px;font-size:1.6rem;font-weight:700;letter-spacing:-.025em">Oil &amp; Gas</h3>
+        </div>
+        <p style="flex:2 1 320px;font-size:1rem;line-height:1.75;color:#6e6e73">The oil and gas sector demands the highest safety standards. Our protective apparel meets the stringent requirements of upstream, midstream and downstream operations.</p>
+        <div style="flex:1 1 200px">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b;margin-bottom:12px">Key requirements</div>
+          <ul style="display:flex;flex-direction:column;gap:9px">
+            <li style="font-size:.9rem;color:#1d1d1f">Chemical resistance</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Flame-resistant options</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Extreme environments</li>
+            <li style="font-size:.9rem;color:#1d1d1f">Regulatory compliance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-page="samples" data-screen-label="Request samples" style="display:none;padding-top:58px">
+  <section style="position:relative;overflow:hidden;padding:96px 22px 60px;background:linear-gradient(180deg,#fff,#f5f5f7);text-align:center">
+    <div style="position:absolute;top:-60%;left:50%;width:70vw;height:70vw;transform:translateX(-50%);background:radial-gradient(circle,rgba(0,49,143,.12),rgba(0,49,143,0) 62%);animation:drift 20s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:relative;max-width:820px;margin:0 auto">
+      <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:14px">Sample programme</div>
+      <h1 style="font-size:clamp(2.4rem,5.6vw,4rem);font-weight:700;letter-spacing:-.035em;line-height:1.04">Try before you buy.</h1>
+      <p style="margin-top:18px;font-size:1.08rem;line-height:1.55;color:#6e6e73">Fill in the form and we'll arrange sample shipment directly to you. Dispatched within 3–5 business days of confirmation.</p>
+    </div>
+  </section>
+  <section style="padding:50px 22px 110px;background:#f5f5f7">
+    <div style="max-width:1150px;margin:0 auto;display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start">
+      <div style="flex:1 1 330px">
+        <h2 style="font-size:1.9rem;font-weight:700;letter-spacing:-.028em;line-height:1.12">How it works</h2>
+        <p style="margin-top:14px;font-size:.98rem;line-height:1.7;color:#6e6e73">Serious buyers verify quality, feel the material and test durability before placing large orders. Our sample programme is designed exactly for that.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:26px">
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:#fff;border-radius:18px;transition:transform .45s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(6px)">
+            <div style="flex:0 0 30px;height:30px;border-radius:50%;background:rgba(0,49,143,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700">1</div>
+            <div><strong style="font-size:.98rem;font-weight:600">Submit your request</strong><p style="margin-top:4px;font-size:.88rem;line-height:1.6;color:#6e6e73">Product interest, quantity and shipping details.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:#fff;border-radius:18px;transition:transform .45s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(6px)">
+            <div style="flex:0 0 30px;height:30px;border-radius:50%;background:rgba(0,49,143,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700">2</div>
+            <div><strong style="font-size:.98rem;font-weight:600">We confirm and pack</strong><p style="margin-top:4px;font-size:.88rem;line-height:1.6;color:#6e6e73">Your pack is prepared within two business days.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:#fff;border-radius:18px;transition:transform .45s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(6px)">
+            <div style="flex:0 0 30px;height:30px;border-radius:50%;background:rgba(0,49,143,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700">3</div>
+            <div><strong style="font-size:.98rem;font-weight:600">Shipped to you</strong><p style="margin-top:4px;font-size:.88rem;line-height:1.6;color:#6e6e73">International courier with tracking details.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:#fff;border-radius:18px;transition:transform .45s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(6px)">
+            <div style="flex:0 0 30px;height:30px;border-radius:50%;background:rgba(0,49,143,.1);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700">4</div>
+            <div><strong style="font-size:.98rem;font-weight:600">Evaluate and order bulk</strong><p style="margin-top:4px;font-size:.88rem;line-height:1.6;color:#6e6e73">Move to a bulk quotation with volume pricing.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:22px;padding:20px 22px;background:var(--deep);border-radius:18px;color:#fff">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)">Need to talk first?</div>
+          <p style="margin-top:8px;font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.8)">WhatsApp <a href="https://wa.me/923232400137" target="_blank" style="color:#7aa5f0;font-weight:600">+92 323 2400137</a> or email <a href="mailto:sales@pearlinternational.org" style="color:#7aa5f0;font-weight:600">sales@pearlinternational.org</a></p>
+        </div>
+      </div>
+      <div style="flex:1 1 460px">
+        <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:38px">
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center;padding:40px 10px;animation:riseSoft .7s cubic-bezier(.16,1,.3,1) both">
+              <div style="width:62px;height:62px;border-radius:50%;background:rgba(0,49,143,.09);color:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <h3 style="margin-top:20px;font-size:1.55rem;font-weight:700;letter-spacing:-.025em">Request submitted</h3>
+              <p style="margin:12px auto 0;max-width:30rem;font-size:.95rem;line-height:1.7;color:#6e6e73">Thank you, {{ sentName }}. We've received your sample request for {{ sentProduct }}. Our team will contact you on WhatsApp or email within 24 hours to confirm and arrange shipment.</p>
+              <p style="margin-top:16px;font-size:.85rem;color:#86868b">Questions? WhatsApp us at <a href="https://wa.me/923232400137" target="_blank" style="font-weight:600">+92 323 2400137</a></p>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <h3 style="font-size:1.4rem;font-weight:700;letter-spacing:-.025em">Sample request form</h3>
+              <p style="margin-top:7px;font-size:.9rem;color:#6e6e73">Fields marked * are required. We respond within 24 hours.</p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-top:24px">
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Full name *</span><input data-f="name" type="text" placeholder="John Smith" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;transition:border-color .3s,box-shadow .3s;background:#fbfbfd" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"/></label>
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Company *</span><input data-f="company" type="text" placeholder="Your Company Ltd." style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;transition:border-color .3s,box-shadow .3s;background:#fbfbfd" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"/></label>
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Email *</span><input data-f="email" type="email" placeholder="john@company.com" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;transition:border-color .3s,box-shadow .3s;background:#fbfbfd" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"/></label>
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">WhatsApp *</span><input data-f="whatsapp" type="tel" placeholder="+1 555 000 0000" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;transition:border-color .3s,box-shadow .3s;background:#fbfbfd" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"/></label>
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Country *</span><input data-f="country" type="text" placeholder="United Kingdom" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;transition:border-color .3s,box-shadow .3s;background:#fbfbfd" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"/></label>
+                <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Monthly volume</span>
+                  <select data-f="qty" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;background:#fbfbfd;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)">
+                    <option value="">Select approximate volume</option>
+                    <option>Under 500 pairs/month</option>
+                    <option>500 – 2,000 pairs/month</option>
+                    <option>2,000 – 10,000 pairs/month</option>
+                    <option>10,000+ pairs/month</option>
+                    <option>One-time / project order</option>
+                  </select>
+                </label>
+              </div>
+              <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Product(s) needed *</span>
+                <select data-f="product" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;background:#fbfbfd;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)">
+                  <option value="">Select product category</option>
+                  <option>Welding Gloves (Cow Split Blue)</option>
+                  <option>Welding Gloves (Cow Split Red)</option>
+                  <option>Chrome Leather Welding Gloves</option>
+                  <option>Aramid Stitched Welding Gloves</option>
+                  <option>Driver Gloves</option>
+                  <option>Rigger Gloves</option>
+                  <option>Mechanic / Anti-Vibration Gloves</option>
+                  <option>Leather Aprons</option>
+                  <option>Protective Arm Sleeves</option>
+                  <option>Industrial Coveralls / Uniforms</option>
+                  <option>Multiple products (specify in notes)</option>
+                </select>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Shipping address *</span><textarea data-f="address" rows="3" placeholder="Full shipping address including city, postcode and country" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;resize:vertical;background:#fbfbfd;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"></textarea></label>
+              <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:.78rem;font-weight:600;color:#1d1d1f">Additional notes</span><textarea data-f="notes" rows="3" placeholder="Sizes, colours, certifications or any other requirements…" style="padding:12px 14px;border:1px solid rgba(0,0,0,.12);border-radius:12px;font-size:.92rem;outline:none;resize:vertical;background:#fbfbfd;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--accent);box-shadow:0 0 0 4px rgba(0,49,143,.12)"></textarea></label>
+              <div data-err="1" style="display:none;margin-top:14px;font-size:.85rem;color:#c0392b">Please fill in all required fields.</div>
+              <button onClick="{{ submit }}" style="width:100%;margin-top:20px;background:var(--accent);color:#fff;font-size:.95rem;font-weight:600;padding:15px;border-radius:14px;transition:background .3s,box-shadow .4s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:#0040b8;box-shadow:0 14px 36px rgba(0,49,143,.3);transform:translateY(-2px)">Submit sample request</button>
+              <p style="margin-top:12px;font-size:.75rem;line-height:1.6;color:#86868b;text-align:center">By submitting you agree to be contacted by Pearl International about your request. We never share your information.</p>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div data-page="contact" data-screen-label="Contact" style="display:none;padding-top:58px">
+  <section style="padding:96px 22px 60px;background:linear-gradient(180deg,#fff,#f5f5f7);text-align:center">
+    <div style="max-width:800px;margin:0 auto">
+      <div style="font-size:.8rem;font-weight:600;color:var(--accent);margin-bottom:14px">Contact</div>
+      <h1 style="font-size:clamp(2.4rem,5.6vw,4rem);font-weight:700;letter-spacing:-.035em;line-height:1.04">Let's talk volume.</h1>
+      <p style="margin-top:18px;font-size:1.08rem;line-height:1.55;color:#6e6e73">Discuss requirements, request a bulk quotation or ask anything. We respond within 24 hours.</p>
+    </div>
+  </section>
+  <section style="padding:50px 22px 110px;background:#f5f5f7">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px">
+      <div style="flex:1 1 380px;background:var(--deep);color:#fff;border-radius:calc(var(--rad) - 2px);padding:44px;position:relative;overflow:hidden">
+        <div style="position:absolute;bottom:-30%;right:-20%;width:70%;height:70%;background:radial-gradient(circle,rgba(42,109,217,.45),rgba(42,109,217,0) 65%);animation:drift 24s ease-in-out infinite;pointer-events:none"></div>
+        <div style="position:relative">
+          <h3 style="font-size:1.6rem;font-weight:700;letter-spacing:-.025em">Get in touch</h3>
+          <p style="margin-top:10px;font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.6)">We welcome enquiries from distributors, importers and industrial buyers worldwide.</p>
+          <div style="display:flex;flex-direction:column;gap:22px;margin-top:32px">
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="flex:0 0 38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+              <div><strong style="font-size:.9rem;font-weight:600">Email</strong>
+                <p style="margin-top:5px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.65)"><a href="mailto:sales@pearlinternational.org" style="color:#7aa5f0">sales@pearlinternational.org</a><br/><a href="mailto:pearlgloves@hotmail.com" style="color:#7aa5f0">pearlgloves@hotmail.com</a><br/><a href="mailto:official.pearlinternational@gmail.com" style="color:#7aa5f0">official.pearlinternational@gmail.com</a></p>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="flex:0 0 38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+              <div><strong style="font-size:.9rem;font-weight:600">Phone</strong>
+                <p style="margin-top:5px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.65)">Landline +92 21 32370620<br/>Mobile +92 300 3931059<br/>WhatsApp <a href="https://wa.me/923232400137" target="_blank" style="color:#7aa5f0">+92 323 2400137</a></p>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="flex:0 0 38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+              <div><strong style="font-size:.9rem;font-weight:600">Address</strong><p style="margin-top:5px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.65)">126/2 Mumtaz Manzil, Bihar Colony<br/>Karachi, Pakistan</p></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start">
+              <div style="flex:0 0 38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+              <div><strong style="font-size:.9rem;font-weight:600">Business hours</strong><p style="margin-top:5px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.65)">Mon–Fri, 9:00–18:00 PKT<br/>All enquiries answered within 24 hours.</p></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:34px">
+            <a href="https://www.linkedin.com/company/pearl-international-manufacturing" target="_blank" style="width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,255,255,.22);transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+            <a href="https://www.instagram.com/official.pearlinternational/" target="_blank" style="width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,255,255,.22);transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61565845242094" target="_blank" style="width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,255,255,.22);transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            <a href="https://wa.me/923232400137" target="_blank" style="width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,255,255,.22);transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="15" height="15"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg></a>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:20px">
+        <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:38px;flex:1">
+          <h3 style="font-size:1.3rem;font-weight:700;letter-spacing:-.022em">Fastest route to a quote</h3>
+          <p style="margin-top:10px;font-size:.95rem;line-height:1.65;color:#6e6e73">Send us your product list, target volumes and destination port. We'll come back with pricing, lead times and shipping options within one business day.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
+            <button data-magnet="1" onClick="{{ goSamples }}" style="background:var(--accent);color:#fff;font-size:.92rem;font-weight:600;padding:13px 26px;border-radius:980px;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s,background .3s" style-hover="background:#0040b8;box-shadow:0 14px 36px rgba(0,49,143,.3)">Request samples</button>
+            <a href="https://wa.me/923232400137" target="_blank" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,0,0,.14);color:#1d1d1f;font-size:.92rem;font-weight:500;padding:13px 24px;border-radius:980px;white-space:nowrap;transition:border-color .3s,background .3s" style-hover="border-color:var(--accent);background:rgba(0,49,143,.04)">WhatsApp us</a>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:calc(var(--rad) - 2px);padding:38px">
+          <h3 style="font-size:1.3rem;font-weight:700;letter-spacing:-.022em">Visit the factory</h3>
+          <p style="margin-top:10px;font-size:.95rem;line-height:1.65;color:#6e6e73">Buyers travelling to Karachi are welcome to tour our production floor. Let us know your dates and we'll arrange a visit.</p>
+          <div style="margin-top:22px;padding:18px 20px;background:#f5f5f7;border-radius:16px;font-size:.9rem;line-height:1.7;color:#1d1d1f">126/2 Mumtaz Manzil, Bihar Colony<br/><span style="color:#6e6e73">Karachi 74200, Sindh, Pakistan</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer style="background:#f5f5f7;border-top:1px solid rgba(0,0,0,.07);padding:64px 22px 34px">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+    <div style="grid-column:span 1">
+      <div style="display:flex;align-items:baseline;gap:8px">
+        <span style="font-size:1.05rem;font-weight:700;letter-spacing:-.02em">Pearl</span>
+        <span style="font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)">International</span>
+      </div>
+      <p style="margin-top:14px;font-size:.86rem;line-height:1.7;color:#6e6e73;max-width:280px">Pioneering leather safety products since 1992. Serving global B2B clients with quality, reliability and competitive pricing.</p>
+      <div style="display:flex;gap:9px;margin-top:18px">
+        <a href="https://www.linkedin.com/company/pearl-international-manufacturing" target="_blank" style="width:34px;height:34px;border-radius:10px;background:rgba(0,0,0,.05);color:#1d1d1f;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--accent);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+        <a href="https://www.instagram.com/official.pearlinternational/" target="_blank" style="width:34px;height:34px;border-radius:10px;background:rgba(0,0,0,.05);color:#1d1d1f;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--accent);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61565845242094" target="_blank" style="width:34px;height:34px;border-radius:10px;background:rgba(0,0,0,.05);color:#1d1d1f;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="background:var(--accent);color:#fff;transform:translateY(-3px)"><svg fill="currentColor" viewBox="0 0 24 24" width="14" height="14"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Company</h4>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <li><button onClick="{{ goHome }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">Home</button></li>
+        <li><button onClick="{{ goAbout }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">About us</button></li>
+        <li><button onClick="{{ goProducts }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">Products</button></li>
+        <li><button onClick="{{ goIndustries }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">Industries</button></li>
+        <li><button onClick="{{ goSamples }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">Request samples</button></li>
+        <li><button onClick="{{ goContact }}" style="font-size:.88rem;color:#1d1d1f;transition:color .25s" style-hover="color:var(--accent)">Contact</button></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Products</h4>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px;font-size:.88rem;color:#6e6e73">
+        <li>Welding gloves</li>
+        <li>Driver gloves</li>
+        <li>Rigger gloves</li>
+        <li>Industrial aprons</li>
+        <li>Protective sleeves</li>
+        <li>Industrial uniforms</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#86868b">Contact</h4>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px;font-size:.88rem;color:#6e6e73">
+        <li><a href="mailto:sales@pearlinternational.org">sales@pearlinternational.org</a></li>
+        <li>+92 21 32370620</li>
+        <li>+92 300 3931059</li>
+        <li>126/2 Mumtaz Manzil</li>
+        <li>Bihar Colony, Karachi</li>
+        <li>Pakistan</li>
+      </ul>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:44px auto 0;padding-top:22px;border-top:1px solid rgba(0,0,0,.08);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.78rem;color:#86868b">
+    <span>© {{ year }} Pearl International. All rights reserved.</span>
+    <span>Karachi, Pakistan</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/923232400137" target="_blank" aria-label="Chat on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:150;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s" style-hover="transform:translateY(-4px) scale(1.06);box-shadow:0 16px 40px rgba(37,211,102,.5)">
+  <svg fill="currentColor" viewBox="0 0 24 24" width="26" height="26"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#00318f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#00318f&quot;,&quot;#0b2d6b&quot;,&quot;#123b8f&quot;,&quot;#1d1d1f&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Full&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;cardRadius&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:24,&quot;min&quot;:8,&quot;max&quot;:36,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+const CATALOG = [
+  {cat:'Safety Gloves',group:'Welding Gloves',code:'P1-025',name:'Cow Split Blue Welding Gloves',desc:'Heavy-duty cow split leather with fleece lining and reinforced palm.',img:'img/p1-025.jpg',sel:'Welding Gloves (Cow Split Blue)'},
+  {cat:'Safety Gloves',group:'Welding Gloves',code:'P1-026',name:'Cow Split Red Welding Gloves',desc:'Reinforced palm, thumb and heat-resistant aramid stitching.',img:'img/p1-026.jpg',sel:'Welding Gloves (Cow Split Red)'},
+  {cat:'Safety Gloves',group:'Welding Gloves',code:'P1-027',name:'Chrome Leather Welding Gloves',desc:'Superior heat and abrasion resistance for heavy welding tasks.',img:'img/p1-027.jpg',sel:'Chrome Leather Welding Gloves'},
+  {cat:'Safety Gloves',group:'Welding Gloves',code:'P1-028',name:'Aramid Stitched Welding Gloves',desc:'Fire-resistant stitching for extra durability in high-heat environments.',img:'img/p1-028.jpg',sel:'Aramid Stitched Welding Gloves'},
+  {cat:'Safety Gloves',group:'Driver Gloves',code:'P2-015',name:'Grain Leather Driver Gloves',desc:'Premium grain leather with keystone thumb for maximum dexterity.',img:'img/p2-015.jpg',sel:'Driver Gloves'},
+  {cat:'Safety Gloves',group:'Driver Gloves',code:'P2-016',name:'Split Leather Driver Gloves',desc:'Economical split leather for general industrial and driving use.',img:'img/p2-016.jpg',sel:'Driver Gloves'},
+  {cat:'Safety Gloves',group:'Driver Gloves',code:'P2-017',name:'Fleece Lined Driver Gloves',desc:'Insulated driver gloves with warm fleece lining for cold weather.',img:'img/p2-017.jpg',sel:'Driver Gloves'},
+  {cat:'Safety Gloves',group:'Rigger Gloves',code:'P3-101',name:'Chrome Rigger Gloves',desc:'Heavy-duty chrome leather with reinforced safety cuff.',img:'img/p3-101.jpg',sel:'Rigger Gloves'},
+  {cat:'Safety Gloves',group:'Rigger Gloves',code:'P3-102',name:'Canadian Rigger Gloves',desc:'Full palm reinforcement for heavy handling and rigging work.',img:'img/p3-102.jpg',sel:'Rigger Gloves'},
+  {cat:'Safety Gloves',group:'Mechanic Gloves',code:'P4-201',name:'Synthetic Mechanic Gloves',desc:'Flexible synthetic leather with reinforced fingertips.',img:'img/p4-201.jpg',sel:'Mechanic / Anti-Vibration Gloves'},
+  {cat:'Safety Gloves',group:'Mechanic Gloves',code:'P4-202',name:'Anti-Vibration Gloves',desc:'Padded gel anti-vibration protection for power tool use.',img:'img/p4-202.jpg',sel:'Mechanic / Anti-Vibration Gloves'},
+  {cat:'Industrial Aprons',group:'Leather Aprons',code:'A1-050',name:'Full Grain Leather Apron',desc:'Heavy-duty full grain leather for welding and industrial fabrication.',img:'img/a1-050.jpg',sel:'Leather Aprons'},
+  {cat:'Industrial Aprons',group:'Leather Aprons',code:'A1-051',name:'Split Leather Apron',desc:'Economical split leather with adjustable neck and waist straps.',img:'img/a1-051.jpg',sel:'Leather Aprons'},
+  {cat:'Industrial Aprons',group:'Leather Aprons',code:'A1-052',name:'Chrome Leather Apron',desc:'Superior chemical and heat resistance for demanding environments.',img:'img/a1-052.jpg',sel:'Leather Aprons'},
+  {cat:'Protective Sleeves',group:'Arm Sleeves',code:'S1-080',name:'Leather Arm Sleeves',desc:'Full-length cow split leather for complete welding arm protection.',img:'img/s1-080.jpg',sel:'Protective Arm Sleeves'},
+  {cat:'Protective Sleeves',group:'Arm Sleeves',code:'S1-081',name:'Heat Resistant Sleeves',desc:'Heat-resistant sleeves with elastic ends for a secure welding fit.',img:'img/s1-081.jpg',sel:'Protective Arm Sleeves'},
+  {cat:'Industrial Uniforms',group:'Coveralls',code:'U1-010',name:'Navy Reflective Coverall',desc:'Heavy-duty coverall with reflective strips for hi-vis compliance.',img:'img/u1-010.jpg',sel:'Industrial Coveralls / Uniforms'},
+  {cat:'Industrial Uniforms',group:'Coveralls',code:'U1-011',name:'FR Rated Coverall',desc:'Flame-retardant coverall meeting international safety standards.',img:'img/u1-011.jpg',sel:'Industrial Coveralls / Uniforms'}
+];
+const CATS = ['All products','Safety Gloves','Industrial Aprons','Protective Sleeves','Industrial Uniforms'];
+
+class Component extends DCLogic {
+  root = React.createRef();
+  state = {cat:'All products', sent:false, sentName:'', sentProduct:''};
+  page = 'home';
+  menuOpen = false;
+  presetProduct = '';
+
+  renderVals() {
+    const active = this.state.cat;
+    const list = active === 'All products' ? CATALOG : CATALOG.filter(p => p.cat === active);
+    const nav = (p) => () => this.go(p);
+    return {
+      root: this.root,
+      year: new Date().getFullYear(),
+      goHome: nav('home'), goAbout: nav('about'), goProducts: nav('products'),
+      goIndustries: nav('industries'), goSamples: nav('samples'), goContact: nav('contact'),
+      toggleMenu: () => this.toggleMenu(),
+      cats: CATS.map(c => ({
+        name: c,
+        count: c === 'All products' ? CATALOG.length : CATALOG.filter(p => p.cat === c).length,
+        bg: c === active ? 'var(--accent)' : 'rgba(0,0,0,0)',
+        fg: c === active ? '#ffffff' : '#1d1d1f',
+        onClick: () => this.setState({cat: c})
+      })),
+      catTitle: active,
+      catCount: list.length,
+      products: list.map(p => Object.assign({}, p, {onReq: () => this.request(p)})),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      sentName: this.state.sentName,
+      sentProduct: this.state.sentProduct,
+      submit: () => this.submit()
+    };
+  }
+
+  go(page) {
+    const r = this.root.current; if (!r) return;
+    this.page = page;
+    r.querySelectorAll('[data-page]').forEach(el => {
+      const on = el.getAttribute('data-page') === page;
+      el.style.display = on ? 'block' : 'none';
+      if (on) {
+        el.style.animation = 'none'; void el.offsetWidth;
+        el.style.animation = 'pageIn .6s cubic-bezier(.16,1,.3,1) both';
+        setTimeout(() => { el.style.animation = ''; }, 700);
+      }
+    });
+    r.querySelectorAll('[data-nav]').forEach(el => {
+      el.style.opacity = el.getAttribute('data-nav') === page ? '1' : '0.65';
+      el.style.color = el.getAttribute('data-nav') === page ? 'var(--accent)' : '#1d1d1f';
+    });
+    if (this.menuOpen) this.toggleMenu();
+    window.scrollTo(0, 0);
+    this.counted = new WeakSet();
+    requestAnimationFrame(() => { this.wireReveals(); this.wireCounters(); });
+  }
+
+  toggleMenu() {
+    const r = this.root.current; if (!r) return;
+    const m = r.querySelector('[data-menu]'); if (!m) return;
+    this.menuOpen = !this.menuOpen;
+    m.style.display = this.menuOpen ? 'flex' : 'none';
+  }
+
+  request(p) {
+    this.presetProduct = p.sel;
+    this.go('samples');
+    setTimeout(() => {
+      const r = this.root.current; if (!r) return;
+      const sel = r.querySelector('[data-f="product"]');
+      if (sel) { sel.value = p.sel; sel.style.borderColor = 'var(--accent)'; }
+    }, 60);
+  }
+
+  submit() {
+    const r = this.root.current; if (!r) return;
+    const v = k => { const el = r.querySelector('[data-f="' + k + '"]'); return el ? el.value.trim() : ''; };
+    const req = ['name','company','email','whatsapp','country','address','product'];
+    const missing = req.filter(k => !v(k));
+    const err = r.querySelector('[data-err]');
+    if (missing.length) {
+      if (err) { err.style.display = 'block'; }
+      const first = r.querySelector('[data-f="' + missing[0] + '"]');
+      if (first) { first.style.borderColor = '#c0392b'; first.focus({preventScroll:true}); }
+      return;
+    }
+    if (err) err.style.display = 'none';
+    this.setState({sent:true, sentName:v('name'), sentProduct:v('product')});
+  }
+
+  applyProps() {
+    const el = this.root.current; if (!el) return;
+    const p = this.props || {};
+    const host = el.ownerDocument.documentElement;
+    if (p.accent) { host.style.setProperty('--accent', p.accent); }
+    if (p.cardRadius != null) { host.style.setProperty('--rad', p.cardRadius + 'px'); }
+    const motion = p.motion || 'Full';
+    if (motion === 'Off') {
+      el.querySelectorAll('*').forEach(n => { if (n.style && n.style.animationName) n.style.animation = 'none'; });
+    }
+    this.motion = motion;
+  }
+
+  wireReveals() {
+    const r = this.root.current; if (!r) return;
+    const off = this.motion === 'Off';
+    const nodes = Array.from(r.querySelectorAll('[style*="animation"]'));
+    const fresh = [];
+    nodes.forEach(el => {
+      if (el.__rvInit) return;
+      const s = el.getAttribute('style') || '';
+      if (!/animation:\s*(rise|riseSoft|heroIn)/.test(s)) return;
+      el.__rvInit = true;
+      el.__float = /floaty/.test(s);
+      el.__hero = /heroIn/.test(s);
+      el.style.animation = 'none';
+      el.style.animationTimeline = 'auto';
+      if (off) { el.style.opacity = '1'; el.style.filter = ''; if (el.__float) el.style.animation = 'floaty 8s ease-in-out infinite'; return; }
+      el.style.opacity = '0';
+      el.style.transform = el.__hero ? 'translateY(26px) scale(.99)' : 'translateY(34px)';
+      el.style.filter = 'blur(7px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s cubic-bezier(.16,1,.3,1)';
+      fresh.push(el);
+    });
+    if (off || !fresh.length) return;
+    const show = (el, delay) => {
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = '';
+        el.style.filter = '';
+        if (el.__float) setTimeout(() => { el.style.animation = 'floaty 8s ease-in-out infinite'; }, 950);
+      }, delay);
+    };
+    if (this.rvObs) this.rvObs.disconnect();
+    const groups = new Map();
+    this.rvObs = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        this.rvObs.unobserve(el);
+        const p = el.parentElement;
+        const n = (groups.get(p) || 0);
+        groups.set(p, n + 1);
+        setTimeout(() => groups.set(p, 0), 700);
+        show(el, Math.min(n, 5) * 90);
+      });
+    }, {threshold: 0.08, rootMargin: '0px 0px -6% 0px'});
+    let heroI = 0;
+    fresh.forEach(el => {
+      const b = el.getBoundingClientRect();
+      const inView = b.top < window.innerHeight * 0.94 && b.bottom > 0;
+      if (el.__hero || inView) { show(el, (el.__hero ? heroI++ : 0) * 110 + 60); }
+      else this.rvObs.observe(el);
+    });
+  }
+
+  wireCounters() {
+    const r = this.root.current; if (!r) return;
+    if (!this.counted) this.counted = new WeakSet();
+    const nodes = r.querySelectorAll('[data-count]');
+    const run = (el) => {
+      if (this.counted.has(el)) return;
+      this.counted.add(el);
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const dur = parseFloat(el.getAttribute('data-dur')) || 1400;
+      if (this.motion === 'Off') { el.textContent = String(target); return; }
+      const t0 = performance.now();
+      const tick = (t) => {
+        const k = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - k, 3);
+        el.textContent = String(Math.round(target * e));
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if (this.countObs) this.countObs.disconnect();
+    this.countObs = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { run(en.target); this.countObs.unobserve(en.target); } });
+    }, {threshold: 0.4});
+    nodes.forEach(n => {
+      const rect = n.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) run(n); else this.countObs.observe(n);
+    });
+  }
+
+  wireResponsive() {
+    const r = this.root.current; if (!r) return;
+    const apply = () => {
+      const w = window.innerWidth;
+      const desk = r.querySelector('[data-desknav]');
+      const burger = r.querySelector('[data-burger]');
+      const menu = r.querySelector('[data-menu]');
+      const narrow = w < 900;
+      if (desk) desk.style.display = narrow ? 'none' : 'flex';
+      if (burger) burger.style.display = narrow ? 'flex' : 'none';
+      if (!narrow && menu) { menu.style.display = 'none'; this.menuOpen = false; }
+    };
+    apply();
+    this._onResize = apply;
+    window.addEventListener('resize', apply);
+  }
+
+  wireScroll() {
+    const r = this.root.current; if (!r) return;
+    const bar = r.querySelector('[data-navbar]');
+    const prog = r.querySelector('[data-progress]');
+    const parallax = Array.from(r.querySelectorAll('[data-parallax]'));
+    let last = window.scrollY, ticking = false;
+    const frame = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (prog) prog.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+      if (bar) {
+        bar.style.boxShadow = y > 12 ? '0 6px 30px rgba(0,20,60,.07)' : 'none';
+        if (this.motion !== 'Off') {
+          bar.style.transform = (y > last && y > 260) ? 'translateY(-100%)' : 'translateY(0)';
+        }
+      }
+      if (this.motion !== 'Off') {
+        parallax.forEach(el => {
+          const f = parseFloat(el.getAttribute('data-parallax')) || 0.1;
+          const rect = el.getBoundingClientRect();
+          const mid = rect.top + rect.height / 2 - window.innerHeight / 2;
+          el.style.translate = '0 ' + Math.round(-mid * f) + 'px';
+        });
+      }
+      last = y;
+    };
+    this._onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+    window.addEventListener('scroll', this._onScroll, {passive:true});
+    frame();
+  }
+
+  wireTilt() {
+    const r = this.root.current; if (!r) return;
+    r.querySelectorAll('[data-tilt]').forEach(card => {
+      const img = card.querySelector('[data-zoom]');
+      const arrow = card.querySelector('[data-arrow]');
+      card.addEventListener('mousemove', (e) => {
+        if (this.motion !== 'Full') return;
+        const b = card.getBoundingClientRect();
+        const px = (e.clientX - b.left) / b.width - 0.5;
+        const py = (e.clientY - b.top) / b.height - 0.5;
+        card.style.transform = 'perspective(1100px) rotateX(' + (-py * 4.5) + 'deg) rotateY(' + (px * 5.5) + 'deg) translateY(-8px)';
+        if (img) img.style.transform = 'scale(1.07) translate(' + (px * 14) + 'px,' + (py * 12) + 'px)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        if (img) img.style.transform = '';
+        if (arrow) arrow.style.transform = '';
+      });
+      card.addEventListener('mouseenter', () => { if (arrow) arrow.style.transform = 'translateX(5px)'; });
+    });
+    r.querySelectorAll('[data-zoom]').forEach(img => {
+      const holder = img.closest('div');
+      if (!holder || img.closest('[data-tilt]')) return;
+      holder.addEventListener('mouseenter', () => { if (this.motion !== 'Off') img.style.transform = 'scale(1.07)'; });
+      holder.addEventListener('mouseleave', () => { img.style.transform = ''; });
+    });
+  }
+
+  wireMagnets() {
+    const r = this.root.current; if (!r) return;
+    r.querySelectorAll('[data-magnet]').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        if (this.motion !== 'Full') return;
+        const b = btn.getBoundingClientRect();
+        const px = (e.clientX - b.left) / b.width - 0.5;
+        const py = (e.clientY - b.top) / b.height - 0.5;
+        btn.style.transform = 'translate(' + (px * 9) + 'px,' + (py * 6) + 'px) scale(1.03)';
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  componentDidMount() {
+    this.applyProps();
+    this.wireResponsive();
+    this.wireScroll();
+    this.wireTilt();
+    this.wireMagnets();
+    this.wireReveals();
+    this.wireCounters();
+  }
+
+  componentDidUpdate() {
+    this.applyProps();
+    const r = this.root.current;
+    if (r) {
+      r.querySelectorAll('[data-page]').forEach(el => {
+        el.style.display = el.getAttribute('data-page') === this.page ? 'block' : 'none';
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this.countObs) this.countObs.disconnect();
+    if (this.rvObs) this.rvObs.disconnect();
+  }
+}
+</script>
+</body>
+</html>

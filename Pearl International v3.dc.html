@@ -9,7 +9,9 @@
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Pearl International: Industrial PPE &amp; Workwear Manufacturer</title>
+<title>Safety Gloves Manufacturer Pakistan | Industrial Workwear | Pearl International</title>
+<meta name="description" content="Factory-direct leather safety gloves, welding gloves, aprons, arm sleeves and industrial workwear from Karachi, Pakistan. Manufacturing since 1992, exporting to 15+ markets. Samples, bulk orders and private label."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.pearlinternational.org/#organization","name":"Pearl International","url":"https://www.pearlinternational.org","logo":"https://www.pearlinternational.org/images/logo-white.png","description":"Pearl International is a B2B manufacturer of leather safety gloves, welding gloves, protective aprons, arm sleeves and industrial workwear based in Karachi, Pakistan. Established in 1992, exporting to 15+ countries.","foundingDate":"1992","email":"sales@pearlinternational.org","address":{"@type":"PostalAddress","streetAddress":"126/2 Mumtaz Manzil, Bihar Colony","addressLocality":"Karachi","addressRegion":"Sindh","postalCode":"74200","addressCountry":"PK"},"contactPoint":[{"@type":"ContactPoint","telephone":"+92-21-32370620","contactType":"sales","areaServed":"Worldwide","availableLanguage":"English"},{"@type":"ContactPoint","telephone":"+92-300-3931059","contactType":"customer service","areaServed":"Worldwide","availableLanguage":"English"}],"sameAs":["https://www.linkedin.com/company/pearl-international-manufacturing","https://www.instagram.com/official.pearlinternational/","https://www.facebook.com/profile.php?id=61565845242094"],"areaServed":["GB","AU","DE","FR","AE","SA","US","CA","TH","NL","BE","IT","ES","NZ","QA"]},{"@type":"LocalBusiness","@id":"https://www.pearlinternational.org/#localbusiness","name":"Pearl International","url":"https://www.pearlinternational.org","telephone":"+92-21-32370620","address":{"@type":"PostalAddress","streetAddress":"126/2 Mumtaz Manzil, Bihar Colony","addressLocality":"Karachi","addressRegion":"Sindh","postalCode":"74200","addressCountry":"PK"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},"geo":{"@type":"GeoCoordinates","latitude":"24.8607","longitude":"67.0011"}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=League+Spartan:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -33,6 +35,8 @@ img{display:block;max-width:100%}
 @keyframes orb{0%,100%{translate:0 0;scale:1}50%{translate:5% -6%;scale:1.14}}
 @keyframes ppFade{from{opacity:0}to{opacity:1}}
 @keyframes ppRise{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
+.pi-faq summary::-webkit-details-marker{display:none}
+.pi-faq[open] .pi-faq-ic{transform:rotate(45deg)}
 .pp-chips::-webkit-scrollbar,.pp-shelf::-webkit-scrollbar{display:none}
 .pp-link,.pp-name{padding:0}
 .pp-link .pp-chev{display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1)}
@@ -333,6 +337,16 @@ img{display:block;max-width:100%}
     </div>
   </div>
 </section>
+<section style="padding:0 26px clamp(84px,9vw,120px);background:var(--tint);color:var(--ink)">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px">
+    <sc-for list="{{ exportPillars }}" as="xp" hint-placeholder-count="3">
+      <div data-reveal="up" style="border-radius:14px;padding:30px 28px;background:var(--blue);color:#fff">
+        <h3 style="font-size:1.18rem;font-weight:800;letter-spacing:-.02em">{{ xp.t }}</h3>
+        <p style="margin-top:10px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.8)">{{ xp.d }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
 
 </div>
 
@@ -362,6 +376,24 @@ img{display:block;max-width:100%}
       </sc-for>
     </div>
     <p data-reveal="up" style="margin-top:22px;font-size:.84rem;line-height:1.7;color:#8B95A6;max-width:760px">Quality control is carried out in-house by our own team; we do not currently hold CE marking, and any certification a buyer requires is arranged and stated explicitly before an order is confirmed.</p>
+  </div>
+</section>
+
+<section data-anchor="faq" data-screen-label="FAQ" style="padding:0 26px clamp(80px,9vw,112px);background:#ffffff;color:var(--ink)">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+    <div data-reveal="up" style="flex:1 1 300px">
+      <div style="font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--blue);margin-bottom:18px">BUYER FAQ</div>
+      <h2 style="font-size:clamp(1.9rem,4.2vw,3.1rem);font-weight:900;letter-spacing:-.04em;line-height:1;text-transform:uppercase">Common<br/><span style="color:var(--blue)">questions</span></h2>
+      <p style="margin-top:18px;max-width:360px;font-size:.96rem;line-height:1.7;color:var(--body)">Anything else, ask us on WhatsApp at +92 323 2400137 or email sales@pearlinternational.org.</p>
+    </div>
+    <div style="flex:2 1 520px;min-width:0;border-top:1px solid var(--hair)">
+      <sc-for list="{{ faqs }}" as="fq" hint-placeholder-count="6">
+        <details class="pi-faq" style="border-bottom:1px solid var(--hair)">
+          <summary style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 2px;cursor:pointer;list-style:none;font-size:1.04rem;font-weight:800;letter-spacing:-.015em">{{ fq.q }}<span class="pi-faq-ic" style="flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--tint);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:transform .35s cubic-bezier(.16,1,.3,1)">+</span></summary>
+          <p style="padding:0 2px 24px;max-width:680px;font-size:.95rem;line-height:1.72;color:var(--body)">{{ fq.a }}</p>
+        </details>
+      </sc-for>
+    </div>
   </div>
 </section>
 
@@ -638,6 +670,7 @@ img{display:block;max-width:100%}
           <div style="font-size:.82rem;font-weight:700;color:var(--blue)">{{ qv.group }} · {{ qv.subLabel }}</div>
           <h3 style="margin-top:10px;font-size:1.7rem;font-weight:800;letter-spacing:-.03em;line-height:1.15">{{ qv.name }}</h3>
           <div style="margin-top:10px;font-size:.85rem;color:#86868B">Article {{ qv.code }}</div>
+          <sc-if value="{{ qv.desc }}" hint-placeholder-val="{{ false }}"><p style="margin-top:14px;font-size:.95rem;line-height:1.6;color:#6E6E73">{{ qv.desc }}</p></sc-if>
           <div style="margin-top:26px;border-top:1px solid #EDEDF0">
             <sc-for list="{{ qvSpecs }}" as="q" hint-placeholder-count="5">
               <div style="display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid #EDEDF0;font-size:.88rem">
@@ -671,6 +704,14 @@ img{display:block;max-width:100%}
         <div style="font-size:.72rem;font-weight:900;letter-spacing:.14em;color:var(--blue);margin-bottom:20px">{{ n.n }}</div>
         <h3 style="font-size:1.24rem;font-weight:800;letter-spacing:-.02em;margin-bottom:11px">{{ n.t }}</h3>
         <p style="font-size:.9rem;line-height:1.72;color:var(--body);margin-bottom:18px">{{ n.d }}</p>
+        <sc-if value="{{ n.hasReqs }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-bottom:18px">
+            <div style="font-size:.68rem;font-weight:800;letter-spacing:.13em;color:#7C8698">KEY REQUIREMENTS</div>
+            <ul style="margin-top:9px;display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ n.reqs }}" as="rq" hint-placeholder-count="4"><li style="font-size:.76rem;font-weight:700;color:var(--blue);background:var(--blue-lt);padding:5px 10px;border-radius:999px">{{ rq }}</li></sc-for>
+            </ul>
+          </div>
+        </sc-if>
         <div style="font-size:.68rem;font-weight:800;letter-spacing:.13em;color:#7C8698">TYPICAL KIT</div>
         <div style="margin-top:9px;font-size:.86rem;font-weight:700;color:var(--ink)">{{ n.kit }}</div>
       </div>
@@ -700,6 +741,7 @@ img{display:block;max-width:100%}
       <div style="background:#ffffff;padding:32px 30px">
         <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue);margin-bottom:12px">EMAIL</div>
         <a href="mailto:sales@pearlinternational.org" style="font-size:1.04rem;font-weight:700;color:var(--ink);transition:color .3s" style-hover="color:var(--blue)">sales@pearlinternational.org</a>
+        <div style="margin-top:6px;display:flex;flex-direction:column;gap:4px;font-size:.9rem;font-weight:600;color:var(--body)"><span>pearlgloves@hotmail.com</span><span>official.pearlinternational@gmail.com</span></div>
         <p style="margin-top:9px;font-size:.86rem;line-height:1.6;color:var(--body)">The single address for samples, quotations and OEM enquiries.</p>
       </div>
       <div style="background:#ffffff;padding:32px 30px">
@@ -712,7 +754,7 @@ img{display:block;max-width:100%}
       </div>
       <div style="background:#ffffff;padding:32px 30px">
         <div style="font-size:.66rem;font-weight:900;letter-spacing:.18em;color:var(--blue);margin-bottom:12px">FACTORY &amp; OFFICE</div>
-        <p style="font-size:.95rem;line-height:1.7;color:var(--ink)">126/2 Mumtaz Manzil, Bihar Colony<br/>Karachi, Pakistan</p>
+        <p style="font-size:.95rem;line-height:1.7;color:var(--ink)">126/2 Mumtaz Manzil, Bihar Colony<br/>Karachi 74200, Sindh, Pakistan</p>
         <p style="margin-top:10px;font-size:.86rem;line-height:1.6;color:var(--body)">Monday to Friday, 9:00am – 6:00pm PKT. All enquiries answered within 24 hours; buyer visits welcome by appointment.</p>
       </div>
     </div>
@@ -733,6 +775,36 @@ img{display:block;max-width:100%}
       </div>
       <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--hair);font-size:.84rem;line-height:1.7;color:var(--body)">Shipping FOB Karachi. Lead time 8 weeks from order confirmation. Payment 25% advance with the balance at sight of B/L, or L/C at sight.</div>
     </div>
+  </div>
+</section>
+<section data-anchor="message" data-screen-label="Send a message" style="padding:0 26px clamp(80px,9vw,112px);background:var(--grey);color:var(--ink)">
+  <div style="max-width:1320px;margin:0 auto;border:1px solid var(--hair);border-radius:22px;background:#ffffff;padding:clamp(26px,4vw,48px)">
+    <sc-if value="{{ msgSent }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:30px 8px">
+        <h3 style="font-size:1.55rem;font-weight:900;letter-spacing:-.03em">Message sent</h3>
+        <p style="margin:12px auto 0;max-width:30rem;font-size:.94rem;line-height:1.7;color:var(--body)">Thank you, {{ msgName }}. Our team will get back to you within 24 hours.</p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ msgNotSent }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-wrap:wrap;gap:36px">
+        <div style="flex:1 1 260px">
+          <h3 style="font-size:1.6rem;font-weight:900;letter-spacing:-.03em">Send us a message</h3>
+          <p style="margin-top:10px;max-width:340px;font-size:.93rem;line-height:1.7;color:var(--body)">We welcome enquiries from distributors, importers and industrial buyers worldwide. Our team replies within 24 hours.</p>
+        </div>
+        <div style="flex:2 1 460px;min-width:0">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:13px">
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">YOUR NAME *</span><input data-m="name" type="text" placeholder="John Smith" style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s" style-focus="border-color:var(--blue)"/></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">COMPANY *</span><input data-m="company" type="text" placeholder="Your Company Ltd." style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s" style-focus="border-color:var(--blue)"/></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">EMAIL *</span><input data-m="email" type="email" placeholder="john@company.com" style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s" style-focus="border-color:var(--blue)"/></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">PHONE</span><input data-m="phone" type="tel" placeholder="+44 7000 000000" style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s" style-focus="border-color:var(--blue)"/></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">COUNTRY</span><input data-m="country" type="text" placeholder="United Kingdom" style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s" style-focus="border-color:var(--blue)"/></label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:7px;margin-top:13px"><span style="font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#6B7688">MESSAGE *</span><textarea data-m="message" rows="4" placeholder="Articles, quantities and destination port" style="padding:13px 15px;border:1px solid var(--hair);border-radius:11px;font-size:.9rem;background:#ffffff;color:var(--ink);outline:none;transition:border-color .3s;resize:vertical" style-focus="border-color:var(--blue)"></textarea></label>
+          <div data-merr="1" style="display:none;margin-top:12px;font-size:.84rem;color:#d93a2b">Please fill in your name, company, email and message.</div>
+          <button data-mag="1" onClick="{{ sendMsg }}" style="margin-top:18px;background:var(--blue);color:#fff;font-size:.84rem;font-weight:800;letter-spacing:.1em;padding:16px 30px;border-radius:999px;transition:background .3s" style-hover="background:var(--blue-dk)">SEND MESSAGE</button>
+        </div>
+      </div>
+    </sc-if>
   </div>
 </section>
 </div>
@@ -781,6 +853,7 @@ img{display:block;max-width:100%}
       <h4 style="font-size:.66rem;font-weight:800;letter-spacing:.2em;color:#ffffff;margin-bottom:20px">CONTACT</h4>
       <ul style="display:flex;flex-direction:column;gap:12px;font-size:.9rem;color:rgba(255,255,255,.78)">
         <li><a href="mailto:sales@pearlinternational.org" style="color:rgba(255,255,255,.78);transition:color .3s" style-hover="color:#fff">sales@pearlinternational.org</a></li>
+        <li>pearlgloves@hotmail.com</li>
         <li>+92 21 32370620</li>
         <li>+92 300 3931059</li>
         <li>126/2 Mumtaz Manzil, Bihar Colony</li>
@@ -815,8 +888,9 @@ const WHYS = [
   {n:'06', t:'Samples before any order', d:'A free sample on bulk order. Handle the goods before you commit a rupee.'}
 ];
 const MARKETS = [
-  {code:'UK', name:'United Kingdom'},{code:'AU', name:'Australia'},{code:'DE', name:'Germany'},{code:'TH', name:'Thailand'},
-  {code:'CA', name:'Canada'},{code:'SA', name:'Saudi Arabia'},{code:'US', name:'United States'},{code:'15+', name:'Global markets'}
+  {code:'UK', name:'United Kingdom'},{code:'AU', name:'Australia'},{code:'DE', name:'Germany'},{code:'FR', name:'France'},
+  {code:'AE', name:'UAE'},{code:'SA', name:'Saudi Arabia'},{code:'US', name:'United States'},{code:'CA', name:'Canada'},
+  {code:'TH', name:'Thailand'},{code:'NL', name:'Netherlands'},{code:'BE', name:'Belgium'},{code:'15+', name:'Global markets'}
 ];
 const TERMS = [
   {k:'LEAD TIME', v:'8 weeks from order confirmation'},
@@ -837,18 +911,31 @@ const NAV = [
   {t:'Contact Us', v:'contact'}
 ];
 const INDUSTRIES = [
-  {n:'01', t:'Manufacturing', d:'Full protective apparel for production lines, assembly and quality control, designed for extended wear in multi-hazard environments.', kit:'Driver gloves, mechanic gloves, coveralls'},
-  {n:'02', t:'Construction', d:'Site-ready protective gear for builders, contractors and project workers, where heavy-duty durability comes before dexterity.', kit:'Rigger gloves, leather aprons, hi-vis coveralls'},
-  {n:'03', t:'Oil & Gas', d:'The sector demands the highest standards. Chemical and flame-resistant options for upstream, midstream and downstream operations.', kit:'Rigger gloves, FR coveralls, leather aprons'},
+  {n:'01', t:'Manufacturing', d:'Full protective apparel for production lines, assembly and quality control, designed for extended wear in multi-hazard environments.', kit:'Driver gloves, mechanic gloves, coveralls', reqs:['Machinery protection', 'Chemical resistance', 'Durability for reuse', 'Professional look']},
+  {n:'02', t:'Construction', d:'Site-ready protective gear for builders, contractors and project workers, where heavy-duty durability comes before dexterity.', kit:'Rigger gloves, leather aprons, hi-vis coveralls', reqs:['Heavy-duty durability', 'Debris protection', 'Weather resistance', 'Hi-vis compliance']},
+  {n:'03', t:'Oil & Gas', d:'The sector demands the highest standards. Chemical and flame-resistant options for upstream, midstream and downstream operations.', kit:'Rigger gloves, FR coveralls, leather aprons', reqs:['Chemical resistance', 'Flame-resistant options', 'Extreme environments', 'Regulatory compliance']},
   {n:'04', t:'Industrial Maintenance', d:'Versatile protection for maintenance and repair operations across mixed tasks and changing hazards.', kit:'Mechanic gloves, anti-vibration gloves, sleeves'},
   {n:'05', t:'Logistics & Warehousing', d:'Durable workwear combining safety, comfort and professional appearance for high-turnover handling.', kit:'Driver gloves, coveralls'},
   {n:'06', t:'Food Processing', d:'Hygiene-compliant protective apparel meeting strict food safety standards on the line.', kit:'Coveralls, aprons, sleeves'}
 ];
+const FAQS = [
+  {q:'What is the minimum order quantity?', a:'MOQ is set per article. Tell us the range and volumes you need and we confirm the minimum for each code, from trial orders up to full container loads.'},
+  {q:'Do you make custom branded gloves and workwear?', a:'Yes. We offer complete OEM and private label manufacturing: your logo, custom packaging, hang tags and labels, built to your specification.'},
+  {q:'Which countries do you export to?', a:'15+ countries, including the United Kingdom, Australia, Germany, France, UAE, Saudi Arabia, the United States, Canada, the Netherlands and Belgium. We handle export documentation including commercial invoice, packing list, certificate of origin and EUR1 form.'},
+  {q:'How long does bulk production take?', a:'Lead time is 8 weeks from order confirmation. Shipment is FOB Karachi, and carton dimensions and CBM are quoted with every offer.'},
+  {q:'Can I get samples before placing a bulk order?', a:'Yes. Samples ship worldwide by DHL or FedEx with tracking, and a free sample is provided on bulk order. Use the sample request form to send your shipping details and product requirements.'},
+  {q:'What payment terms do you offer?', a:'25% advance with the balance at sight of B/L, or L/C at sight.'}
+];
+const EXPORT = [
+  {t:'Factory-direct rates', d:'Volume discounts and transparent pricing, with no hidden fees for distributor partners.'},
+  {t:'Reliable freight', d:'Coordinated freight so your shipment arrives on time and correctly packed.'},
+  {t:'Full export support', d:'Commercial invoice, packing list, certificate of origin, EUR1 and country-specific requirements handled in-house.'}
+];
 const STEPS = [
   {n:'1', t:'Submit your request', d:'Products, approximate volume and where to ship.'},
   {n:'2', t:'We confirm and pack', d:'Reviewed and prepared within two business days.'},
-  {n:'3', t:'Shipped to you', d:'International courier with tracking to your address.'},
-  {n:'4', t:'Evaluate and order bulk', d:'Move straight to a bulk quotation with volume pricing.'}
+  {n:'3', t:'Shipped to you', d:'By international courier (DHL or FedEx), with tracking to your address.'},
+  {n:'4', t:'Evaluate and order bulk', d:'Move straight to a bulk quotation with volume pricing. Most buyers order within two weeks.'}
 ];
 
 const CATALOG = {
@@ -861,7 +948,9 @@ const CATALOG = {
         {code:'P1-003', name:"Cow split superior rigger gloves with a red cloth back and a rubberized cuff", imgno:'29', sel:'Rigger Gloves'},
         {code:'P1-004', name:"Cow split standard rigger gloves with a stripe cloth back and a rubberized cuff", imgno:'25', sel:'Rigger Gloves'},
         {code:'P1-005', name:"Cow split double palm rigger gloves with a yellow cloth back and a rubberized cuff", imgno:'26', sel:'Rigger Gloves'},
-        {code:'P1-006', name:"Cow split economy rigger gloves with a candy cloth backing and a rubberized cuff", imgno:'30', sel:'Rigger Gloves'}
+        {code:'P1-006', name:"Cow split economy rigger gloves with a candy cloth backing and a rubberized cuff", imgno:'30', sel:'Rigger Gloves'},
+        {code:'P3-101', name:"Chrome rigger gloves", desc:'Heavy-duty chrome leather with a reinforced safety cuff.', imgno:'', sel:'Rigger Gloves'},
+        {code:'P3-102', name:"Canadian rigger gloves", desc:'Full palm reinforcement for heavy handling and rigging work.', imgno:'', sel:'Rigger Gloves'}
       ]},
       {id:'driver', label:'Driver Gloves', items:[
         {code:'P1-007', name:"Sheep/goat skin gloves with a blue interlock back and a Velcro band cuff", imgno:'13', sel:'Driver Gloves'},
@@ -876,16 +965,19 @@ const CATALOG = {
         {code:'P1-018', name:"Sheep skin driver gloves with blue border piping and open cuff", imgno:'1', sel:'Driver Gloves'},
         {code:'P1-019', name:"Goat skin driver gloves with red border piping and open cuff", imgno:'4', sel:'Driver Gloves'},
         {code:'P1-020', name:"Goat skin driver gloves with black border piping and open cuff", imgno:'7', sel:'Driver Gloves'},
-        {code:'P1-021', name:"Goat skin driver gloves with split leather backing", imgno:'6', sel:'Driver Gloves'}
+        {code:'P1-021', name:"Goat skin driver gloves with split leather backing", imgno:'6', sel:'Driver Gloves'},
+        {code:'P2-017', name:"Fleece lined driver gloves", desc:'Insulated driver gloves with warm fleece lining for cold weather.', imgno:'', sel:'Driver Gloves'}
       ]},
       {id:'mechanic', label:'Mechanic Gloves', items:[
         {code:'P1-022', img:'img/p1-026.jpg', name:"Mechanic gloves made of goat skin leather with a red fabric back", imgno:'14', sel:'Mechanic / Anti-Vibration Gloves'},
         {code:'P1-023', name:"Mechanic gloves made of cow grain yellow leather with a black fabric back", imgno:'15', sel:'Mechanic / Anti-Vibration Gloves'},
-        {code:'P1-024', name:"Goat skin gloves with a black waterproof cloth back", imgno:'16', sel:'Mechanic / Anti-Vibration Gloves'}
+        {code:'P1-024', name:"Goat skin gloves with a black waterproof cloth back", imgno:'16', sel:'Mechanic / Anti-Vibration Gloves'},
+        {code:'P4-201', name:"Synthetic leather mechanic gloves", desc:'Flexible synthetic leather with reinforced fingertips.', imgno:'', sel:'Mechanic / Anti-Vibration Gloves'},
+        {code:'P4-202', name:"Anti-vibration gloves", desc:'Padded gel anti-vibration protection for power tool use.', imgno:'', sel:'Mechanic / Anti-Vibration Gloves'}
       ]},
       {id:'welding', label:'Welding Gloves', items:[
-        {code:'P1-025', img:'img/p1-025.jpg', name:"Cow split blue welding gloves with piping and fleece lining inside", imgno:'23', sel:'Welding Gloves (Cow Split Blue)'},
-        {code:'P1-026', name:"Cow split red welding gloves with piping and fleece lining inside", imgno:'24', sel:'Welding Gloves (Cow Split Red)'},
+        {code:'P1-025', img:'img/p1-025.jpg', desc:'Heavy-duty cow split leather with fleece lining and reinforced palm.', name:"Cow split blue welding gloves with piping and fleece lining inside", imgno:'23', sel:'Welding Gloves (Cow Split Blue)'},
+        {code:'P1-026', desc:'Reinforced palm and thumb with heat-resistant stitching.', name:"Cow split red welding gloves with piping and fleece lining inside", imgno:'24', sel:'Welding Gloves (Cow Split Red)'},
         {code:'P1-027', name:"Cow split black welding gloves with piping and fleece lining inside", imgno:'17', sel:'Chrome Leather Welding Gloves'},
         {code:'P1-028', name:"White leather welding gloves with red cuff and soft inner lining", imgno:'18', sel:'Chrome Leather Welding Gloves'},
         {code:'P1-029', name:"Cow-grain TIG welder gloves with a cow-split back and a cow-split cuff", imgno:'19', sel:'Aramid Stitched Welding Gloves'},
@@ -909,7 +1001,9 @@ const CATALOG = {
     label:'INDUSTRIAL APRONS',
     subs: [
       {id:'leather-aprons', label:'Leather Aprons', items:[
-        {code:'P1-101', img:'img/a1-050.jpg', name:"Grey leather heavy-duty industrial apron", imgno:'39', sel:'Leather Aprons'}
+        {code:'P1-101', img:'img/a1-050.jpg', desc:'Heavy-duty leather for welding and industrial fabrication.', name:"Grey leather heavy-duty industrial apron", imgno:'39', sel:'Leather Aprons'},
+        {code:'A1-051', name:"Split leather apron", desc:'Economical split leather with adjustable neck and waist straps.', imgno:'', sel:'Leather Aprons'},
+        {code:'A1-052', name:"Chrome leather apron", desc:'Chemical and heat resistance for demanding environments.', imgno:'', sel:'Leather Aprons'}
       ]},
       {id:'cotton-aprons', label:'Cotton Aprons', items:[
         {code:'P1-102', name:"White cotton industrial apron with front pocket", imgno:'38', sel:'Leather Aprons'}
@@ -920,7 +1014,8 @@ const CATALOG = {
     label:'PROTECTIVE SLEEVES',
     subs: [
       {id:'arm-sleeves', label:'Arm Sleeves', items:[
-        {code:'P1-103', img:'img/s1-080.jpg', name:"Leather sleeves", imgno:'40', sel:'Protective Arm Sleeves'}
+        {code:'P1-103', img:'img/s1-080.jpg', desc:'Full-length cow split leather for complete welding arm protection.', name:"Leather sleeves", imgno:'40', sel:'Protective Arm Sleeves'},
+        {code:'S1-081', name:"Heat resistant sleeves", desc:'Heat-resistant sleeves with elastic ends for a secure fit during welding.', imgno:'', sel:'Protective Arm Sleeves'}
       ]}
     ]
   },
@@ -928,9 +1023,10 @@ const CATALOG = {
     label:'INDUSTRIAL UNIFORM',
     subs: [
       {id:'coveralls', label:'Coveralls', items:[
-        {code:'P1-104', img:'img/u1-010.jpg', name:"Worker coverall", imgno:'', sel:'Industrial Coveralls / Uniforms'},
+        {code:'P1-104', img:'img/u1-010.jpg', name:"Navy reflective coverall", desc:'Heavy-duty coverall with reflective strips for hi-vis compliance.', imgno:'', sel:'Industrial Coveralls / Uniforms'},
         {code:'P1-105', name:"Worker jacket (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'},
-        {code:'P1-106', name:"Worker trouser (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'}
+        {code:'P1-106', name:"Worker trouser (navy blue)", imgno:'', sel:'Industrial Coveralls / Uniforms'},
+        {code:'U1-011', name:"Flame-retardant coverall", desc:'Flame-retardant coverall for high-heat and spark-prone work.', imgno:'', sel:'Industrial Coveralls / Uniforms'}
       ]}
     ]
   }
@@ -959,7 +1055,7 @@ const ic = (d, s) => React.createElement('svg', {width:s||13, height:s||13, view
 
 class Component extends DCLogic {
   root = React.createRef();
-  state = {sent:false, sentName:'', sentProduct:'', view:'home', openGroup:'gloves', sub:'rigger', qv:''};
+  state = {sent:false, sentName:'', sentProduct:'', msgSent:false, msgName:'', view:'home', openGroup:'gloves', sub:'rigger', qv:''};
   menuOpen = false;
 
   findSub(id) {
@@ -1074,7 +1170,13 @@ class Component extends DCLogic {
         {t:'Your label, your spec', d:'Complete private labelling and custom packaging, made to your drawings and tolerances.', icon:ic('M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V3h10l7.6 7.6a2 2 0 010 2.8zM7.5 7.5h.01', 22)},
         {t:'Real capacity', d:'100,000+ pairs monthly with flexible MOQs, from trial orders to full container loads.', icon:ic('M4 5h16v14H4zM4 10h16M10 5v14', 22)}
       ],
-      industries: INDUSTRIES,
+      industries: INDUSTRIES.map(n => Object.assign({}, n, {hasReqs:!!n.reqs, reqs:n.reqs || []})),
+      faqs: FAQS,
+      exportPillars: EXPORT,
+      msgSent: this.state.msgSent,
+      msgNotSent: !this.state.msgSent,
+      msgName: this.state.msgName,
+      sendMsg: () => this.sendMsg(),
       nav: NAV.map(n => ({
         t:n.t, go:() => this.goView(n.v),
         weight:this.state.view === n.v ? '800' : '600',
@@ -1149,6 +1251,21 @@ class Component extends DCLogic {
     const m = r.querySelector('[data-menu]'); if (!m) return;
     this.menuOpen = !this.menuOpen;
     m.style.display = this.menuOpen ? 'flex' : 'none';
+  }
+
+  sendMsg() {
+    const r = this.root.current; if (!r) return;
+    const v = k => { const el = r.querySelector('[data-m="' + k + '"]'); return el ? el.value.trim() : ''; };
+    const missing = ['name','company','email','message'].filter(k => !v(k));
+    const err = r.querySelector('[data-merr]');
+    if (missing.length) {
+      if (err) err.style.display = 'block';
+      const first = r.querySelector('[data-m="' + missing[0] + '"]');
+      if (first) { first.style.borderColor = '#d93a2b'; first.focus({preventScroll:true}); }
+      return;
+    }
+    if (err) err.style.display = 'none';
+    this.setState({msgSent:true, msgName:v('name')});
   }
 
   submit() {
